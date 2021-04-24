@@ -5,7 +5,7 @@ import { getPosts } from '../../utils/storyblok'
 
 export default function Home({ posts, pageCurrent, pageTotal }) {
   return (
-    <div className="container max-w-3xl mx-auto">
+    <>
       <Head>
         <title>Blog - Kevin Putrajaya</title>
       </Head>
@@ -23,7 +23,7 @@ export default function Home({ posts, pageCurrent, pageTotal }) {
         }
       </div>
       <div>{pageCurrent} / {pageTotal}</div>
-    </div>
+    </>
   )
 }
 

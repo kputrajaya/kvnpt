@@ -6,15 +6,15 @@ import Image from '../components/image'
 
 export default function Home({ avatar, content, links }) {
   return (
-    <div className="container max-w-3xl mx-auto">
+    <>
       <Head>
         <title>Kevin Putrajaya</title>
       </Head>
 
-      <div className="h-screen flex items-center">
-        <div className="flex items-start">
-          <Image src={avatar} width={150} height={150} className="rounded-full flex-shrink-0" title="Kevin Putrajaya" />
-          <div className="ml-8">
+      <div className="h-screen py-8 flex items-center">
+        <div className="md:flex items-start">
+          <Image src={avatar} width={125} height={125} className="rounded-full md:mt-1 flex-shrink-0" title="Kevin Putrajaya" />
+          <div className="mt-8 md:mt-0 md:ml-8">
             <div className="mb-8">
               <ReactMarkdown children={content} />
             </div>
@@ -28,7 +28,7 @@ export default function Home({ avatar, content, links }) {
           </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 

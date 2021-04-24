@@ -4,7 +4,7 @@ import { getPost, getPosts } from '../../utils/storyblok'
 
 export default function Post({ post }) {
   return (
-    <div className="container max-w-3xl mx-auto">
+    <>
       <Head>
         <title>{post.name} - Kevin Putrajaya</title>
       </Head>
@@ -21,7 +21,7 @@ export default function Post({ post }) {
           ))
         }
       </div>
-    </div>
+    </>
   )
 }
 
