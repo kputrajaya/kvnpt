@@ -1,65 +1,53 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import SVG from 'react-inlinesvg';
+import ReactMarkdown from 'react-markdown'
 
-export default function Home() {
+import { getIntro, getLinks } from '../utils/storyblok'
+import Image from '../components/image'
+
+export default function Home({ avatar, content, links }) {
   return (
-    <div className={styles.container}>
+    <div className="container max-w-3xl mx-auto">
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Kevin Putrajaya</title>
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+      <div className="h-screen flex items-center">
+        <div className="flex items-start">
+          <Image src={avatar} width={150} height={150} className="rounded-full flex-shrink-0" />
+          <div className="ml-8">
+            <div className="mb-8">
+              <ReactMarkdown children={content} />
+            </div>
+            {
+              links.map((link, index) => (
+                <a className="mr-4 inline-block" href={link.link} target="_blank" key={index}>
+                  <SVG src={link.image} width={25} title={link.title} />
+                </a>
+              ))
+            }
+          </div>
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+      </div>
     </div>
   )
+}
+
+export async function getStaticProps() {
+  const [resIntro, resLinks] = await Promise.all([getIntro(), getLinks()])
+
+  const [{ image: { url: avatar } }, { body: content }] = resIntro.story.content.body
+  const links = resLinks.story.content.body.map((link) => ({
+    image: link.image.url,
+    title: link.caption,
+    link: link.link.url
+  }))
+
+  return {
+    props: {
+      avatar,
+      content,
+      links
+    },
+  }
 }
