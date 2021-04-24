@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import SVG from 'react-inlinesvg';
 import ReactMarkdown from 'react-markdown'
 
 import { getIntro, getLinks } from '../utils/storyblok'
@@ -14,7 +13,7 @@ export default function Home({ avatar, content, links }) {
 
       <div className="h-screen flex items-center">
         <div className="flex items-start">
-          <Image src={avatar} width={150} height={150} className="rounded-full flex-shrink-0" />
+          <Image src={avatar} width={150} height={150} alt="Kevin Putrajaya" className="rounded-full flex-shrink-0" />
           <div className="ml-8">
             <div className="mb-8">
               <ReactMarkdown children={content} />
@@ -22,7 +21,7 @@ export default function Home({ avatar, content, links }) {
             {
               links.map((link, index) => (
                 <a className="mr-4 inline-block" href={link.link} target="_blank" key={index}>
-                  <SVG src={link.image} width={25} height={25} title={link.title} />
+                  <Image src={link.image} width={25} height={25} alt={link.title} />
                 </a>
               ))
             }
