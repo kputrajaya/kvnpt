@@ -22,7 +22,7 @@ export default function Home({ avatar, content, links }) {
             {
               links.map((link, index) => (
                 <a className="mr-4 inline-block" href={link.link} target="_blank" key={index}>
-                  <SVG src={link.image} width={25} title={link.title} />
+                  <SVG src={link.image} width={25} height={25} title={link.title} />
                 </a>
               ))
             }
