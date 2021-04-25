@@ -3,6 +3,7 @@ import { format, parseISO } from 'date-fns'
 
 import { getPost, getPostCount, getPosts } from '../../../utils/storyblok'
 import { BLOG_PER_PAGE_MAX } from '../../../utils/constants'
+import BackButton from '../../../components/back_button'
 import Block from '../../../components/block'
 
 export default function Post({ post }) {
@@ -12,9 +13,9 @@ export default function Post({ post }) {
         <title>{post.name} - Kevin Putrajaya</title>
       </Head>
 
-      <a className="mb-4 text-sm text-gray-400 block" href={`/blog`}>&larr; Back</a>
+      <BackButton href="/blog/pages/1" />
       <h1 className="mb-1 text-2xl font-bold">{post.name}</h1>
-      <h3 className="mb-8 text-sm text-gray-400">{format(parseISO(post.published_at), 'd LLL yyyy')}</h3>
+      <h3 className="mb-8 text-sm text-gray-500">{format(parseISO(post.published_at), 'd LLL yyyy')}</h3>
 
       <div>
         {

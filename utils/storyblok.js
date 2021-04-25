@@ -2,8 +2,6 @@ const _get = (path, param='') => {
   const token = process.env.STORYBLOK_TOKEN
   const timestamp = Date.now()
   const url = `https://api.storyblok.com/v1/cdn/stories/${path}?token=${token}&t=${timestamp}&${param}`
-  console.log('----------')
-  console.log(url)
   return fetch(url)
 }
 const _getJson = (path, param='') => {

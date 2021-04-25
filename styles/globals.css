@@ -13,10 +13,3 @@ p {
 a {
   @apply underline;
 }
-
-blockquote::before {
-    content: '“';
-}
-blockquote::after {
-    content: '”';
-}

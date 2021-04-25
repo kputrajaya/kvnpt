@@ -4,6 +4,7 @@ import { format, parseISO } from 'date-fns'
 
 import { getPostCount, getPosts } from '../../../utils/storyblok'
 import { BLOG_PER_PAGE } from '../../../utils/constants'
+import BackButton from '../../../components/back_button'
 
 export default function Page({ posts, pageCurrent, pageCount }) {
   return (
@@ -12,21 +13,23 @@ export default function Page({ posts, pageCurrent, pageCount }) {
         <title>Blog - Kevin Putrajaya</title>
       </Head>
 
-      <a className="mb-4 text-sm text-gray-400 block" href="/">&larr; Back</a>
+      <BackButton href="/" />
       <h1 className="mb-8 text-2xl font-bold">Blog</h1>
 
-      <div>
+      <ul className="list-disc">
         {
           posts.map((post, index) => (
-            <a className="no-underline" href={`/blog/posts/${post.slug}`} key={index}>
-              <h2 className="mb-1 text-lg font-bold">{post.name}</h2>
-              <h3 className="mb-4 text-sm text-gray-400">{format(parseISO(post.published_at), 'd LLL yyyy')}</h3>
-            </a>
+            <li className="text-gray-500 text-sm">
+              <a className="mb-4 text-black no-underline block" href={`/blog/posts/${post.slug}`} key={index}>
+                <h2 className="mb-1 text-lg font-bold">{post.name}</h2>
+                <h3 className="text-sm text-gray-500">{format(parseISO(post.published_at), 'd LLL yyyy')}</h3>
+              </a>
+            </li>
           ))
         }
-      </div>
+      </ul>
 
-      <div className="mt-8 text-sm text-gray-400">
+      <div className="mt-8 text-sm text-gray-500">
         {
           pageCurrent > 1 &&
           <>
@@ -34,9 +37,7 @@ export default function Page({ posts, pageCurrent, pageCount }) {
             <span className="mx-2">&middot;</span>
           </>
         }
-        <span className="text-black">
-          Page {pageCurrent} / {pageCount}
-        </span>
+        Page {pageCurrent} / {pageCount}
         {
           pageCurrent < pageCount &&
           <>

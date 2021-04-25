@@ -2,20 +2,20 @@ import Audio from './audio'
 
 export default function BlockSong({ block }) {
   return (
-    <p>
+    <div>
       <Audio src={block.audio.url} />
       {
         block.caption &&
-        <div class="mt-2 text-xs text-center italic text-gray-400">
+        <div className="mt-2 text-xs text-center italic text-gray-500">
           {block.caption}
         </div>
       }
       {
         block.album &&
-        <div class="text-xs text-center italic text-gray-400">
+        <div className="mt-2 text-xs text-center italic text-gray-500">
           Album: <a href={`/song-albums/${block.album.slug}`}>{block.album.name}</a>
         </div>
       }
-    </p>
+    </div>
   )
 }

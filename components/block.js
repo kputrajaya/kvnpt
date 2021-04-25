@@ -18,12 +18,12 @@ export default function Block({ block }) {
       case 'song':
         return <BlockSong block={block} />
       default:
-        return <p class="text-gray-400">[block: {block.component}]</p>
+        return <div className="text-gray-500">[block: {block.component}]</div>
     }
   }
 
   return (
-    <div class="mb-8">
+    <div className="mb-8">
       {renderBlock()}
     </div>
   )
