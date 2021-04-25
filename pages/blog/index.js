@@ -1,3 +1,7 @@
+export default function Blog() {
+  return null
+}
+
 export async function getServerSideProps() {
   return {
     redirect: {
