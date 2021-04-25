@@ -11,9 +11,9 @@ export default function Home({ avatar, content, links }) {
         <title>Kevin Putrajaya</title>
       </Head>
 
-      <div className="h-screen py-8 flex items-center">
+      <div className="h-screen -my-8 py-8 flex items-center">
         <div className="md:flex items-start">
-          <Image src={avatar} width={125} height={125} className="rounded-full md:mt-1 flex-shrink-0" title="Kevin Putrajaya" />
+          <Image src={avatar} title="Kevin Putrajaya" width={125} height={125} className="rounded-full md:mt-1 flex-shrink-0" />
           <div className="mt-8 md:mt-0 md:ml-8">
             <div className="mb-8">
               <ReactMarkdown children={content} />
@@ -21,7 +21,7 @@ export default function Home({ avatar, content, links }) {
             {
               links.map((link, index) => (
                 <a className="mr-4 inline-block" href={link.link} target="_blank" key={index}>
-                  <Image src={link.image} width={25} height={25} title={link.title} />
+                  <Image src={link.image} title={link.title} width={25} height={25} />
                 </a>
               ))
             }

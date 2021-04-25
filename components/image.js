@@ -1,8 +1,11 @@
 import SVG from 'react-inlinesvg'
 
-export default function Image({ src, width, height, ...props }) {
+import { IMAGEKIT_HOST } from '../utils/constants'
+
+export default function Image({ src, title, width, height, ...props }) {
   const isSvg = src.toLowerCase().endsWith('.svg')
   const attrs = {
+    title,
     width,
     height,
     style: {width, height},
@@ -11,6 +14,6 @@ export default function Image({ src, width, height, ...props }) {
   return (
     isSvg
       ? <SVG src={src} {...attrs} />
-      : <img src={`${src}?tr=w-${width},h-${height}`} {...attrs} />
+      : <img src={src.startsWith(IMAGEKIT_HOST) ? `${src}?tr=w-${width},h-${height}` : src} {...attrs} />
   )
 }
