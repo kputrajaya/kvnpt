@@ -1,10 +1,10 @@
 import Head from 'next/head'
 import ReactMarkdown from 'react-markdown'
 
-import { getIntro, getLinks } from '../utils/storyblok'
+import { getIntro, getContact } from '../utils/storyblok'
 import Image from '../components/image'
 
-export default function Home({ avatar, content, links }) {
+export default function Home({ avatar, content, contact }) {
   return (
     <>
       <Head>
@@ -19,9 +19,9 @@ export default function Home({ avatar, content, links }) {
               <ReactMarkdown children={content} />
             </div>
             {
-              links.map((link, index) => (
-                <a className="mr-4 inline-block" href={link.link} target="_blank" key={index}>
-                  <Image src={link.image} title={link.title} width={25} height={25} />
+              contact.map((contact, index) => (
+                <a className="mr-4 inline-block" href={contact.link} target="_blank" key={index}>
+                  <Image src={contact.image} title={contact.title} width={25} height={25} />
                 </a>
               ))
             }
@@ -33,20 +33,20 @@ export default function Home({ avatar, content, links }) {
 }
 
 export async function getStaticProps() {
-  const [resIntro, resLinks] = await Promise.all([getIntro(), getLinks()])
+  const [resIntro, resContact] = await Promise.all([getIntro(), getContact()])
 
   const [{ image: { url: avatar } }, { body: content }] = resIntro.story.content.body
-  const links = resLinks.story.content.body.map((link) => ({
-    image: link.image.url,
-    title: link.caption,
-    link: link.link.url
+  const contact = resContact.story.content.body.map((contact) => ({
+    image: contact.image.url,
+    title: contact.caption,
+    link: contact.link.url
   }))
 
   return {
     props: {
       avatar,
       content,
-      links
+      contact
     },
   }
 }

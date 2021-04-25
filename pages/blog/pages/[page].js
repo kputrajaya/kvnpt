@@ -19,7 +19,7 @@ export default function Page({ posts, pageCurrent, pageCount }) {
       <ul className="list-disc">
         {
           posts.map((post, index) => (
-            <li className="text-gray-500 text-sm">
+            <li className="text-gray-500 text-sm" key={index}>
               <a className="mb-4 text-black no-underline block" href={`/blog/posts/${post.slug}`} key={index}>
                 <h2 className="mb-1 text-lg font-bold">{post.name}</h2>
                 <h3 className="text-sm text-gray-500">{format(parseISO(post.published_at), 'd LLL yyyy')}</h3>
