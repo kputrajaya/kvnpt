@@ -13,7 +13,7 @@ export default function BlockSong({ block }) {
       {
         block.album &&
         <div className="mt-2 text-xs text-center italic text-gray-500">
-          Album: <a href={`/song-albums/${block.album.slug}`}>{block.album.name}</a>
+          Album: <a href={`/songs/${block.album.slug}`}>{block.album.name}</a>
         </div>
       }
     </div>
