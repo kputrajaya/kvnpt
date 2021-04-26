@@ -1,7 +1,7 @@
 import Image from './image'
 
 export default function BlockPhoto({ block }) {
-  let image = <Image src={block.image.url} title={block.caption} width={1200} height={1200} style={{width: '100%', height: 'auto'}} />
+  let image = <Image src={block.image.url} width={1200} height={1200} style={{width: '100%', height: 'auto'}} />
   if (block.link && block.link.url) {
     image = <a href={block.link.url} target="_blank">{image}</a>
   }

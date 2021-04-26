@@ -13,3 +13,7 @@ p {
 a {
   @apply underline;
 }
+
+strong {
+  @apply font-semibold;
+}

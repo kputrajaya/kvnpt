@@ -10,7 +10,7 @@ export default function Photos() {
       </Head>
 
       <BackButton href="/" />
-      <h1 className="mb-8 text-2xl font-bold">Photos</h1>
+      <h1 className="mb-8 text-2xl font-semibold">Photos</h1>
 
       <div>Coming soon</div>
     </>

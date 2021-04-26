@@ -8,9 +8,7 @@ const _getJson = (path, param='') => {
   return _get(path, param).then(res => res.json())
 }
 
-export const getIntro = () => _getJson('site/introduction')
-
-export const getContact = () => _getJson('site/contact')
+export const getHome = () => _getJson('site')
 
 export const getResume = () => _getJson('site/resume')
 

@@ -14,14 +14,14 @@ export default function Page({ posts, pageCurrent, pageCount }) {
       </Head>
 
       <BackButton href="/" />
-      <h1 className="mb-8 text-2xl font-bold">Blog</h1>
+      <h1 className="mb-8 text-2xl font-semibold">Blog</h1>
 
       <ul className="list-disc">
         {
           posts.map((post, index) => (
             <li className="text-gray-500 text-sm" key={index}>
               <a className="mb-4 text-black no-underline block" href={`/blog/posts/${post.slug}`} key={index}>
-                <h2 className="mb-1 text-lg font-bold">{post.name}</h2>
+                <h2 className="mb-1 text-lg font-semibold">{post.name}</h2>
                 <h3 className="text-sm text-gray-500">{format(parseISO(post.published_at), 'd LLL yyyy')}</h3>
               </a>
             </li>
