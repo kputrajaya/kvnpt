@@ -24,8 +24,8 @@ export default function Resume({ resume }) {
   }
   const renderSkill = (block, index) => {
     return (
-      <li className="mt-2 mr-2 px-3 py-2 text-sm bg-gray-200 rounded inline-block print:border print:border-black" data-synonyms={block.synonyms} key={index}>
-        {block.display}
+      <li className="mt-2 mr-2 px-3 py-2 text-sm bg-gray-200 rounded inline-block print:border print:border-black" key={index}>
+        <span className={block.highlight ? 'font-semibold' : ''}>{block.name}</span>
       </li>
     )
   }
