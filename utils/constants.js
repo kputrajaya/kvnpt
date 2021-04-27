@@ -6,4 +6,4 @@ export const BLOG_PER_PAGE_MAX = 100
 
 export const IMAGEKIT_ENDPOINT = process.env.IMAGEKIT_ENDPOINT || 'https://ik.imagekit.io/kvn/'
 
-export const STORYBLOK_TOKEN = process.env.STORYBLOK_TOKEN
+export const STORYBLOK_TOKEN = process.env.STORYBLOK_TOKEN || ''
