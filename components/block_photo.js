@@ -1,14 +1,22 @@
 import Image from './image'
+import { BLOCK_PHOTO_MAX_HEIGHT, BLOCK_PHOTO_MAX_WIDTH } from '../utils/constants'
 
 export default function BlockPhoto({ block }) {
-  let image = <Image src={block.image.url} width={1200} height={1200} style={{width: '100%', height: 'auto'}} />
+  const style = {
+    width: 'auto',
+    maxWidth: '100%',
+    maxHeight: `${BLOCK_PHOTO_MAX_HEIGHT}px`
+  }
+  let image = <Image src={block.image.url} width={BLOCK_PHOTO_MAX_WIDTH} height={BLOCK_PHOTO_MAX_HEIGHT} style={style} />
   if (block.link && block.link.url) {
     image = <a href={block.link.url} target="_blank">{image}</a>
   }
 
   return (
-    <div>
-      {image}
+    <div className="text-center">
+      <div className="inline-block">
+        {image}
+      </div>
       {
         block.caption &&
         <div className="mt-2 text-xs text-center italic text-gray-500">

@@ -1,19 +1,23 @@
 import SVG from 'react-inlinesvg'
 
-import { IMAGEKIT_HOST } from '../utils/constants'
+import { IMAGEKIT_ENDPOINT } from '../utils/constants'
 
-export default function Image({ src, title, width, height, ...props }) {
+export default function Image({ src, title, width, height, pad=false, ...props }) {
   const isSvg = src.toLowerCase().endsWith('.svg')
-  const attrs = {
-    title,
-    width,
-    height,
-    style: {width, height},
-    ...props
+
+  const Tag = isSvg ? SVG : 'img'
+  let newSrc = src
+  if (!isSvg) {
+    if (newSrc.startsWith('http') && !newSrc.startsWith(IMAGEKIT_ENDPOINT)) {
+      newSrc = IMAGEKIT_ENDPOINT + newSrc
+    }
+    newSrc += `?tr=w-${width * 2},h-${height * 2}`
+    if (pad) {
+      newSrc += ',cm-pad_resize,bg-FFFFFF'
+    } else {
+      newSrc += ',c-at_max'
+    }
   }
-  return (
-    isSvg
-      ? <SVG src={src} {...attrs} />
-      : <img src={src.startsWith(IMAGEKIT_HOST) ? `${src}?tr=w-${width},h-${height}` : src} {...attrs} />
-  )
+
+  return <Tag src={newSrc} width={width} height={height} title={title} style={{width, height}} {...props} />
 }
