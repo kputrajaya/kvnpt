@@ -8,7 +8,7 @@ export const getLinkPreview = async (url) => {
       url: preview.url || null,
       title: preview.title || preview.siteName || null,
       description: preview.description || null,
-      image: (preview.favicons || []).filter((icon) => icon.toLowerCase().endsWith('.png')).find(_ => true) || (preview.images || []).find(_ => true)
+      image: (preview.images || []).find(_ => true) || (preview.favicons || []).filter((icon) => icon.toLowerCase().endsWith('.png')).find(_ => true)
     }
   } catch (e) {
     return null
