@@ -1,9 +1,9 @@
 import Head from 'next/head'
 import { format, parseISO } from 'date-fns'
-import { getLinkPreview } from 'link-preview-js';
 
-import { getPost, getPostCount, getPosts } from '../../../utils/storyblok'
 import { BLOG_PER_PAGE_MAX } from '../../../utils/constants'
+import { getLinkPreview } from '../../../utils/generics'
+import { getPost, getPostCount, getPosts } from '../../../utils/storyblok'
 import BackButton from '../../../components/back_button'
 import Block from '../../../components/block'
 
@@ -59,16 +59,7 @@ export async function getStaticProps({ params }) {
   const blocks = resPost.story.content.body
   await Promise.all(blocks.map(async (block, index) => {
     if (block.component === 'link') {
-      const preview = await getLinkPreview(block.link.url)
-      console.log(preview)
-      blocks[index].link.preview = preview
-        ? {
-          url: preview.url || null,
-          title: preview.title || preview.siteName || null,
-          description: preview.description || null,
-          image: (preview.images || []).find(_ => true) || (preview.favicons || []).filter((icon) => icon.toLowerCase().endsWith('.png')).find(_ => true)
-        }
-        : null
+      blocks[index].link.preview = await getLinkPreview(block.link.url)
     }
   }))
 
