@@ -19,13 +19,13 @@ export default function BlockPhoto({ block }) {
       </div>
       {
         block.caption &&
-        <div className="mt-2 text-xs text-center italic text-gray-400">
+        <div className="mt-2 text-xs text-center italic text-scheme-third">
           {block.caption}
         </div>
       }
       {
         block.album &&
-        <div className="mt-2 text-xs text-center italic text-gray-400">
+        <div className="mt-2 text-xs text-center italic text-scheme-third">
           Album: <a href={`/photos/${block.album.slug}`}>{block.album.name}</a>
         </div>
       }

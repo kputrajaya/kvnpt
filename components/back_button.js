@@ -1,5 +1,5 @@
 export default function BackButton({ href }) {
   return (
-    <a className="mb-4 text-sm text-gray-400 inline-block print:hidden" href={href}>&larr; Back</a>
+    <a className="mt-1.5 mb-4 text-sm text-scheme-third inline-block print:hidden" href={href}>&larr; Back</a>
   )
 }

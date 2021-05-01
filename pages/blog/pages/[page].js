@@ -18,14 +18,14 @@ export default function Page({ posts, pageCurrent, pageCount }) {
 
       {
         posts.map((post, index) => (
-          <a className="mb-4 p-4 no-underline bg-gray-800 block border border-gray-800 rounded" href={`/blog/posts/${post.slug}`} key={index}>
+          <a className="kvn-card mb-4 no-underline" href={`/blog/posts/${post.slug}`} key={index}>
             <h2 className="font-semibold">{post.name}</h2>
-            <h3 className="text-sm text-gray-400">{format(parseISO(post.published_at), 'd LLL yyyy')}</h3>
+            <h3 className="text-sm text-scheme-third">{format(parseISO(post.published_at), 'd LLL yyyy')}</h3>
           </a>
         ))
       }
 
-      <div className="mt-8 text-sm text-gray-400">
+      <div className="mt-8 text-sm text-scheme-third">
         {
           pageCurrent > 1 &&
           <>

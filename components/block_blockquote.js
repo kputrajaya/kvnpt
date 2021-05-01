@@ -7,12 +7,12 @@ export default function BlockBlockquote({ block }) {
         </blockquote>
         {
           block.source &&
-          <div className="mt-2 text-sm text-gray-400">&mdash; {block.source}</div>
+          <div className="mt-2 text-sm text-scheme-third">&mdash; {block.source}</div>
         }
       </div>
       {
         block.caption &&
-        <div className="mt-2 text-xs text-center italic text-gray-400">
+        <div className="mt-2 text-xs text-center italic text-scheme-third">
           {block.caption}
         </div>
       }

@@ -21,7 +21,7 @@ export default function Home({ photo, introduction, contacts }) {
             {
               contacts.map((contact, index) => (
                 <a className="mr-4 inline-block" href={contact.link.url} target="_blank" key={index}>
-                  <Image src={contact.image.url} title={contact.title} width={25} height={25} className="fill-current text-gray-200" />
+                  <Image src={contact.image.url} title={contact.title} width={25} height={25} className="fill-current text-scheme-first" />
                 </a>
               ))
             }
