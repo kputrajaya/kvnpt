@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }) {
       <Component {...pageProps} />
       {
         darkMode &&
-        <div className="p-2 bg-scheme rounded-full leading-none absolute top-8 right-8 cursor-pointer" title="Dark mode" onClick={darkMode.toggle}>
+        <div className="p-2 bg-scheme rounded-full leading-none absolute top-8 right-8 cursor-pointer print:hidden" title="Dark mode" onClick={darkMode.toggle}>
           <Image src={darkMode.value ? SvgDark : SvgLight} width={19} height={19} />
         </div>
       }
