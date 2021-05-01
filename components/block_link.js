@@ -6,9 +6,9 @@ export default function BlockLink({ block }) {
       <div className="flex">
         {
           block.link.preview.image &&
-          (
-            <Image src={block.link.preview.image} width={75} height={75} pad={true} className="mr-4 flex-shrink-0" />
-          )
+          <div className="mr-4 flex-shrink-0">
+            <Image src={block.link.preview.image} width={75} height={75} />
+          </div>
         }
         <div className="min-w-0">
           <div className="mb-1 font-bold truncate">{block.link.preview.title}</div>
@@ -24,7 +24,7 @@ export default function BlockLink({ block }) {
 
   return (
     <div>
-      <a className="kvn-card w-full max-w-md mx-auto no-underline" href={block.link.url} target="_blank">
+      <a className="kvn-card max-w-md mx-auto no-underline block" href={block.link.url} target="_blank">
         {renderLink()}
       </a>
       {

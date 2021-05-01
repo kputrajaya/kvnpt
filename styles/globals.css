@@ -14,7 +14,6 @@ body {
   @apply dark:text-gray-100;
   @apply bg-gray-100;
   @apply dark:bg-gray-900;
-  @apply transition-colors;
 }
 
 p {
@@ -35,25 +34,21 @@ strong {
 .text-scheme-first {
   @apply text-gray-900;
   @apply dark:text-gray-100;
-  @apply transition-colors;
 }
 
 .text-scheme-second {
   @apply text-gray-700;
   @apply dark:text-gray-300;
-  @apply transition-colors;
 }
 
 .text-scheme-third {
   @apply text-gray-600;
   @apply dark:text-gray-400;
-  @apply transition-colors;
 }
 
 .bg-scheme {
   @apply bg-gray-200;
   @apply dark:bg-gray-800;
-  @apply transition-colors;
 }
 
 
@@ -67,6 +62,9 @@ strong {
   @apply border-gray-200;
   @apply dark:border-gray-800;
   @apply rounded;
-  @apply block;
-  @apply transition-colors;
+  @apply overflow-hidden;
+}
+.kvn-card.kvn-card-small {
+  @apply px-4;
+  @apply py-2;
 }

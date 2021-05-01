@@ -67,10 +67,10 @@ export default function Resume({ resume }) {
       </ul>
 
       <h3 className="mt-12 text-lg font-semibold">Skills</h3>
-      <ul className="mt-4">
+      <ul className="mt-4 leading-none">
         {
           resume.skills.map((block, index) => (
-            <li className="kvn-card mt-2 mr-2 py-2 text-sm inline-block" key={index}>
+            <li className="kvn-card kvn-card-small mt-2 mr-2 text-sm inline-block" key={index}>
               <span className={block.highlight ? 'font-semibold' : ''}>{block.name}</span>
             </li>
           ))
