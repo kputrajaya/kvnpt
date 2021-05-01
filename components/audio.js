@@ -1,4 +1,4 @@
-import ReactAudioPlayer from 'react-audio-player';
+import ReactAudioPlayer from 'react-audio-player'
 
 export default function Audio({ src }) {
   return (

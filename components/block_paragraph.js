@@ -1,9 +1,9 @@
-import ReactMarkdown from 'react-markdown'
+import Markdown from './markdown'
 
 export default function BlockParagraph({ block }) {
   return (
     <div>
-      <ReactMarkdown children={block.body} />
+      <Markdown text={block.body} />
     </div>
   )
 }

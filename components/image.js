@@ -19,5 +19,7 @@ export default function Image({ src, title, width, height, pad=false, ...props }
     }
   }
 
-  return <Tag src={newSrc} width={width} height={height} title={title} style={{width, height}} {...props} />
+  return (
+    <Tag src={newSrc} width={width} height={height} title={title} style={{width, height}} {...props} />
+  )
 }

@@ -1,9 +1,9 @@
 import Head from 'next/head'
-import ReactMarkdown from 'react-markdown'
 
 import { getResume } from '../utils/storyblok'
 import BackButton from '../components/back_button'
 import Image from '../components/image'
+import Markdown from '../components/markdown'
 
 export default function Resume({ resume }) {
   const renderExperience = () => {
@@ -39,7 +39,7 @@ export default function Resume({ resume }) {
             company.positions.map((position, index) => (
               <div className="mt-7 -mb-4 text-sm" key={index}>
                 <h4 className="mb-1 font-semibold text-scheme-second">{position.position} &nbsp;&middot;&nbsp; {position.start} &ndash; {position.end}</h4>
-                <div className="text-scheme-third"><ReactMarkdown children={position.summary} /></div>
+                <div className="text-scheme-third"><Markdown text={position.summary} /></div>
               </div>
             ))
           }
@@ -59,7 +59,7 @@ export default function Resume({ resume }) {
       <h1 className="mb-1 text-2xl font-semibold">{resume.name}</h1>
       <h3 className="mb-6 text-sm text-scheme-third">{resume.position} &nbsp;&middot;&nbsp; {resume.location}</h3>
 
-      <div className="text-sm"><ReactMarkdown children={resume.summary} /></div>
+      <div className="text-sm"><Markdown text={resume.summary} /></div>
 
       <h3 className="mt-12 text-lg font-semibold">Experience</h3>
       <ul className="list-disc">

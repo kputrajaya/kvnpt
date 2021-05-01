@@ -20,9 +20,7 @@ export default function BlockLink({ block }) {
         </div>
       </div>
     )
-    : (
-      <div className="text-xs text-scheme-third">{block.link.url}</div>
-    )
+    : <div className="text-xs text-scheme-third">{block.link.url}</div>
 
   return (
     <div>

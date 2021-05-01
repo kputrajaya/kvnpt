@@ -1,8 +1,8 @@
 import Head from 'next/head'
-import ReactMarkdown from 'react-markdown'
 
 import { getHome } from '../utils/storyblok'
 import Image from '../components/image'
+import Markdown from '../components/markdown'
 
 export default function Home({ photo, introduction, contacts }) {
   return (
@@ -16,7 +16,7 @@ export default function Home({ photo, introduction, contacts }) {
           <Image src={photo.url} width={125} height={125} className="rounded-full md:mt-1 md:flex-shrink-0" />
           <div className="mt-8 md:mt-0 md:ml-8">
             <div className="mb-8">
-              <ReactMarkdown children={introduction} />
+              <Markdown text={introduction} />
             </div>
             {
               contacts.map((contact, index) => (
