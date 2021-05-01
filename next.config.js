@@ -9,6 +9,12 @@ module.exports = {
       })
     }
 
+    // Inline SVG
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: 'raw-loader'
+    })
+
     return config
   },
 }

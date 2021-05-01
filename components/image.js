@@ -3,7 +3,7 @@ import SVG from 'react-inlinesvg'
 import { IMAGEKIT_ENDPOINT } from '../utils/constants'
 
 export default function Image({ src, title, width, height, dynamicRatio=false, ...props }) {
-  const isSvg = src.toLowerCase().endsWith('.svg') || src.toLowerCase().startsWith('<svg')
+  const isSvg = src.startsWith('<svg') || src.toLowerCase().endsWith('.svg')
 
   const Tag = isSvg ? SVG : 'img'
   let newSrc = src
@@ -22,7 +22,11 @@ export default function Image({ src, title, width, height, dynamicRatio=false, .
       maxWidth: width,
       maxHeight: height
     }
-    : {width, height}
+    : {
+      width,
+      minWidth: width,
+      height
+    }
 
   return (
     <Tag src={newSrc} width={width} height={height} title={title} style={style} {...props} />

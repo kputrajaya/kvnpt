@@ -3,8 +3,17 @@ import Head from 'next/head'
 import { getHome } from '../utils/storyblok'
 import Image from '../components/image'
 import Markdown from '../components/markdown'
+import SvgEmail from '../public/images/contact-email.svg'
+import SvgGitHub from '../public/images/contact-github.svg'
+import SvgLinkedIn from '../public/images/contact-linkedin.svg'
 
 export default function Home({ photo, introduction, contacts }) {
+  const contactSvgMap = {
+    Email: SvgEmail,
+    GitHub: SvgGitHub,
+    LinkedIn: SvgLinkedIn
+  }
+
   return (
     <>
       <Head>
@@ -21,7 +30,7 @@ export default function Home({ photo, introduction, contacts }) {
             {
               contacts.map((contact, index) => (
                 <a className="mr-4 inline-block" href={contact.link.url} target="_blank" key={index}>
-                  <Image src={contact.svg} title={contact.title} width={25} height={25} className="fill-current text-scheme-first" />
+                  <Image src={contactSvgMap[contact.caption]} title={contact.caption} width={25} height={25} className="fill-current text-scheme-first" />
                 </a>
               ))
             }
