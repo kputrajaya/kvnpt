@@ -1,4 +1,4 @@
-import useDarkMode from 'use-dark-mode';
+import useDarkMode from 'use-dark-mode'
 
 import '../styles/globals.css'
 
