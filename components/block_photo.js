@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
-import Image from './image'
 import { BLOCK_PHOTO_MAX_HEIGHT, BLOCK_PHOTO_MAX_WIDTH } from '../utils/constants'
+import Image from './image'
 
 export default function BlockPhoto({ block }) {
   let image = <Image src={block.image.url} width={BLOCK_PHOTO_MAX_WIDTH} height={BLOCK_PHOTO_MAX_HEIGHT} dynamicRatio />

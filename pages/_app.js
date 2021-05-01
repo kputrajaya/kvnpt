@@ -6,14 +6,13 @@ import SvgLight from '../public/images/scheme-light.svg'
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
-  let darkMode = null
-  if (typeof window !== 'undefined') {
-    darkMode = useDarkMode(true, {
+  const darkMode = typeof window !== 'undefined'
+    ? useDarkMode(true, {
       classNameDark: 'dark',
       classNameLight: 'light',
       element: document.documentElement
     })
-  }
+    : null
 
   return (
     <div className="container max-w-3xl mx-auto p-8 relative">

@@ -1,3 +1,4 @@
+import { BLOCK_LINK_IMAGE_SIZE } from '../utils/constants'
 import Image from './image'
 
 export default function BlockLink({ block }) {
@@ -7,7 +8,7 @@ export default function BlockLink({ block }) {
         {
           block.link.preview.image &&
           <div className="mr-4 flex-shrink-0">
-            <Image src={block.link.preview.image} width={75} height={75} dynamicRatio />
+            <Image src={block.link.preview.image} width={BLOCK_LINK_IMAGE_SIZE} height={BLOCK_LINK_IMAGE_SIZE} dynamicRatio />
           </div>
         }
         <div className="min-w-0">

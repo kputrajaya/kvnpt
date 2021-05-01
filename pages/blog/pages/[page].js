@@ -3,8 +3,8 @@ import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
 import { format, parseISO } from 'date-fns'
 
-import { getPostCount, getPosts } from '../../../utils/storyblok'
 import { BLOG_PER_PAGE } from '../../../utils/constants'
+import { getPostCount, getPosts } from '../../../utils/storyblok'
 import BackButton from '../../../components/back_button'
 
 export default function Page({ posts, pageCurrent, pageCount }) {
