@@ -16,7 +16,7 @@ export default function Post({ post }) {
 
       <BackButton href="/blog/pages/1" />
       <h1 className="mb-1 text-2xl font-semibold">{post.name}</h1>
-      <h3 className="mb-8 text-sm text-gray-500">{format(parseISO(post.published_at), 'd LLL yyyy')}</h3>
+      <h3 className="mb-8 text-sm text-gray-400">{format(parseISO(post.published_at), 'd LLL yyyy')}</h3>
 
       <div>
         {

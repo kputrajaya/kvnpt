@@ -18,7 +18,7 @@ export default function Block({ block }) {
       case 'song':
         return <BlockSong block={block} />
       default:
-        return <div className="text-gray-500">[block: {block.component}]</div>
+        return <div className="text-gray-400">[block: {block.component}]</div>
     }
   }
 

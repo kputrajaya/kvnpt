@@ -2,7 +2,7 @@ import { STORYBLOK_TOKEN } from './constants'
 
 const _get = (path, param='') => {
   const timestamp = Date.now()
-  const url = `https://api.storyblok.com/v1/cdn/stories/${path}?token=${STORYBLOK_TOKEN}&t=${timestamp}&${param}`
+  const url = `https://api.storyblok.com/v1/cdn/stories/${path}?token=${STORYBLOK_TOKEN}&${param}&t=${timestamp}`
   return fetch(url)
 }
 const _getJson = (path, param='') => {

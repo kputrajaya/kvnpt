@@ -14,14 +14,14 @@ export default function BlockLink({ block }) {
           <div className="mb-1 font-bold truncate">{block.link.preview.title}</div>
           {
             block.link.preview.description &&
-            <div className="mb-2 text-xs text-gray-500">{block.link.preview.description}</div>
+            <div className="mb-2 text-xs text-gray-400">{block.link.preview.description}</div>
           }
-          <div className="text-xs text-gray-500">{block.link.preview.url}</div>
+          <div className="text-xs text-gray-400">{block.link.preview.url}</div>
         </div>
       </div>
     )
     : (
-      <div className="text-xs text-gray-500">{block.link.url}</div>
+      <div className="text-xs text-gray-400">{block.link.url}</div>
     )
 
   return (
@@ -31,7 +31,7 @@ export default function BlockLink({ block }) {
       </a>
       {
         block.caption &&
-        <div className="mt-2 text-xs text-center italic text-gray-500">
+        <div className="mt-2 text-xs text-center italic text-gray-400">
           {block.caption}
         </div>
       }

@@ -6,13 +6,13 @@ export default function BlockSong({ block }) {
       <Audio src={block.audio.url} />
       {
         block.caption &&
-        <div className="mt-2 text-xs text-center italic text-gray-500">
+        <div className="mt-2 text-xs text-center italic text-gray-400">
           {block.caption}
         </div>
       }
       {
         block.album &&
-        <div className="mt-2 text-xs text-center italic text-gray-500">
+        <div className="mt-2 text-xs text-center italic text-gray-400">
           Album: <a href={`/songs/${block.album.slug}`}>{block.album.name}</a>
         </div>
       }

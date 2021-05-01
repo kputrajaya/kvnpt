@@ -3,7 +3,6 @@ import { getLinkPreview as getLinkPreviewLib } from 'link-preview-js'
 export const getLinkPreview = async (url) => {
   try {
     const preview = await getLinkPreviewLib(url)
-    console.log(preview)
     return {
       url: preview.url || null,
       title: preview.title || preview.siteName || null,

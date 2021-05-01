@@ -16,20 +16,16 @@ export default function Page({ posts, pageCurrent, pageCount }) {
       <BackButton href="/" />
       <h1 className="mb-8 text-2xl font-semibold">Blog</h1>
 
-      <ul className="list-disc">
-        {
-          posts.map((post, index) => (
-            <li className="text-gray-500 text-sm" key={index}>
-              <a className="mb-4 text-black no-underline block" href={`/blog/posts/${post.slug}`} key={index}>
-                <h2 className="mb-1 text-lg font-semibold">{post.name}</h2>
-                <h3 className="text-sm text-gray-500">{format(parseISO(post.published_at), 'd LLL yyyy')}</h3>
-              </a>
-            </li>
-          ))
-        }
-      </ul>
+      {
+        posts.map((post, index) => (
+          <a className="mb-4 p-4 no-underline bg-gray-800 block border border-gray-800 rounded" href={`/blog/posts/${post.slug}`} key={index}>
+            <h2 className="font-semibold">{post.name}</h2>
+            <h3 className="text-sm text-gray-400">{format(parseISO(post.published_at), 'd LLL yyyy')}</h3>
+          </a>
+        ))
+      }
 
-      <div className="mt-8 text-sm text-gray-500">
+      <div className="mt-8 text-sm text-gray-400">
         {
           pageCurrent > 1 &&
           <>
