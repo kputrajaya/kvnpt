@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
 import { format, parseISO } from 'date-fns'
 
@@ -18,10 +19,12 @@ export default function Page({ posts, pageCurrent, pageCount }) {
 
       {
         posts.map((post, index) => (
-          <a className="kvn-card mb-4 no-underline" href={`/blog/posts/${post.slug}`} key={index}>
-            <h2 className="font-semibold">{post.name}</h2>
-            <h3 className="text-sm text-scheme-third">{format(parseISO(post.published_at), 'd LLL yyyy')}</h3>
-          </a>
+          <Link href={`/blog/posts/${post.slug}`} key={index}>
+            <a className="kvn-card mb-4 no-underline">
+              <h2 className="font-semibold">{post.name}</h2>
+              <h3 className="text-sm text-scheme-third">{format(parseISO(post.published_at), 'd LLL yyyy')}</h3>
+            </a>
+          </Link>
         ))
       }
 
@@ -29,7 +32,7 @@ export default function Page({ posts, pageCurrent, pageCount }) {
         {
           pageCurrent > 1 &&
           <>
-            <a href={`/blog/pages/${pageCurrent - 1}`}>&larr; Previous</a>
+            <Link href={`/blog/pages/${pageCurrent - 1}`}><a>&larr; Previous</a></Link>
             <span className="mx-2">&middot;</span>
           </>
         }
@@ -38,7 +41,7 @@ export default function Page({ posts, pageCurrent, pageCount }) {
           pageCurrent < pageCount &&
           <>
             <span className="mx-2">&middot;</span>
-            <a href={`/blog/pages/${pageCurrent + 1}`}>Next &rarr;</a>
+            <Link href={`/blog/pages/${pageCurrent + 1}`}><a>Next &rarr;</a></Link>
           </>
         }
       </div>

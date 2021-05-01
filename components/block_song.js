@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import Audio from './audio'
 
 export default function BlockSong({ block }) {
@@ -13,7 +15,7 @@ export default function BlockSong({ block }) {
       {
         block.album &&
         <div className="mt-2 text-xs text-center italic text-scheme-third">
-          Album: <a href={`/songs/${block.album.slug}`}>{block.album.name}</a>
+          Album: <Link href={`/songs/${block.album.slug}`}><a>{block.album.name}</a></Link>
         </div>
       }
     </div>

@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import Image from './image'
 import { BLOCK_PHOTO_MAX_HEIGHT, BLOCK_PHOTO_MAX_WIDTH } from '../utils/constants'
 
@@ -26,7 +28,7 @@ export default function BlockPhoto({ block }) {
       {
         block.album &&
         <div className="mt-2 text-xs text-center italic text-scheme-third">
-          Album: <a href={`/photos/${block.album.slug}`}>{block.album.name}</a>
+          Album: <Link href={`/photos/${block.album.slug}`}><a>{block.album.name}</a></Link>
         </div>
       }
     </div>
