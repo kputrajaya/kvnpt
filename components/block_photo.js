@@ -4,12 +4,7 @@ import Image from './image'
 import { BLOCK_PHOTO_MAX_HEIGHT, BLOCK_PHOTO_MAX_WIDTH } from '../utils/constants'
 
 export default function BlockPhoto({ block }) {
-  const style = {
-    width: 'auto',
-    maxWidth: '100%',
-    maxHeight: `${BLOCK_PHOTO_MAX_HEIGHT}px`
-  }
-  let image = <Image src={block.image.url} width={BLOCK_PHOTO_MAX_WIDTH} height={BLOCK_PHOTO_MAX_HEIGHT} style={style} />
+  let image = <Image src={block.image.url} width={BLOCK_PHOTO_MAX_WIDTH} height={BLOCK_PHOTO_MAX_HEIGHT} dynamicRatio />
   if (block.link && block.link.url) {
     image = <a href={block.link.url} target="_blank">{image}</a>
   }

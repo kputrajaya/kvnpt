@@ -7,7 +7,7 @@ export default function BlockLink({ block }) {
         {
           block.link.preview.image &&
           <div className="mr-4 flex-shrink-0">
-            <Image src={block.link.preview.image} width={75} height={75} />
+            <Image src={block.link.preview.image} width={75} height={75} dynamicRatio />
           </div>
         }
         <div className="min-w-0">
