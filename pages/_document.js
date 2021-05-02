@@ -25,7 +25,7 @@ class MyDocument extends Document {
   }
 
   render() {
-    const initScript = Uglify.minify(this.init.toString(), {fromString: true})
+    const initScript = Uglify.minify(this.init.toString(), {fromString: true}).code
 
     return (
       <Html>
