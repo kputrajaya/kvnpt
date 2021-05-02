@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { format, parseISO } from 'date-fns'
 
-import { BLOG_PER_PAGE_MAX } from '../../../utils/constants'
+import { BLOG_PER_PAGE_MAX, STATIC_PROPS_REVALIDATE } from '../../../utils/constants'
 import { getLinkPreview } from '../../../utils/generics'
 import { getPost, getPostCount, getPosts } from '../../../utils/storyblok'
 import BackButton from '../../../components/back_button'
@@ -48,7 +48,7 @@ export async function getStaticPaths() {
     }
   })))
 
-  return {paths, fallback: false}
+  return {paths, fallback: true}
 }
 
 export async function getStaticProps({ params }) {
@@ -66,6 +66,7 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       post: resPost.story
-    }
+    },
+    revalidate: STATIC_PROPS_REVALIDATE
   }
 }

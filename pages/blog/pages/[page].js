@@ -3,7 +3,7 @@ import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
 import { format, parseISO } from 'date-fns'
 
-import { BLOG_PER_PAGE } from '../../../utils/constants'
+import { BLOG_PER_PAGE, STATIC_PROPS_REVALIDATE } from '../../../utils/constants'
 import { getPostCount, getPosts } from '../../../utils/storyblok'
 import BackButton from '../../../components/back_button'
 
@@ -61,7 +61,7 @@ export async function getStaticPaths() {
     }
   }))
 
-  return {paths, fallback: false}
+  return {paths, fallback: true}
 }
 
 export async function getStaticProps({ params }) {
@@ -75,6 +75,7 @@ export async function getStaticProps({ params }) {
       posts: resPosts.stories,
       pageCurrent,
       pageCount
-    }
+    },
+    revalidate: STATIC_PROPS_REVALIDATE
   }
 }

@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import { RESUME_AVATAR_SIZE } from '../utils/constants'
+import { RESUME_AVATAR_SIZE, STATIC_PROPS_REVALIDATE } from '../utils/constants'
 import { getResume } from '../utils/storyblok'
 import BackButton from '../components/back_button'
 import Image from '../components/image'
@@ -88,5 +88,6 @@ export async function getStaticProps() {
     props: {
       resume: resResume.story.content
     },
+    revalidate: STATIC_PROPS_REVALIDATE
   }
 }

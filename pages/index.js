@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import { INTRO_AVATAR_SIZE, INTRO_CONTACT_SIZE } from '../utils/constants'
+import { INTRO_AVATAR_SIZE, INTRO_CONTACT_SIZE, STATIC_PROPS_REVALIDATE } from '../utils/constants'
 import { getHome } from '../utils/storyblok'
 import Image from '../components/image'
 import Markdown from '../components/markdown'
@@ -54,5 +54,6 @@ export async function getStaticProps() {
       introduction,
       contacts
     },
+    revalidate: STATIC_PROPS_REVALIDATE
   }
 }

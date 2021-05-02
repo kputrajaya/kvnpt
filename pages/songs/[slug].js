@@ -1,5 +1,6 @@
 import Head from 'next/head'
 
+import { STATIC_PROPS_REVALIDATE } from '../../utils/constants'
 import BackButton from '../../components/back_button'
 
 export default function Song() {
@@ -9,12 +10,12 @@ export default function Song() {
 export async function getStaticPaths() {
   const paths = []
 
-  return {paths, fallback: false}
+  return {paths, fallback: true}
 }
 
 export async function getStaticProps({ params }) {
   return {
-    props: {}
+    props: {},
+    revalidate: STATIC_PROPS_REVALIDATE
   }
 }
-
