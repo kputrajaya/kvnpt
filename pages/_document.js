@@ -25,13 +25,14 @@ class MyDocument extends Document {
   }
 
   render() {
-    const initScript = Uglify.minify(this.init.toString(), {fromString: true}).code
+    let initScript = `(${this.init.toString()})();`
+    initScript = Uglify.minify(initScript).code
 
     return (
       <Html>
         <Head />
         <body>
-          <script dangerouslySetInnerHTML={{__html: `(${initScript})();`}} />
+          <script dangerouslySetInnerHTML={{__html: initScript}} />
           <Main />
           <NextScript />
         </body>
