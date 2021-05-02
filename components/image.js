@@ -19,13 +19,13 @@ export default function Image({ src, title, width, height, dynamicRatio=false, .
   const style = dynamicRatio
     ? {
       width: 'auto',
-      maxWidth: width,
+      maxWidth: '100%',
+      height: 'auto',
       maxHeight: height
     }
     : {
       width,
-      minWidth: width,
-      height
+      height: 'auto'
     }
 
   return (

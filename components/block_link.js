@@ -7,11 +7,11 @@ export default function BlockLink({ block }) {
       <div className="flex">
         {
           block.link.preview.image &&
-          <div className="mr-4 flex-shrink-0">
+          <div className="mr-4 flex-shrink-0" style={{width: BLOCK_LINK_IMAGE_SIZE}}>
             <Image src={block.link.preview.image} width={BLOCK_LINK_IMAGE_SIZE} height={BLOCK_LINK_IMAGE_SIZE} dynamicRatio />
           </div>
         }
-        <div className="min-w-0">
+        <div className="min-w-0 flex-grow-1">
           <div className="mb-1 font-bold truncate">{block.link.preview.title}</div>
           {
             block.link.preview.description &&
