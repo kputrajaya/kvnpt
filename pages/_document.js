@@ -1,7 +1,8 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
+import Uglify from 'uglify-js'
 
 class MyDocument extends Document {
-  noFlash = function () {
+  init = function () {
     var key = 'darkMode';
     var clsDark = 'dark';
     var clsLight = 'light';
@@ -24,11 +25,13 @@ class MyDocument extends Document {
   }
 
   render() {
+    const initScript = Uglify.minify(this.init.toString(), {fromString: true})
+
     return (
       <Html>
         <Head />
         <body>
-          <script dangerouslySetInnerHTML={{__html: `(${this.noFlash.toString()})();`}} />
+          <script dangerouslySetInnerHTML={{__html: `(${initScript})();`}} />
           <Main />
           <NextScript />
         </body>
