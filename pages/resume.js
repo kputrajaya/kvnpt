@@ -57,7 +57,7 @@ export default function Resume({ resume }) {
 
       <BackButton href="/" />
       <Image src={resume.photo.url} width={RESUME_AVATAR_SIZE} height={RESUME_AVATAR_SIZE} className="mb-4 rounded-full" />
-      <h1 className="mb-1 text-2xl font-semibold">{resume.name}</h1>
+      <h1 className="mb-2 text-2xl font-semibold">{resume.name}</h1>
       <h3 className="mb-6 text-sm text-scheme-third">{resume.position} &nbsp;&middot;&nbsp; {resume.location}</h3>
 
       <div className="text-sm"><Markdown text={resume.summary} /></div>

@@ -17,8 +17,14 @@ export default function Post({ post }) {
       </Head>
 
       <BackButton href="/blog/pages/1" />
-      <h1 className="mb-1 text-2xl font-semibold">{post.name}</h1>
-      <h3 className="mb-8 text-sm text-scheme-third">{format(parseISO(post.published_at), 'd LLL yyyy')}</h3>
+      <h1 className="mb-2 text-2xl font-semibold">{post.name}</h1>
+      <h3 className="mb-8 text-sm text-scheme-third">
+        {format(parseISO(post.published_at), 'd LLL yyyy')}
+        {
+          post.tag_list.length &&
+          <> &nbsp;&middot;&nbsp; {post.tag_list.join(', ')}</>
+        }
+      </h3>
 
       <div>
         {
