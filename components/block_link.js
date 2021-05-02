@@ -12,7 +12,7 @@ export default function BlockLink({ block }) {
           </div>
         }
         <div className="min-w-0 flex-grow-1">
-          <div className="mb-1 font-bold truncate">{block.link.preview.title}</div>
+          <div className="mb-1 font-semibold truncate">{block.link.preview.title}</div>
           {
             block.link.preview.description &&
             <div className="mb-2 text-xs text-scheme-third">{block.link.preview.description}</div>
@@ -25,7 +25,7 @@ export default function BlockLink({ block }) {
 
   return (
     <div>
-      <a className="kvn-card max-w-md mx-auto no-underline block" href={block.link.url} target="_blank">
+      <a className="kvn-card max-w-md mx-auto block" href={block.link.url} target="_blank">
         {renderLink()}
       </a>
       {

@@ -21,7 +21,8 @@ p {
 }
 
 a {
-  @apply underline;
+  @apply text-red-600;
+  @apply dark:text-red-500;
 }
 
 strong {

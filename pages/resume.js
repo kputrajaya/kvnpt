@@ -32,7 +32,7 @@ export default function Resume({ resume }) {
       companies.map((company, index) => (
         <div className="kvn-card mt-4" key={index}>
           <div className="-mb-4">
-            <a className="font-semibold text-scheme-first inline-block" href={company.company.link.url} target="_blank">
+            <a className="font-semibold inline-block" href={company.company.link.url} target="_blank">
               {company.company.caption}
             </a>
           </div>
