@@ -8,6 +8,8 @@ import BackButton from '../../../components/back_button'
 import Block from '../../../components/block'
 
 export default function Post({ post }) {
+  if (!post) return null
+
   return (
     <>
       <Head>
@@ -54,6 +56,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   // Get post for current slug
   const resPost = await getPost(params.slug)
+  if (!resPost?.story) return {notFound: true}
 
   // Generate link preview
   const blocks = resPost.story.content.body

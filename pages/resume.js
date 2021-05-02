@@ -24,7 +24,7 @@ export default function Resume({ resume }) {
         currentCompany.positions.push(block)
       }
     })
-    if (currentCompany && currentCompany.positions.length) {
+    if (currentCompany?.positions?.length) {
       companies.push(currentCompany)
     }
 

@@ -5,7 +5,7 @@ import Image from './image'
 
 export default function BlockPhoto({ block }) {
   let image = <Image src={block.image.url} width={BLOCK_PHOTO_MAX_WIDTH} height={BLOCK_PHOTO_MAX_HEIGHT} dynamicRatio />
-  if (block.link && block.link.url) {
+  if (block.link?.url) {
     image = <a href={block.link.url} target="_blank">{image}</a>
   }
 

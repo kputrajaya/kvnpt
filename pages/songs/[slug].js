@@ -14,6 +14,8 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
+  if (false) return {notFound: true}
+
   return {
     props: {},
     revalidate: STATIC_PROPS_REVALIDATE
