@@ -15,7 +15,7 @@ export default function BlockLink({ block }) {
           <div className="mb-1 font-semibold truncate">{block.link.preview.title}</div>
           {
             block.link.preview.description &&
-            <div className="mb-2 text-xs text-scheme-third">{block.link.preview.description}</div>
+            <div className="mb-2 text-xs text-scheme-second">{block.link.preview.description}</div>
           }
           <div className="text-xs text-scheme-third">{block.link.preview.url}</div>
         </div>
