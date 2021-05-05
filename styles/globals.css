@@ -15,6 +15,17 @@ body {
   @apply bg-gray-100;
   @apply dark:bg-gray-900;
 }
+body::after {
+  content: '';
+
+  @apply fixed;
+  @apply inset-0;
+  @apply bottom-1/2;
+  @apply bg-custom-light;
+  @apply dark:bg-custom-dark;
+  @apply bg-cover;
+  @apply -z-1;
+}
 
 p {
   @apply mb-4;
@@ -23,6 +34,11 @@ p {
 a {
   @apply text-red-600;
   @apply dark:text-red-500;
+}
+
+img {
+  @apply dark:opacity-90;
+  @apply print:dark:opacity-100;
 }
 
 strong {
