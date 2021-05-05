@@ -32,7 +32,7 @@ export default function Home({ photo, introduction, contacts }) {
               {
                 contacts.map((contact, index) => (
                   <a className="mr-4 inline-block" href={contact.link.url} target="_blank" key={index}>
-                    <Image src={contactSvgMap[contact.caption]} title={contact.caption} width={INTRO_CONTACT_SIZE} height={INTRO_CONTACT_SIZE} className="fill-current text-scheme-first" />
+                    <Image src={contactSvgMap[contact.caption]} title={contact.caption} width={INTRO_CONTACT_SIZE} height={INTRO_CONTACT_SIZE} className="fill-current text-scheme-primary" />
                   </a>
                 ))
               }

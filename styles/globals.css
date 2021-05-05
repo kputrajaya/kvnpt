@@ -63,6 +63,11 @@ strong {
   @apply dark:text-gray-400;
 }
 
+.text-scheme-primary {
+  @apply text-red-600;
+  @apply dark:text-red-500;
+}
+
 .bg-scheme {
   @apply bg-gray-200;
   @apply dark:bg-gray-800;
