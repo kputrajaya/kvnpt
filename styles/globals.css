@@ -33,7 +33,6 @@ p {
 
 a {
   @apply text-red-600;
-  @apply dark:text-red-500;
 }
 
 img {
@@ -65,7 +64,6 @@ strong {
 
 .text-scheme-primary {
   @apply text-red-600;
-  @apply dark:text-red-500;
 }
 
 .bg-scheme {
