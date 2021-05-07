@@ -8,9 +8,7 @@ export default function Song() {
 }
 
 export async function getStaticPaths() {
-  const paths = []
-
-  return {paths, fallback: true}
+  return {paths: [], fallback: true}
 }
 
 export async function getStaticProps({ params }) {

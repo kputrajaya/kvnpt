@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { format, parseISO } from 'date-fns'
 
-import { BLOG_PER_PAGE_MAX, STATIC_PROPS_REVALIDATE } from '../../../utils/constants'
+import { STATIC_PROPS_REVALIDATE } from '../../../utils/constants'
 import { getLinkPreview } from '../../../utils/generics'
 import { getPost, getPostCount, getPosts } from '../../../utils/storyblok'
 import BackButton from '../../../components/back_button'
@@ -40,23 +40,7 @@ export default function Post({ post }) {
 }
 
 export async function getStaticPaths() {
-  // Get post count and page count (using max fetch count to server)
-  const count = await getPostCount()
-  const pageCount = Math.ceil(count / BLOG_PER_PAGE_MAX)
-
-  // Get multiple pages of posts in parallel
-  const multiPosts = await Promise.all(
-    [...Array(pageCount).keys()].map((key) => getPosts(key + 1, BLOG_PER_PAGE_MAX))
-  )
-
-  // Flatten into list of slugs
-  const paths = multiPosts.flatMap(posts => posts.stories.map(post => ({
-    params: {
-      slug: post.slug
-    }
-  })))
-
-  return {paths, fallback: true}
+  return {paths: [], fallback: true}
 }
 
 export async function getStaticProps({ params }) {
