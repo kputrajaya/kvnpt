@@ -21,7 +21,7 @@ export default function Post({ post }) {
       <h3 className="mb-8 text-sm text-scheme-third">
         {format(parseISO(post.published_at), 'd LLL yyyy')}
         {
-          post.tag_list.length &&
+          post.tag_list.length > 0 &&
           <> &nbsp;&middot;&nbsp; {post.tag_list.join(', ')}</>
         }
       </h3>
