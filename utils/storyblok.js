@@ -27,4 +27,4 @@ export const getPostCount = async () => {
   return posts.count
 }
 
-export const getPost = (slug) => _getJson(`posts/${slug}`, 'resolve_relations=photo.album,song.album')
+export const getPost = (slug) => _getJson(`posts/${slug}`, 'resolve_relations=photo_album_link.photo_album')

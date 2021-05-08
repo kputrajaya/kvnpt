@@ -20,12 +20,6 @@ export default function BlockPhoto({ block }) {
           {block.caption}
         </div>
       }
-      {
-        block.album &&
-        <div className="mt-2 text-xs text-center italic text-scheme-third">
-          Album: <Link href={`/photos/${block.album.slug}`}><a>{block.album.name}</a></Link>
-        </div>
-      }
     </div>
   )
 }
