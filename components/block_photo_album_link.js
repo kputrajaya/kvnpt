@@ -33,17 +33,10 @@ export default function BlockPhotoAlbumLink({ block }) {
       </div>
       <div className="leading-0">
         {
-          images.map((image, index) => (
-            <>
-              {
-                (index < BLOCK_PHOTO_ALBUM_LINK_PREVIEW_COUNT || expand) &&
-                (
-                  <div className="cursor-pointer sm:w-6/12 inline-block" onClick={() => setLightboxControl({toggler: !lightboxControl.toggler, index})} key={index}>
-                    <Image src={image} width={BLOCK_PHOTO_ALBUM_LINK_THUMB_SIZE} height={BLOCK_PHOTO_ALBUM_LINK_THUMB_SIZE} />
-                  </div>
-                )
-              }
-            </>
+          images.filter((image, index) => expand || index < BLOCK_PHOTO_ALBUM_LINK_PREVIEW_COUNT).map((image, index) => (
+            <div className="cursor-pointer sm:w-6/12 inline-block" onClick={() => setLightboxControl({toggler: !lightboxControl.toggler, index})} key={index}>
+              <Image src={image} width={BLOCK_PHOTO_ALBUM_LINK_THUMB_SIZE} height={BLOCK_PHOTO_ALBUM_LINK_THUMB_SIZE} />
+            </div>
           ))
         }
         {
