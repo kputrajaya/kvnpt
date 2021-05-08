@@ -1,12 +1,12 @@
 import Head from 'next/head'
 
-import { RESUME_AVATAR_SIZE, STATIC_PROPS_REVALIDATE } from '../utils/constants'
-import { getResume } from '../utils/storyblok'
+import {RESUME_AVATAR_SIZE, STATIC_PROPS_REVALIDATE} from '../utils/constants'
+import {getResume} from '../utils/storyblok'
 import BackButton from '../components/back_button'
 import Image from '../components/image'
 import Markdown from '../components/markdown'
 
-export default function Resume({ resume }) {
+export default function Resume({resume}) {
   const renderExperience = () => {
     // Group positions based on company
     const companies = []
@@ -18,7 +18,7 @@ export default function Resume({ resume }) {
         }
         currentCompany = {
           company: block,
-          positions: []
+          positions: [],
         }
       } else if (currentCompany) {
         currentCompany.positions.push(block)
@@ -32,14 +32,16 @@ export default function Resume({ resume }) {
       companies.map((company, index) => (
         <div className="kvn-card mt-4" key={index}>
           <div className="-mb-4">
-            <a className="font-semibold inline-block" href={company.company.link.url} target="_blank">
+            <a className="font-semibold inline-block" href={company.company.link.url} target="_blank" rel="noreferrer">
               {company.company.caption}
             </a>
           </div>
           {
             company.positions.map((position, index) => (
               <div className="mt-7 -mb-4 text-sm" key={index}>
-                <h4 className="mb-1 font-semibold text-scheme-second">{position.position} &nbsp;&middot;&nbsp; {position.start} &ndash; {position.end}</h4>
+                <h4 className="mb-1 font-semibold text-scheme-second">
+                  {position.position} &nbsp;&middot;&nbsp; {position.start} &ndash; {position.end}
+                </h4>
                 <div className="text-scheme-third"><Markdown text={position.summary} /></div>
               </div>
             ))
@@ -56,7 +58,12 @@ export default function Resume({ resume }) {
       </Head>
 
       <BackButton href="/" />
-      <Image src={resume.photo.url} width={RESUME_AVATAR_SIZE} height={RESUME_AVATAR_SIZE} className="mb-4 rounded-full" />
+      <Image
+        src={resume.photo.url}
+        width={RESUME_AVATAR_SIZE}
+        height={RESUME_AVATAR_SIZE}
+        className="mb-4 rounded-full"
+      />
       <h1 className="mb-2 text-2xl font-semibold">{resume.name}</h1>
       <h3 className="mb-6 text-sm text-scheme-third">{resume.position} &nbsp;&middot;&nbsp; {resume.location}</h3>
 
@@ -86,8 +93,8 @@ export async function getStaticProps() {
 
   return {
     props: {
-      resume: resResume.story.content
+      resume: resResume.story.content,
     },
-    revalidate: STATIC_PROPS_REVALIDATE
+    revalidate: STATIC_PROPS_REVALIDATE,
   }
 }

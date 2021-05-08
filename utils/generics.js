@@ -1,10 +1,12 @@
-import { format, parseISO } from 'date-fns'
-import { getLinkPreview as getLinkPreviewInner } from 'link-preview-js'
+import {format, parseISO} from 'date-fns'
+import {getLinkPreview as getLinkPreviewInner} from 'link-preview-js'
 
-import { IMAGEKIT_ENDPOINT } from './constants'
+import {IMAGEKIT_ENDPOINT} from './constants'
 
 export const formatDate = (date) => {
-  const dateWithoutZ = date.substr(-1) === 'Z' ? date.substr(0, date.length - 1) : date
+  const dateWithoutZ = date.substr(-1) === 'Z' ?
+    date.substr(0, date.length - 1) :
+    date
   return format(parseISO(dateWithoutZ), 'd LLL yyyy')
 }
 
@@ -28,10 +30,10 @@ export const getLinkPreview = async (url) => {
       title: preview.title || preview.siteName || null,
       description: preview.description || null,
       image: (
-        (preview.images || []).find(_ => true) ||
-        (preview.favicons || []).filter((icon) => icon.toLowerCase().endsWith('.png')).find(_ => true) ||
+        (preview.images || []).find((_) => true) ||
+        (preview.favicons || []).filter((icon) => icon.toLowerCase().endsWith('.png')).find((_) => true) ||
         null
-      )
+      ),
     }
   } catch (e) {
     return null

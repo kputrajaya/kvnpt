@@ -1,18 +1,18 @@
 import Head from 'next/head'
 
-import { INTRO_AVATAR_SIZE, INTRO_CONTACT_SIZE, STATIC_PROPS_REVALIDATE } from '../utils/constants'
-import { getHome } from '../utils/storyblok'
+import {INTRO_AVATAR_SIZE, INTRO_CONTACT_SIZE, STATIC_PROPS_REVALIDATE} from '../utils/constants'
+import {getHome} from '../utils/storyblok'
 import Image from '../components/image'
 import Markdown from '../components/markdown'
 import SvgEmail from '../public/images/contact-email.svg'
 import SvgGitHub from '../public/images/contact-github.svg'
 import SvgLinkedIn from '../public/images/contact-linkedin.svg'
 
-export default function Home({ photo, introduction, contacts }) {
+export default function Home({photo, introduction, contacts}) {
   const contactSvgMap = {
     Email: SvgEmail,
     GitHub: SvgGitHub,
-    LinkedIn: SvgLinkedIn
+    LinkedIn: SvgLinkedIn,
   }
 
   return (
@@ -23,7 +23,12 @@ export default function Home({ photo, introduction, contacts }) {
 
       <div className="h-screen -my-8 py-8 flex items-center">
         <div className="md:flex md:items-start">
-          <Image src={photo.url} width={INTRO_AVATAR_SIZE} height={INTRO_AVATAR_SIZE} className="rounded-full md:mt-1 md:flex-shrink-0" />
+          <Image
+            src={photo.url}
+            width={INTRO_AVATAR_SIZE}
+            height={INTRO_AVATAR_SIZE}
+            className="rounded-full md:mt-1 md:flex-shrink-0"
+          />
           <div className="mt-8 md:mt-0 md:ml-8">
             <div className="mb-8">
               <Markdown text={introduction} />
@@ -31,8 +36,14 @@ export default function Home({ photo, introduction, contacts }) {
             <div style={{height: INTRO_CONTACT_SIZE}}>
               {
                 contacts.map((contact, index) => (
-                  <a className="mr-4 inline-block" href={contact.link.url} target="_blank" key={index}>
-                    <Image src={contactSvgMap[contact.caption]} title={contact.caption} width={INTRO_CONTACT_SIZE} height={INTRO_CONTACT_SIZE} className="fill-current text-scheme-primary" />
+                  <a className="mr-4 inline-block" href={contact.link.url} target="_blank" rel="noreferrer" key={index}>
+                    <Image
+                      src={contactSvgMap[contact.caption]}
+                      title={contact.caption}
+                      width={INTRO_CONTACT_SIZE}
+                      height={INTRO_CONTACT_SIZE}
+                      className="fill-current text-scheme-primary"
+                    />
                   </a>
                 ))
               }
@@ -46,14 +57,14 @@ export default function Home({ photo, introduction, contacts }) {
 
 export async function getStaticProps() {
   const resHome = await getHome()
-  const { photo, introduction, contacts } = resHome.story.content
+  const {photo, introduction, contacts} = resHome.story.content
 
   return {
     props: {
       photo,
       introduction,
-      contacts
+      contacts,
     },
-    revalidate: STATIC_PROPS_REVALIDATE
+    revalidate: STATIC_PROPS_REVALIDATE,
   }
 }

@@ -1,4 +1,4 @@
-import { STORYBLOK_TOKEN } from './constants'
+import {STORYBLOK_TOKEN} from './constants'
 
 const _get = (path, param='') => {
   const timestamp = Date.now()
@@ -6,7 +6,7 @@ const _get = (path, param='') => {
   return fetch(url)
 }
 const _getJson = (path, param='') => {
-  return _get(path, param).then(res => res.json())
+  return _get(path, param).then((res) => res.json())
 }
 
 export const getHome = () => _getJson('site')
@@ -18,7 +18,7 @@ export const getPosts = async (page, perPage) => {
   const resPostsJson = await resPosts.json()
   return {
     count: resPosts.headers.get('total'),
-    stories: resPostsJson.stories
+    stories: resPostsJson.stories,
   }
 }
 

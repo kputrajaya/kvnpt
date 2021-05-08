@@ -1,13 +1,13 @@
 import Head from 'next/head'
 
-import { STATIC_PROPS_REVALIDATE } from '../../../utils/constants'
-import { getLinkPreview } from '../../../utils/generics'
-import { getPost } from '../../../utils/storyblok'
+import {STATIC_PROPS_REVALIDATE} from '../../../utils/constants'
+import {getLinkPreview} from '../../../utils/generics'
+import {getPost} from '../../../utils/storyblok'
 import BackButton from '../../../components/back_button'
 import Block from '../../../components/block'
 import PostSubtitle from '../../../components/post_subtitle'
 
-export default function Post({ post }) {
+export default function Post({post}) {
   if (!post) return null
 
   return (
@@ -39,7 +39,7 @@ export async function getStaticPaths() {
   return {paths: [], fallback: true}
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({params}) {
   // Get post for current slug
   const resPost = await getPost(params.slug)
   if (!resPost?.story) return {notFound: true}
@@ -54,8 +54,8 @@ export async function getStaticProps({ params }) {
 
   return {
     props: {
-      post: resPost.story
+      post: resPost.story,
     },
-    revalidate: STATIC_PROPS_REVALIDATE
+    revalidate: STATIC_PROPS_REVALIDATE,
   }
 }

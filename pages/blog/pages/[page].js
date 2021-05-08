@@ -1,13 +1,12 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import ReactMarkdown from 'react-markdown'
 
-import { BLOG_PER_PAGE, STATIC_PROPS_REVALIDATE } from '../../../utils/constants'
-import { getPostCount, getPosts } from '../../../utils/storyblok'
+import {BLOG_PER_PAGE, STATIC_PROPS_REVALIDATE} from '../../../utils/constants'
+import {getPostCount, getPosts} from '../../../utils/storyblok'
 import BackButton from '../../../components/back_button'
 import PostSubtitle from '../../../components/post_subtitle'
 
-export default function Page({ posts, pageCurrent, pageCount }) {
+export default function Page({posts, pageCurrent, pageCount}) {
   if (!posts) return null
 
   return (
@@ -61,14 +60,14 @@ export async function getStaticPaths() {
   // Build list of pages
   const paths = [...Array(pageCount).keys()].map((key) => ({
     params: {
-      page: `${key + 1}`
-    }
+      page: `${key + 1}`,
+    },
   }))
 
   return {paths, fallback: true}
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({params}) {
   // Get posts for current page
   const pageCurrent = Math.floor(params.page)
   if (!(pageCurrent > 0)) return {notFound: true}
@@ -80,8 +79,8 @@ export async function getStaticProps({ params }) {
     props: {
       posts: resPosts.stories,
       pageCurrent,
-      pageCount
+      pageCount,
     },
-    revalidate: STATIC_PROPS_REVALIDATE
+    revalidate: STATIC_PROPS_REVALIDATE,
   }
 }

@@ -1,32 +1,30 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document'
+import Document, {Html, Head, Main, NextScript} from 'next/document'
 import Uglify from 'uglify-js'
 
 class MyDocument extends Document {
-  init = function () {
-    var key = 'darkMode';
-    var clsDark = 'dark';
-    var clsLight = 'light';
-    var elm = document.documentElement;
-
-    var useDark;
-    try {
-      useDark = JSON.parse(localStorage.getItem(key));
-    } catch (err) {
-      useDark = window.matchMedia
-        ? window.matchMedia('(prefers-color-scheme: dark)').matches
-        : elm.classList.contains(clsDark);
-      try {
-        localStorage.setItem(key, JSON.stringify(useDark));
-      } catch (err) { }
-    }
-
-    elm.classList.add(useDark ? clsDark : clsLight);
-    elm.classList.remove(useDark ? clsLight : clsDark);
-  }
-
   render() {
-    let initScript = `(${this.init.toString()})();`
-    initScript = Uglify.minify(initScript).code
+    const init = function() {
+      const key = 'darkMode'
+      const clsDark = 'dark'
+      const clsLight = 'light'
+      const elm = document.documentElement
+
+      let useDark
+      try {
+        useDark = JSON.parse(localStorage.getItem(key))
+      } catch (err) {
+        useDark = window.matchMedia ?
+          window.matchMedia('(prefers-color-scheme: dark)').matches :
+          elm.classList.contains(clsDark)
+        try {
+          localStorage.setItem(key, JSON.stringify(useDark))
+        } catch (err) {}
+      }
+
+      elm.classList.add(useDark ? clsDark : clsLight)
+      elm.classList.remove(useDark ? clsLight : clsDark)
+    }
+    const initScript = Uglify.minify(`(${init.toString()})();`).code
 
     return (
       <Html>
@@ -37,7 +35,7 @@ class MyDocument extends Document {
           <NextScript />
         </body>
       </Html>
-    );
+    )
   }
 }
 

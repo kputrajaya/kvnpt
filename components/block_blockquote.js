@@ -1,4 +1,4 @@
-export default function BlockBlockquote({ block }) {
+export default function BlockBlockquote({block}) {
   return (
     <div>
       <div className="py-6 pl-7 pr-0 border-l-8">

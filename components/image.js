@@ -1,22 +1,22 @@
 import SVG from 'react-inlinesvg'
 
-import { buildImageSrc } from '../utils/generics'
+import {buildImageSrc} from '../utils/generics'
 
-export default function Image({ src, title, width, height, dynamicRatio=false, ...props }) {
+export default function Image({src, title, width, height, dynamicRatio=false, ...props}) {
   const isSvg = src.startsWith('<svg') || src.toLowerCase().endsWith('.svg')
 
   const Tag = isSvg ? SVG : 'img'
   const newSrc = isSvg ? src : buildImageSrc(src, width, height, dynamicRatio)
-  const style = dynamicRatio
-    ? {
+  const style = dynamicRatio ?
+    {
       width: 'auto',
       maxWidth: '100%',
       height: 'auto',
-      maxHeight: height
-    }
-    : {
+      maxHeight: height,
+    } :
+    {
       width,
-      height: 'auto'
+      height: 'auto',
     }
 
   return (

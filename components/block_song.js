@@ -1,8 +1,6 @@
-import Link from 'next/link'
-
 import Audio from './audio'
 
-export default function BlockSong({ block }) {
+export default function BlockSong({block}) {
   return (
     <div>
       <Audio src={block.audio.url} />

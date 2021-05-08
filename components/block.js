@@ -5,7 +5,7 @@ import BlockPhoto from './block_photo'
 import BlockPhotoAlbumLink from './block_photo_album_link'
 import BlockSong from './block_song'
 
-export default function Block({ block }) {
+export default function Block({block}) {
   const renderBlock = () => {
     switch (block.component) {
       case 'blockquote':
