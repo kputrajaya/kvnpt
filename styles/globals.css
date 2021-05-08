@@ -69,6 +69,7 @@ strong {
 .bg-scheme {
   @apply bg-gray-200;
   @apply dark:bg-gray-800;
+  @apply bg-opacity-90;
 }
 
 
@@ -78,10 +79,11 @@ strong {
   @apply p-4;
   @apply bg-gray-200;
   @apply dark:bg-gray-800;
+  @apply bg-opacity-90;
   @apply border;
   @apply border-gray-200;
   @apply dark:border-gray-800;
-  @apply rounded;
+  @apply rounded-md;
   @apply overflow-hidden;
 }
 .kvn-card.kvn-card-small {

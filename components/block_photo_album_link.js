@@ -1,12 +1,11 @@
 import { useState } from 'react'
 import FsLightbox from 'fslightbox-react'
 
+import { BLOCK_PHOTO_ALBUM_LINK_IMAGE_SIZE, BLOCK_PHOTO_ALBUM_LINK_PREVIEW_COUNT, BLOCK_PHOTO_ALBUM_LINK_THUMB_SIZE } from '../utils/constants'
 import { buildImageSrc } from '../utils/generics'
 import Image from './image'
 
 export default function BlockPhotoAlbumLink({ block }) {
-  console.log(block)
-
   const [lightboxControl, setLightboxControl] = useState({toggler: false, index: 0})
   const [expand, setExpand] = useState(false)
 
@@ -14,7 +13,7 @@ export default function BlockPhotoAlbumLink({ block }) {
   const images = []
   const albums = new Set()
   block.photo_album.content.photos.forEach((photo) => {
-    lightboxSources.push(buildImageSrc(photo.image.url, 1500, 1500, true))
+    lightboxSources.push(buildImageSrc(photo.image.url, BLOCK_PHOTO_ALBUM_LINK_IMAGE_SIZE, BLOCK_PHOTO_ALBUM_LINK_IMAGE_SIZE, true))
     images.push(photo.image.url)
     if (photo.album) {
       albums.add(photo.album.slug)
@@ -37,19 +36,22 @@ export default function BlockPhotoAlbumLink({ block }) {
           images.map((image, index) => (
             <>
               {
-                (index < 9 || expand) &&
+                (index < BLOCK_PHOTO_ALBUM_LINK_PREVIEW_COUNT || expand) &&
                 (
-                  <div className="cursor-pointer w-6/12 md:w-4/12 inline-block" onClick={() => setLightboxControl({toggler: !lightboxControl.toggler, index})} key={index}>
-                    <Image src={image} width={350} height={350} />
+                  <div className="cursor-pointer sm:w-6/12 inline-block" onClick={() => setLightboxControl({toggler: !lightboxControl.toggler, index})} key={index}>
+                    <Image src={image} width={BLOCK_PHOTO_ALBUM_LINK_THUMB_SIZE} height={BLOCK_PHOTO_ALBUM_LINK_THUMB_SIZE} />
                   </div>
                 )
               }
             </>
           ))
         }
-        <button className="w-full mt-2 -mb-2 p-2 text-xs font-semibold text-scheme-primary text-center cursor-pointer" onClick={() => setExpand(!expand)}>
-          {expand ? 'View less' : 'View more'} &hellip;
-        </button>
+        {
+          images.length > BLOCK_PHOTO_ALBUM_LINK_PREVIEW_COUNT &&
+          <button className="w-full mt-2 -mb-2 p-2 text-xs text-scheme-third text-center cursor-pointer" onClick={() => setExpand(!expand)}>
+            {expand ? 'View less' : `View ${images.length - BLOCK_PHOTO_ALBUM_LINK_PREVIEW_COUNT} more`} &hellip;
+          </button>
+        }
         <FsLightbox
           sources={lightboxSources}
           toggler={lightboxControl.toggler}

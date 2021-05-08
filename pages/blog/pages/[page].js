@@ -3,9 +3,9 @@ import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
 
 import { BLOG_PER_PAGE, STATIC_PROPS_REVALIDATE } from '../../../utils/constants'
-import { formatDate } from '../../../utils/generics'
 import { getPostCount, getPosts } from '../../../utils/storyblok'
 import BackButton from '../../../components/back_button'
+import PostSubtitle from '../../../components/post_subtitle'
 
 export default function Page({ posts, pageCurrent, pageCount }) {
   if (!posts) return null
@@ -24,7 +24,9 @@ export default function Page({ posts, pageCurrent, pageCount }) {
           <Link href={`/blog/posts/${post.slug}`} key={index}>
             <a className="kvn-card mb-4 block">
               <h2 className="mb-1 font-semibold">{post.name}</h2>
-              <h3 className="text-sm text-scheme-third">{formatDate(post.published_at)}</h3>
+              <h3 className="text-sm text-scheme-third">
+                <PostSubtitle post={post} />
+              </h3>
             </a>
           </Link>
         ))

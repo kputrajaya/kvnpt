@@ -1,10 +1,11 @@
 import Head from 'next/head'
 
 import { STATIC_PROPS_REVALIDATE } from '../../../utils/constants'
-import { formatDate, getLinkPreview } from '../../../utils/generics'
-import { getPost, getPostCount, getPosts } from '../../../utils/storyblok'
+import { getLinkPreview } from '../../../utils/generics'
+import { getPost } from '../../../utils/storyblok'
 import BackButton from '../../../components/back_button'
 import Block from '../../../components/block'
+import PostSubtitle from '../../../components/post_subtitle'
 
 export default function Post({ post }) {
   if (!post) return null
@@ -18,11 +19,7 @@ export default function Post({ post }) {
       <BackButton href="/blog/pages/1" />
       <h1 className="mb-2 text-2xl font-semibold">{post.name}</h1>
       <h3 className="mb-8 text-sm text-scheme-third">
-        {formatDate(post.published_at)}
-        {
-          post.tag_list.length > 0 &&
-          <> &nbsp;&middot;&nbsp; {post.tag_list.join(', ')}</>
-        }
+        <PostSubtitle post={post} />
       </h3>
 
       <div>
