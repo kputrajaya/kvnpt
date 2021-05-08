@@ -24,6 +24,9 @@ module.exports = {
         'custom-dark': `linear-gradient(to bottom, rgba(23, 23, 23, .2) 40%, rgba(23, 23, 23, 1) 60%), url('${imagePrefix}/images/background-dark.jpg')`,
         'custom-light': `linear-gradient(to bottom, rgba(245, 245, 245, .2) 40%, rgba(245, 245, 245, 1) 60%), url('${imagePrefix}/images/background-light.jpg')`,
       }),
+      lineHeight: {
+       '0': '0',
+      },
       zIndex: {
         '-1': '-1',
       },

@@ -68,7 +68,7 @@ export default function Resume({ resume }) {
       </ul>
 
       <h3 className="mt-12 text-lg font-semibold">Skills</h3>
-      <ul className="mt-4 leading-none">
+      <ul className="mt-4 leading-0">
         {
           resume.skills.map((block, index) => (
             <li className="kvn-card kvn-card-small mt-2 mr-2 text-sm inline-block" key={index}>

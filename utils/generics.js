@@ -1,6 +1,25 @@
 import { format, parseISO } from 'date-fns'
 import { getLinkPreview as getLinkPreviewInner } from 'link-preview-js'
 
+import { IMAGEKIT_ENDPOINT } from './constants'
+
+export const formatDate = (date) => {
+  const dateWithoutZ = date.substr(-1) === 'Z' ? date.substr(0, date.length - 1) : date
+  return format(parseISO(dateWithoutZ), 'd LLL yyyy')
+}
+
+export const buildImageSrc = (src, width, height, dynamicRatio=false) => {
+  let newSrc = src
+  if (newSrc.startsWith('http') && !newSrc.startsWith(IMAGEKIT_ENDPOINT)) {
+    newSrc = IMAGEKIT_ENDPOINT + newSrc
+  }
+  newSrc += `?tr=w-${width},h-${height}`
+  if (dynamicRatio) {
+    newSrc += ',c-at_max'
+  }
+  return newSrc
+}
+
 export const getLinkPreview = async (url) => {
   try {
     const preview = await getLinkPreviewInner(url)
@@ -17,9 +36,4 @@ export const getLinkPreview = async (url) => {
   } catch (e) {
     return null
   }
-}
-
-export const formatDate = (date) => {
-  const dateWithoutZ = date.substr(-1) === 'Z' ? date.substr(0, date.length - 1) : date
-  return format(parseISO(dateWithoutZ), 'd LLL yyyy')
 }

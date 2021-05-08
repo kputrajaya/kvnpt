@@ -1,4 +1,5 @@
 import BlockBlockquote from './block_blockquote'
+import BlockGallery from './block_gallery'
 import BlockLink from './block_link'
 import BlockParagraph from './block_paragraph'
 import BlockPhoto from './block_photo'
@@ -9,6 +10,8 @@ export default function Block({ block }) {
     switch (block.component) {
       case 'blockquote':
         return <BlockBlockquote block={block} />
+      case 'gallery':
+        return <BlockGallery block={block} />
       case 'link':
         return <BlockLink block={block} />
       case 'paragraph':
