@@ -1,3 +1,4 @@
+import { format, parseISO } from 'date-fns'
 import { getLinkPreview as getLinkPreviewInner } from 'link-preview-js'
 
 export const getLinkPreview = async (url) => {
@@ -16,4 +17,9 @@ export const getLinkPreview = async (url) => {
   } catch (e) {
     return null
   }
+}
+
+export const formatDate = (date) => {
+  const dateWithoutZ = date.substr(-1) === 'Z' ? date.substr(0, date.length - 1) : date
+  return format(parseISO(dateWithoutZ), 'd LLL yyyy')
 }

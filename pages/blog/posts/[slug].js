@@ -1,8 +1,7 @@
 import Head from 'next/head'
-import { format, parseISO } from 'date-fns'
 
 import { STATIC_PROPS_REVALIDATE } from '../../../utils/constants'
-import { getLinkPreview } from '../../../utils/generics'
+import { formatDate, getLinkPreview } from '../../../utils/generics'
 import { getPost, getPostCount, getPosts } from '../../../utils/storyblok'
 import BackButton from '../../../components/back_button'
 import Block from '../../../components/block'
@@ -19,7 +18,7 @@ export default function Post({ post }) {
       <BackButton href="/blog/pages/1" />
       <h1 className="mb-2 text-2xl font-semibold">{post.name}</h1>
       <h3 className="mb-8 text-sm text-scheme-third">
-        {format(parseISO(post.published_at), 'd LLL yyyy')}
+        {formatDate(post.published_at)}
         {
           post.tag_list.length > 0 &&
           <> &nbsp;&middot;&nbsp; {post.tag_list.join(', ')}</>
