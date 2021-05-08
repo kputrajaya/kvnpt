@@ -51,17 +51,14 @@ strong {
   @apply text-gray-900;
   @apply dark:text-gray-100;
 }
-
 .text-scheme-second {
   @apply text-gray-700;
   @apply dark:text-gray-300;
 }
-
 .text-scheme-third {
   @apply text-gray-600;
   @apply dark:text-gray-400;
 }
-
 .text-scheme-primary {
   @apply text-red-600;
 }
@@ -70,6 +67,13 @@ strong {
   @apply bg-gray-200;
   @apply dark:bg-gray-800;
   @apply bg-opacity-90;
+  @apply dark:bg-opacity-90;  /* Specificity issue */
+}
+.bg-scheme-transparent {
+  @apply bg-gray-200;
+  @apply dark:bg-gray-800;
+  @apply bg-opacity-75;
+  @apply dark:bg-opacity-75;  /* Specificity issue */
 }
 
 

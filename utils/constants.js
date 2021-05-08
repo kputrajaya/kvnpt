@@ -16,6 +16,9 @@ export const IMAGEKIT_ENDPOINT = process.env.IMAGEKIT_ENDPOINT || ''
 export const INTRO_AVATAR_SIZE = 125
 export const INTRO_CONTACT_SIZE = 25
 
+export const PHOTO_ALBUM_PREVIEW_COUNT = 4
+export const PHOTO_ALBUM_THUMB_SIZE = 176
+
 export const RESUME_AVATAR_SIZE = 125
 
 export const STATIC_PROPS_REVALIDATE = process.env.STATIC_PROPS_REVALIDATE || 10
