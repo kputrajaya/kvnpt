@@ -8,6 +8,7 @@ export default function BlockPhotoAlbumLink({ block }) {
   console.log(block)
 
   const [lightboxControl, setLightboxControl] = useState({toggler: false, index: 0})
+  const [expand, setExpand] = useState(false)
 
   const lightboxSources = []
   const images = []
@@ -34,11 +35,21 @@ export default function BlockPhotoAlbumLink({ block }) {
       <div className="leading-0">
         {
           images.map((image, index) => (
-            <div className="cursor-pointer w-6/12 md:w-4/12 inline-block" onClick={() => setLightboxControl({toggler: !lightboxControl.toggler, index})} key={index}>
-              <Image src={image} width={350} height={350} />
-            </div>
+            <>
+              {
+                (index < 9 || expand) &&
+                (
+                  <div className="cursor-pointer w-6/12 md:w-4/12 inline-block" onClick={() => setLightboxControl({toggler: !lightboxControl.toggler, index})} key={index}>
+                    <Image src={image} width={350} height={350} />
+                  </div>
+                )
+              }
+            </>
           ))
         }
+        <button className="w-full mt-2 -mb-2 p-2 text-xs font-semibold text-scheme-primary text-center cursor-pointer" onClick={() => setExpand(!expand)}>
+          {expand ? 'View less' : 'View more'} &hellip;
+        </button>
         <FsLightbox
           sources={lightboxSources}
           toggler={lightboxControl.toggler}
