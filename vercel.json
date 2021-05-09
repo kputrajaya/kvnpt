@@ -1,0 +1,57 @@
+{
+  "redirects": [
+    {
+      "source": "/(bt|botler)",
+      "destination": "https://t.me/api_botler_bot"
+    },
+    {
+      "source": "/(fb|facebook)",
+      "destination": "https://www.facebook.com/kiloev"
+    },
+    {
+      "source": "/(fl|flickr)",
+      "destination": "https://flickr.com/photos/kputrajaya"
+    },
+    {
+      "source": "/(gh|github)(/.*)?",
+      "destination": "https://github.com/kiloev$2"
+    },
+    {
+      "source": "/(gs|gist)(/.*)?",
+      "destination": "http://gist.github.com/kiloev$2"
+    },
+    {
+      "source": "/(ig|instagram)",
+      "destination": "https://www.instagram.com/kputrajaya/"
+    },
+    {
+      "source": "/(in|linkedin)",
+      "destination": "https://www.linkedin.com/in/kputrajaya/"
+    },
+    {
+      "source": "/(pd|payday)",
+      "destination": "http://fbi.overkillsoftware.com/suspect/76561198079249102"
+    },
+    {
+      "source": "/(qu|quora)",
+      "destination": "https://www.quora.com/profile/Kevin-Putrajaya"
+    },
+    {
+      "source": "/(sp|spotify)",
+      "destination": "https://open.spotify.com/user/21qf3gujlq6pmr55bmvehhxpa"
+    },
+    {
+      "source": "/(st|steam)",
+      "destination": "https://steamcommunity.com/id/kiloev/"
+    },
+    {
+      "source": "/(sv|stardew)",
+      "destination": "https://stardew.info/planner/31-windy-moths-whimpered-cordially/",
+      "permanent": false
+    },
+    {
+      "source": "/(tw|twitter)",
+      "destination": "https://twitter.com/kputrajaya"
+    }
+  ]
+}

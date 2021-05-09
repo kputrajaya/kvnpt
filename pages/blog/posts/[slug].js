@@ -1,7 +1,7 @@
 import Head from 'next/head'
 
 import {SITE_TITLE, STATIC_PROPS_REVALIDATE} from '../../../utils/constants'
-import {getLinkPreview} from '../../../utils/generics'
+import {getLinkPreview} from '../../../utils/links'
 import {getPost} from '../../../utils/storyblok'
 import BackButton from '../../../components/back_button'
 import Block from '../../../components/block'

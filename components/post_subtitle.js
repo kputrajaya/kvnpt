@@ -1,5 +1,5 @@
 import {SVG_POST_SIZE} from '../utils/constants'
-import {formatDate} from '../utils/generics'
+import {formatDate} from '../utils/dates'
 import Image from './image'
 import SvgDate from '../public/images/post-date.svg'
 import SvgTag from '../public/images/post-tag.svg'
