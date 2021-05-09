@@ -23,6 +23,7 @@ export const PHOTO_ALBUM_THUMB_SIZE = 575
 export const RESUME_AVATAR_SIZE = 125
 
 export const SITE_TITLE = 'Kevin Putrajaya'
+export const SITE_DESCRIPTION = 'Personal site of Kevin Putrajaya, a Software Engineer from Indonesia.'
 
 export const STATIC_PROPS_REVALIDATE = process.env.STATIC_PROPS_REVALIDATE || 15
 
