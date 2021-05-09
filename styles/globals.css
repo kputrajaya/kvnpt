@@ -27,10 +27,6 @@ body::after {
   @apply -z-1;
 }
 
-p {
-  @apply mb-4;
-}
-
 a {
   @apply text-red-600;
 }
@@ -69,7 +65,7 @@ strong {
   @apply bg-opacity-90;
   @apply dark:bg-opacity-90;  /* Specificity issue */
 }
-.bg-scheme-transparent {
+.bg-scheme-75 {
   @apply bg-gray-200;
   @apply dark:bg-gray-800;
   @apply bg-opacity-75;
@@ -78,6 +74,16 @@ strong {
 
 
 /* Custom components */
+
+.kvn-markdown h1,
+.kvn-markdown h2,
+.kvn-markdown h3,
+.kvn-markdown h4,
+.kvn-markdown h5,
+.kvn-markdown h6,
+.kvn-markdown p {
+  @apply mb-4;
+}
 
 .kvn-card {
   @apply p-4;

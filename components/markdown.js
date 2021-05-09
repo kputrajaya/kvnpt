@@ -12,7 +12,6 @@ export default function Markdown({text}) {
   }
 
   return (
-    /* eslint-disable-next-line react/no-children-prop */
-    <ReactMarkdown children={text} components={components} />
+    <ReactMarkdown components={components} className="kvn-markdown">{text}</ReactMarkdown>
   )
 }

@@ -27,7 +27,7 @@ class MyDocument extends Document {
     const initScript = Uglify.minify(`(${init.toString()})();`).code
 
     return (
-      <Html>
+      <Html lang="en">
         <Head />
         <body>
           <script dangerouslySetInnerHTML={{__html: initScript}} />
