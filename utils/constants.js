@@ -22,6 +22,8 @@ export const PHOTO_ALBUM_THUMB_SIZE = 575
 
 export const RESUME_AVATAR_SIZE = 125
 
+export const SITE_TITLE = 'Kevin Putrajaya'
+
 export const STATIC_PROPS_REVALIDATE = process.env.STATIC_PROPS_REVALIDATE || 15
 
 export const STORYBLOK_TOKEN = process.env.STORYBLOK_TOKEN || 'Not initialized'

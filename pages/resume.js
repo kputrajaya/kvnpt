@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import {RESUME_AVATAR_SIZE, STATIC_PROPS_REVALIDATE} from '../utils/constants'
+import {RESUME_AVATAR_SIZE, SITE_TITLE, STATIC_PROPS_REVALIDATE} from '../utils/constants'
 import {getResume} from '../utils/storyblok'
 import BackButton from '../components/back_button'
 import Image from '../components/image'
@@ -54,7 +54,7 @@ export default function Resume({resume}) {
   return (
     <>
       <Head>
-        <title>Resume - Kevin Putrajaya</title>
+        <title>Resume - {SITE_TITLE}</title>
       </Head>
 
       <BackButton href="/" />

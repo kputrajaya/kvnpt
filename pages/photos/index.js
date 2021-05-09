@@ -1,7 +1,12 @@
 import Head from 'next/head'
 import Link from 'next/link'
 
-import {PHOTO_ALBUM_TEASER_COUNT, PHOTO_ALBUM_TEASER_SIZE, STATIC_PROPS_REVALIDATE} from '../../utils/constants'
+import {
+  PHOTO_ALBUM_TEASER_COUNT,
+  PHOTO_ALBUM_TEASER_SIZE,
+  SITE_TITLE,
+  STATIC_PROPS_REVALIDATE,
+} from '../../utils/constants'
 import {getPhotoAlbums} from '../../utils/storyblok'
 import BackButton from '../../components/back_button'
 import Image from '../../components/image'
@@ -10,7 +15,7 @@ export default function Photos({albums}) {
   return (
     <>
       <Head>
-        <title>Photos - Kevin Putrajaya</title>
+        <title>Photos - {SITE_TITLE}</title>
       </Head>
 
       <BackButton href="/" />

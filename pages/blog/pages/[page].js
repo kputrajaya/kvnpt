@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 
-import {BLOG_PER_PAGE, STATIC_PROPS_REVALIDATE} from '../../../utils/constants'
+import {BLOG_PER_PAGE, SITE_TITLE, STATIC_PROPS_REVALIDATE} from '../../../utils/constants'
 import {getPostCount, getPosts} from '../../../utils/storyblok'
 import BackButton from '../../../components/back_button'
 import PostSubtitle from '../../../components/post_subtitle'
@@ -12,7 +12,7 @@ export default function Page({posts, pageCurrent, pageCount}) {
   return (
     <>
       <Head>
-        <title>Blog - Kevin Putrajaya</title>
+        <title>Blog - {SITE_TITLE}</title>
       </Head>
 
       <BackButton href="/" />

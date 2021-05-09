@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import {STATIC_PROPS_REVALIDATE} from '../../../utils/constants'
+import {SITE_TITLE, STATIC_PROPS_REVALIDATE} from '../../../utils/constants'
 import {getLinkPreview} from '../../../utils/generics'
 import {getPost} from '../../../utils/storyblok'
 import BackButton from '../../../components/back_button'
@@ -13,7 +13,7 @@ export default function Post({post}) {
   return (
     <>
       <Head>
-        <title>{post.name} - Kevin Putrajaya</title>
+        <title>{post.name} - {SITE_TITLE}</title>
       </Head>
 
       <BackButton href="/blog/pages/1" />

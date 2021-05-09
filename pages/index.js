@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import {INTRO_AVATAR_SIZE, INTRO_CONTACT_SIZE, STATIC_PROPS_REVALIDATE} from '../utils/constants'
+import {INTRO_AVATAR_SIZE, INTRO_CONTACT_SIZE, SITE_TITLE, STATIC_PROPS_REVALIDATE} from '../utils/constants'
 import {getHome} from '../utils/storyblok'
 import Image from '../components/image'
 import Markdown from '../components/markdown'
@@ -18,7 +18,7 @@ export default function Home({photo, introduction, contacts}) {
   return (
     <>
       <Head>
-        <title>Kevin Putrajaya</title>
+        <title>{SITE_TITLE}</title>
       </Head>
 
       <div className="h-screen -my-8 py-8 flex items-center">
@@ -28,7 +28,7 @@ export default function Home({photo, introduction, contacts}) {
             width={INTRO_AVATAR_SIZE}
             height={INTRO_AVATAR_SIZE}
             className="rounded-full md:mt-1 md:flex-shrink-0"
-            alt="Kevin"
+            alt={SITE_TITLE}
           />
           <div className="mt-8 md:mt-0 md:ml-8">
             <div className="mb-8">

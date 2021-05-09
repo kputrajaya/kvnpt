@@ -1,12 +1,13 @@
 import Head from 'next/head'
 
+import {SITE_TITLE} from '../../utils/constants'
 import BackButton from '../../components/back_button'
 
 export default function Songs() {
   return (
     <>
       <Head>
-        <title>Songs - Kevin Putrajaya</title>
+        <title>Songs - {SITE_TITLE}</title>
       </Head>
 
       <BackButton href="/" />
