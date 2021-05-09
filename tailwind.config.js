@@ -20,7 +20,7 @@ module.exports = {
       colors: {
         gray: colors.trueGray,
         red: {
-          600: '#BF4A4A',
+          600: '#BD4242',
         },
       },
       inset: {
