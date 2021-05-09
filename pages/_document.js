@@ -4,21 +4,19 @@ import Uglify from 'uglify-js'
 class MyDocument extends Document {
   render() {
     const init = function() {
+      if (!window.localStorage) return
+
       const key = 'darkMode'
       const clsDark = 'dark'
       const clsLight = 'light'
       const elm = document.documentElement
 
-      let useDark
-      try {
-        useDark = JSON.parse(localStorage.getItem(key))
-      } catch (err) {
+      let useDark = JSON.parse(localStorage.getItem(key))
+      if (useDark === null) {
         useDark = window.matchMedia ?
           window.matchMedia('(prefers-color-scheme: dark)').matches :
           elm.classList.contains(clsDark)
-        try {
-          localStorage.setItem(key, JSON.stringify(useDark))
-        } catch (err) {}
+        localStorage.setItem(key, JSON.stringify(useDark))
       }
 
       elm.classList.add(useDark ? clsDark : clsLight)
