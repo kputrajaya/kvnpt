@@ -4,6 +4,7 @@ import {PHOTO_ALBUM_PREVIEW_COUNT, SITE_TITLE, STATIC_PROPS_REVALIDATE} from '..
 import {getPhotoAlbum} from '../../utils/storyblok'
 import BackButton from '../../components/back_button'
 import PhotoAlbumImages from '../../components/photo_album_images'
+import PostSubtitle from '../../components/post_subtitle'
 
 export default function Photo({album}) {
   if (!album) return null
@@ -16,7 +17,9 @@ export default function Photo({album}) {
 
       <BackButton href="/photos" />
       <h1 className="mb-2 text-2xl font-semibold">{album.name}</h1>
-      <h3 className="mb-8 text-sm text-scheme-third">{album.content.description}</h3>
+      <h3 className="mb-8 text-sm text-scheme-third">
+        <PostSubtitle date={album.content.date} />
+      </h3>
 
       <div className="mb-8">
         <PhotoAlbumImages album={album} previewCount={PHOTO_ALBUM_PREVIEW_COUNT} />

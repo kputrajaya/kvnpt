@@ -10,6 +10,7 @@ import {
 import {getPhotoAlbums} from '../../utils/storyblok'
 import BackButton from '../../components/back_button'
 import Image from '../../components/image'
+import PostSubtitle from '../../components/post_subtitle'
 
 export default function Photos({albums}) {
   return (
@@ -44,7 +45,9 @@ export default function Photos({albums}) {
                 }
               </div>
               <h2 className="mb-1 font-semibold">{album.name}</h2>
-              <h3 className="text-sm text-scheme-third">{album.content.description}</h3>
+              <h3 className="text-sm text-scheme-third">
+                <PostSubtitle date={album.content.date} />
+              </h3>
             </a>
           </Link>
         ))
