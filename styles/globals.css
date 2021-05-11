@@ -32,7 +32,7 @@ a {
 }
 
 img {
-  @apply dark:opacity-90;
+  @apply dark:opacity-95;
   @apply print:dark:opacity-100;
 }
 
