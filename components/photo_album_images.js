@@ -19,23 +19,25 @@ export default function PhotoAlbumImages({album, previewCount}) {
 
   return (
     <div className="leading-0">
-      {
-        images
-          .filter((image, index) => expand || index < previewCount)
-          .map((image, index) => (
-            <div
-              className="cursor-pointer sm:w-6/12 inline-block"
-              onClick={() => setLightboxControl({toggler: !lightboxControl.toggler, index})}
-              key={index}
-            >
-              <Image
-                src={image}
-                width={PHOTO_ALBUM_THUMB_SIZE}
-                height={PHOTO_ALBUM_THUMB_SIZE}
-              />
-            </div>
-          ))
-      }
+      <div className="-m-1 leading-0">
+        {
+          images
+            .filter((image, index) => expand || index < previewCount)
+            .map((image, index) => (
+              <div
+                className="cursor-pointer sm:w-6/12 p-1 inline-block"
+                key={index}
+              >
+                <Image
+                  src={image}
+                  width={PHOTO_ALBUM_THUMB_SIZE}
+                  height={PHOTO_ALBUM_THUMB_SIZE}
+                  onClick={() => setLightboxControl({toggler: !lightboxControl.toggler, index})}
+                />
+              </div>
+            ))
+        }
+      </div>
       {
         images.length > previewCount &&
         <button
