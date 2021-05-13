@@ -53,10 +53,9 @@ strong {
 }
 .text-scheme-third {
   @apply text-gray-500;
-  @apply dark:text-gray-400;
 }
 .text-scheme-primary {
-  @apply text-red-600;
+  @apply text-red-500;
 }
 
 .bg-scheme {
@@ -80,6 +79,23 @@ strong {
 
 /* Custom components */
 
+.kvn-card {
+  @apply p-4;
+  @apply bg-gray-200;
+  @apply dark:bg-gray-800;
+  @apply bg-opacity-90;
+  @apply dark:bg-opacity-90;  /* Specificity issue */
+  @apply border;
+  @apply border-gray-200;
+  @apply dark:border-gray-800;
+  @apply rounded-md;
+  @apply overflow-hidden;
+}
+.kvn-card.kvn-card-small {
+  @apply px-4;
+  @apply py-2;
+}
+
 .kvn-markdown h1,
 .kvn-markdown h2,
 .kvn-markdown h3,
@@ -90,18 +106,55 @@ strong {
   @apply mb-4;
 }
 
-.kvn-card {
-  @apply p-4;
+.kvn-audio .rhap_container {
+  @apply w-full;
+  @apply py-3;
+  @apply px-8;
   @apply bg-gray-200;
   @apply dark:bg-gray-800;
   @apply bg-opacity-90;
-  @apply border;
-  @apply border-gray-200;
-  @apply dark:border-gray-800;
-  @apply rounded-md;
-  @apply overflow-hidden;
+  @apply dark:bg-opacity-90;  /* Specificity issue */
+  @apply shadow-none;
+  @apply items-center;
 }
-.kvn-card.kvn-card-small {
-  @apply px-4;
-  @apply py-2;
+.kvn-audio .rhap_main {
+  @apply w-full;
+  max-width: 704px;
+}
+.kvn-audio .rhap_time {
+  @apply text-sm;
+  @apply text-gray-700;
+  @apply dark:text-gray-300;
+}
+.kvn-audio .rhap_repeat-button,
+.kvn-audio .rhap_main-controls-button,
+.kvn-audio .rhap_volume-button {
+  @apply text-gray-600;
+  @apply dark:text-gray-400;
+}
+.kvn-audio .rhap_play-pause-button {
+  @apply text-gray-700;
+  @apply dark:text-gray-300;
+}
+.kvn-audio .rhap_progress-indicator,
+.kvn-audio .rhap_volume-indicator {
+  @apply bg-gray-600;
+  @apply dark:bg-gray-400;
+  @apply shadow-none;
+}
+.kvn-audio .rhap_progress-bar,
+.kvn-audio .rhap_volume-bar {
+  @apply rounded-sm;
+}
+.kvn-audio .rhap_progress-bar-show-download {
+  @apply bg-gray-300;
+  @apply dark:bg-gray-700;
+}
+.kvn-audio .rhap_download-progress,
+.kvn-audio .rhap_volume-bar {
+  @apply bg-gray-400;
+  @apply dark:bg-gray-600;
+}
+.kvn-audio .rhap_progress-filled {
+  @apply bg-gray-500;
 }
