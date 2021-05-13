@@ -52,7 +52,7 @@ strong {
   @apply dark:text-gray-300;
 }
 .text-scheme-third {
-  @apply text-gray-600;
+  @apply text-gray-500;
   @apply dark:text-gray-400;
 }
 .text-scheme-primary {
@@ -70,6 +70,11 @@ strong {
   @apply dark:bg-gray-800;
   @apply bg-opacity-75;
   @apply dark:bg-opacity-75;  /* Specificity issue */
+}
+
+.border-scheme {
+  @apply border-gray-300;
+  @apply dark:border-gray-700;
 }
 
 

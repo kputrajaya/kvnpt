@@ -24,8 +24,7 @@ export const RESUME_AVATAR_SIZE = 125
 
 export const SITE_TITLE = 'Kevin Putrajaya'
 export const SITE_DESCRIPTION = (
-  'I\'m a Software Engineer / Musician / Photographer / Gamer / Home Cook from Indonesia. ' +
-  'I share my resume, blog, and portfolio here in my site.'
+  'I\'m a Software Engineer from Indonesia. I share my resume, blog, music, and photos here in my site.'
 )
 
 export const STATIC_PROPS_REVALIDATE = process.env.STATIC_PROPS_REVALIDATE || 15
