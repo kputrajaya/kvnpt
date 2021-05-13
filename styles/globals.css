@@ -53,6 +53,7 @@ strong {
 }
 .text-scheme-third {
   @apply text-gray-500;
+  @apply dark:text-gray-400;
 }
 .text-scheme-primary {
   @apply text-red-500;
