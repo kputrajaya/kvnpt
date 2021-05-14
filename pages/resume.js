@@ -31,10 +31,16 @@ export default function Resume({resume}) {
     return (
       companies.map((company, index) => (
         <div className="kvn-card mt-4" key={index}>
-          <div className="-mb-4">
-            <a className="font-semibold inline-block" href={company.company.link.url} target="_blank" rel="noreferrer">
-              {company.company.caption}
-            </a>
+          <div className="-mb-4 font-semibold">
+            {
+              company.company.link.url ?
+                <a className="inline-block" href={company.company.link.url} target="_blank" rel="noreferrer">
+                  {company.company.caption}
+                </a> :
+                <div>
+                  {company.company.caption}
+                </div>
+            }
           </div>
           {
             company.positions.map((position, index) => (
