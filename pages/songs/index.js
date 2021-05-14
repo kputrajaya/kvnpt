@@ -43,7 +43,7 @@ export default function Songs({albums}) {
                           {
                             song.featuring &&
                             <div className="text-xs text-scheme-third">
-                              <span className="italic">ft.</span> {song.featuring}
+                              <span className="italic">w.</span> {song.featuring}
                             </div>
                           }
                         </div>
