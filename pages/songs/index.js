@@ -9,7 +9,7 @@ import Audio from '../../components/audio'
 export default function Songs({albums}) {
   const [playIndex, setPlayIndex] = useState(-1)
   const allSongs = []
-  let currentIndex = -1
+  let counter = 0
 
   return (
     <>
@@ -18,7 +18,7 @@ export default function Songs({albums}) {
       </Head>
 
       <BackButton href="/" />
-      <h1 className="mb-8 text-2xl font-semibold">Songs (WIP)</h1>
+      <h1 className="mb-8 text-2xl font-semibold">Songs</h1>
 
       {
         albums.map((album, index) => {
@@ -28,25 +28,40 @@ export default function Songs({albums}) {
               <div className="-mb-2">
                 {
                   album.content.songs.map((song, index) => {
+                    const songIndex = counter
                     if (song.audio.url) {
                       allSongs.push(song)
-                      currentIndex++
+                      counter++
                     }
+
+                    const renderLine = () => (
+                      <div className="flex">
+                        <div className="flex-grow">
+                          <span className={song.audio.url && playIndex === songIndex ? 'font-semibold' : ''}>
+                            {song.title}
+                          </span>
+                          {
+                            song.featuring &&
+                            <div className="text-xs text-scheme-third">
+                              <span className="italic">ft.</span> {song.featuring}
+                            </div>
+                          }
+                        </div>
+                        <div className="text-scheme-third">
+                          {song.duration || '--:--'}
+                        </div>
+                      </div>
+                    )
+
                     return (
-                      <div className="border-t border-scheme" key={index}>
+                      <div className="text-sm text-scheme-primary border-t border-scheme" key={index}>
                         {
                           song.audio.url ?
-                            <div
-                              className={
-                                'py-2 text-scheme-primary cursor-pointer ' +
-                                (playIndex === currentIndex ? 'font-semibold' : '')
-                              }
-                              onClick={() => setPlayIndex(currentIndex)}
-                            >
-                              {song.title}
+                            <div className="py-2 cursor-pointer" onClick={() => setPlayIndex(songIndex)}>
+                              {renderLine()}
                             </div> :
                             <div className="py-2 text-scheme-third cursor-not-allowed">
-                              {song.title}
+                              {renderLine()}
                             </div>
                         }
                       </div>
