@@ -3,8 +3,8 @@ import Head from 'next/head'
 
 import {SITE_TITLE, STATIC_PROPS_REVALIDATE} from '../../utils/constants'
 import {getSongAlbums} from '../../utils/storyblok'
-import BackButton from '../../components/back_button'
 import Audio from '../../components/audio'
+import BackButton from '../../components/back_button'
 
 export default function Songs({albums}) {
   const [playIndex, setPlayIndex] = useState(-1)

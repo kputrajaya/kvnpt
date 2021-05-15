@@ -33,3 +33,5 @@ export const STORYBLOK_TOKEN = process.env.STORYBLOK_TOKEN || 'Not initialized'
 
 export const SVG_SCHEME_SIZE = 19
 export const SVG_POST_SIZE = 15
+
+export const UTTERANCES_REPO = 'kiloev/kvnpt'
