@@ -1,7 +1,7 @@
 import Head from 'next/head'
 
-import BackButton from '../../components/back_button'
-import CommentsInner from '../../components/comments'
+import BackButton from '../components/back_button'
+import CommentsInner from '../components/comments'
 
 export default function Comments({albums}) {
   return (
