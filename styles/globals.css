@@ -142,6 +142,7 @@ strong {
   @apply bg-gray-600;
   @apply dark:bg-gray-400;
   @apply shadow-none;
+  @apply opacity-100;
   @apply z-10;
 }
 .kvn-audio .rhap_progress-bar,
