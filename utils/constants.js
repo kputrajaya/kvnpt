@@ -27,11 +27,9 @@ export const SITE_DESCRIPTION = (
   'I\'m Kevin, a Software Engineer from Indonesia. I share my resume, blog, music, and photos here in my site.'
 )
 
-export const STATIC_PROPS_REVALIDATE = process.env.STATIC_PROPS_REVALIDATE || 15
+export const STATIC_PROPS_REVALIDATE = process.env.STATIC_PROPS_REVALIDATE || 30
 
 export const STORYBLOK_TOKEN = process.env.STORYBLOK_TOKEN || 'Not initialized'
 
 export const SVG_SCHEME_SIZE = 19
 export const SVG_POST_SIZE = 15
-
-export const UTTERANCES_REPO = 'kiloev/kvnpt'
