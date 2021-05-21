@@ -35,7 +35,7 @@ export default function Photos({albums}) {
                         index === PHOTO_ALBUM_TEASER_COUNT - 1 &&
                         album.content.photos.length > PHOTO_ALBUM_TEASER_COUNT &&
                         (
-                          <div className="flex items-center justify-center absolute inset-0 bg-scheme-75">
+                          <div className="font-semibold bg-scheme-75 flex items-center justify-center absolute inset-0">
                             +{album.content.photos.length - PHOTO_ALBUM_TEASER_COUNT + 1} more
                           </div>
                         )
