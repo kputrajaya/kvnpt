@@ -99,9 +99,15 @@ strong {
 
 .kvn-markdown h2,
 .kvn-markdown h3,
+.kvn-markdown ul,
+.kvn-markdown ol,
 .kvn-markdown p,
 .kvn-markdown pre {
   @apply mb-4;
+}
+.kvn-markdown * + h2,
+.kvn-markdown * + h3 {
+  @apply mt-6;
 }
 .kvn-markdown h2 {
   @apply font-semibold;
@@ -111,9 +117,15 @@ strong {
   @apply font-semibold;
   @apply text-lg;
 }
-.kvn-markdown * + h2,
-.kvn-markdown * + h3 {
-  @apply mt-6;
+.kvn-markdown ul,
+.kvn-markdown ol {
+  @apply pl-4;
+}
+.kvn-markdown ul {
+  @apply list-disc;
+}
+.kvn-markdown ol {
+  @apply list-decimal;
 }
 .kvn-markdown pre,
 .kvn-markdown p code {
