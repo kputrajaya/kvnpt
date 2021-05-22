@@ -97,14 +97,41 @@ strong {
   @apply py-2;
 }
 
-.kvn-markdown h1,
 .kvn-markdown h2,
 .kvn-markdown h3,
-.kvn-markdown h4,
-.kvn-markdown h5,
-.kvn-markdown h6,
-.kvn-markdown p {
+.kvn-markdown p,
+.kvn-markdown pre {
   @apply mb-4;
+}
+.kvn-markdown h2 {
+  @apply font-semibold;
+  @apply text-xl;
+}
+.kvn-markdown h3 {
+  @apply font-semibold;
+  @apply text-lg;
+}
+.kvn-markdown * + h2,
+.kvn-markdown * + h3 {
+  @apply mt-6;
+}
+.kvn-markdown pre,
+.kvn-markdown p code {
+  @apply px-1;
+  @apply font-mono;
+  @apply text-sm;
+  @apply bg-gray-200;
+  @apply dark:bg-gray-800;
+  @apply bg-opacity-90;
+  @apply dark:bg-opacity-90;  /* Specificity issue */
+  @apply border;
+  @apply border-gray-200;
+  @apply dark:border-gray-800;
+  @apply rounded-md;
+}
+.kvn-markdown pre {
+  @apply p-4;
+  @apply overflow-x-auto;
 }
 
 .kvn-audio .rhap_container {
