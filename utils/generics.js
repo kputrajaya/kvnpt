@@ -5,7 +5,7 @@ export const buildImageSrc = (src, width, height, dynamicRatio=false) => {
   if (newSrc.startsWith('http') && !newSrc.startsWith(IMAGEKIT_ENDPOINT)) {
     newSrc = IMAGEKIT_ENDPOINT + newSrc
   }
-  newSrc += `?tr=w-${width * 2},h-${height * 2}`
+  newSrc += `?tr=w-${width * 1.5},h-${height * 1.5}`
   if (dynamicRatio) {
     newSrc += ',c-at_max'
   }
