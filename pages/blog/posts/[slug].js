@@ -19,7 +19,7 @@ export default function Post({post}) {
       <BackButton href="/blog/pages/1" />
       <h1 className="mb-2 text-2xl font-semibold">{post.name}</h1>
       <h3 className="mb-8 text-sm text-scheme-third">
-        <PostSubtitle date={post.created_at} tags={post.tag_list} />
+        <PostSubtitle date={post.first_published_at} tags={post.tag_list} />
       </h3>
 
       <div>

@@ -24,7 +24,7 @@ export default function Page({posts, pageCurrent, pageCount}) {
             <a className="kvn-card mb-4 block">
               <h2 className="mb-1 font-semibold">{post.name}</h2>
               <h3 className="text-sm text-scheme-third">
-                <PostSubtitle date={post.created_at} tags={post.tag_list} />
+                <PostSubtitle date={post.first_published_at} tags={post.tag_list} />
               </h3>
             </a>
           </Link>
