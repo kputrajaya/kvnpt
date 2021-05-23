@@ -28,7 +28,7 @@ body::after {
 }
 
 a {
-  @apply text-red-600;
+  @apply text-red-500;
 }
 
 img {
