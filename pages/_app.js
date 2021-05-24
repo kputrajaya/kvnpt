@@ -17,24 +17,25 @@ function MyApp({Component, pageProps}) {
     null
 
   return (
-    <div className="container max-w-3xl mx-auto p-8 relative">
+    <>
       <Head>
         <meta name="description" content={SITE_DESCRIPTION} />
       </Head>
 
-      <Component {...pageProps} />
-
-      {
-        darkMode &&
-        <div
-          className="p-2 bg-scheme rounded-full leading-0 absolute top-8 right-8 cursor-pointer print:hidden"
-          title="Dark mode"
-          onClick={darkMode.toggle}
-        >
-          <Image src={darkMode.value ? SvgDark : SvgLight} width={SVG_SCHEME_SIZE} height={SVG_SCHEME_SIZE} />
-        </div>
-      }
-    </div>
+      <div className="container max-w-3xl mx-auto p-8 relative">
+        <Component {...pageProps} />
+        {
+          darkMode &&
+          <div
+            className="p-2 bg-scheme rounded-full leading-0 absolute top-8 right-8 cursor-pointer print:hidden"
+            title="Dark mode"
+            onClick={darkMode.toggle}
+          >
+            <Image src={darkMode.value ? SvgDark : SvgLight} width={SVG_SCHEME_SIZE} height={SVG_SCHEME_SIZE} />
+          </div>
+        }
+      </div>
+    </>
   )
 }
 
