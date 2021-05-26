@@ -2,7 +2,7 @@ import Head from 'next/head'
 import useDarkMode from 'use-dark-mode'
 
 import Image from '../components/image'
-import {SITE_DESCRIPTION, SVG_SCHEME_SIZE} from '../utils/constants'
+import {SITE_DESCRIPTION, SITE_IMAGE, SVG_SCHEME_SIZE} from '../utils/constants'
 import SvgDark from '../public/images/scheme-dark.svg'
 import SvgLight from '../public/images/scheme-light.svg'
 import '../styles/globals.css'
@@ -19,6 +19,8 @@ function MyApp({Component, pageProps}) {
   return (
     <>
       <Head>
+        <meta property="og:image" content={SITE_IMAGE} />
+        <meta property="og:description" content={SITE_DESCRIPTION} />
         <meta name="description" content={SITE_DESCRIPTION} />
       </Head>
 
