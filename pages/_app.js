@@ -24,7 +24,7 @@ function MyApp({Component, pageProps}) {
 
         <meta name="twitter:card" content="summary_large_image"></meta>
         <meta name="twitter:creator" content={SITE_TWITTER_USER} />
-        <meta property="twitter:description" content={SITE_DESCRIPTION} />
+        <meta name="twitter:description" content={SITE_DESCRIPTION} />
 
         <meta name="description" content={SITE_DESCRIPTION} />
       </Head>
