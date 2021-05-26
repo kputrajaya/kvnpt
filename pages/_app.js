@@ -21,6 +21,11 @@ function MyApp({Component, pageProps}) {
       <Head>
         <meta property="og:image" content={SITE_IMAGE} />
         <meta property="og:description" content={SITE_DESCRIPTION} />
+
+        <meta name="twitter:card" content="summary_large_image"></meta>
+        <meta name="twitter:creator" content={SITE_TWITTER_USER} />
+        <meta property="twitter:description" content={SITE_DESCRIPTION} />
+
         <meta name="description" content={SITE_DESCRIPTION} />
       </Head>
 
