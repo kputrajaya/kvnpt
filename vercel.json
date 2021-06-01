@@ -43,6 +43,10 @@
     {
       "source": "/(tw|twitter)",
       "destination": "https://twitter.com/kputrajaya"
+    },
+    {
+      "source": "/(yt|youtube)",
+      "destination": "https://youtube.com/c/KevinPutrajaya/live"
     }
   ]
 }
