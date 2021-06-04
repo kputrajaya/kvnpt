@@ -97,8 +97,12 @@ strong {
   @apply py-2;
 }
 
+.kvn-markdown h1,
 .kvn-markdown h2,
 .kvn-markdown h3,
+.kvn-markdown h4,
+.kvn-markdown h5,
+.kvn-markdown h6,
 .kvn-markdown ul,
 .kvn-markdown ol,
 .kvn-markdown p,
