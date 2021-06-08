@@ -1,14 +1,17 @@
 import {useState} from 'react'
 import Head from 'next/head'
 
-import {SITE_TITLE, STATIC_PROPS_REVALIDATE} from '../../utils/constants'
+import {SITE_TITLE, STATIC_PROPS_REVALIDATE, SVG_SONG_SIZE} from '../../utils/constants'
 import {getSongAlbums} from '../../utils/storyblok'
 import Audio from '../../components/audio'
 import BackButton from '../../components/back_button'
+import Image from '../../components/image'
+import SvgSongPlay from '../../public/images/song-play.svg'
+import SvgSongPlaying from '../../public/images/song-playing.svg'
 
 export default function Songs({albums}) {
   const [playIndex, setPlayIndex] = useState(-1)
-  const allSongs = []
+  const playableSongs = []
   let counter = 0
 
   return (
@@ -29,17 +32,25 @@ export default function Songs({albums}) {
                 {
                   album.content.songs.map((song, index) => {
                     const songIndex = counter
+                    const playing = song.audio.url && playIndex === songIndex
                     if (song.audio.url) {
-                      allSongs.push(song)
+                      playableSongs.push(song)
                       counter++
                     }
 
                     const renderLine = () => (
                       <div className="flex">
-                        <div className="flex-grow">
-                          <span className={song.audio.url && playIndex === songIndex ? 'font-semibold' : ''}>
+                        <div className="mr-4 text-scheme-primary fill-current flex-shrink-0 self-center">
+                          {
+                            playing ?
+                              <Image src={SvgSongPlaying} width={SVG_SONG_SIZE} height={SVG_SONG_SIZE} /> :
+                              <Image src={SvgSongPlay} width={SVG_SONG_SIZE} height={SVG_SONG_SIZE} />
+                          }
+                        </div>
+                        <div className="min-w-0 truncate flex-grow">
+                          <div>
                             {song.title}
-                          </span>
+                          </div>
                           {
                             song.featuring &&
                             <div className="text-xs text-scheme-third">
@@ -47,14 +58,14 @@ export default function Songs({albums}) {
                             </div>
                           }
                         </div>
-                        <div className="text-scheme-third">
+                        <div className="ml-4 text-scheme-third flex-shrink-0">
                           {song.duration || '--:--'}
                         </div>
                       </div>
                     )
 
                     return (
-                      <div className="text-sm text-scheme-primary border-t border-scheme" key={index}>
+                      <div className="text-sm border-t border-scheme" key={index}>
                         {
                           song.audio.url ?
                             <div className="py-2 cursor-pointer" onClick={() => setPlayIndex(songIndex)}>
@@ -76,7 +87,7 @@ export default function Songs({albums}) {
         })
       }
 
-      <Audio songs={allSongs} index={playIndex} setIndex={setPlayIndex} />
+      <Audio songs={playableSongs} index={playIndex} setIndex={setPlayIndex} />
     </>
   )
 }
