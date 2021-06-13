@@ -40,7 +40,7 @@ export default function Songs({albums}) {
 
                     const renderLine = () => (
                       <div className="flex">
-                        <div className="mr-4 text-scheme-primary fill-current flex-shrink-0 self-center">
+                        <div className="mr-4 text-scheme-primary fill-current flex-shrink-0 self-center" style={{width: SVG_SONG_SIZE}}>
                           {
                             playing ?
                               <Image src={SvgSongPlaying} width={SVG_SONG_SIZE} height={SVG_SONG_SIZE} /> :
