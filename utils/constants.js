@@ -25,7 +25,7 @@ export const RESUME_AVATAR_SIZE = 125
 export const SITE_DESCRIPTION = (
   'I\'m Kevin, a Software Engineer from Indonesia. I share my resume, blog, music, and photos here in my site.'
 )
-export const SITE_IMAGE = 'https://ik.imagekit.io/kvn/og_image_A3Obhq90F.jpg'
+export const SITE_IMAGE = 'https://ik.imagekit.io/kvn/og_image_nbEDAvfHN8N.jpg'
 export const SITE_TITLE = 'Kevin Putrajaya'
 export const SITE_TWITTER_USER = '@kputrajaya'
 
