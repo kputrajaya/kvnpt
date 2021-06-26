@@ -9,26 +9,25 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "date-fns": "^2.21.1",
+    "date-fns": "^2.22.1",
     "link-preview-js": "^2.1.6",
-    "next": "^10.2.0",
+    "next": "^11.0.0",
     "preact": "^10.5.13",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-h5-audio-player": "^3.7.0",
-    "react-inlinesvg": "^2.2.2",
-    "react-markdown": "^6.0.1",
-    "uglify-js": "^3.13.5",
+    "react-h5-audio-player": "^3.7.1",
+    "react-inlinesvg": "^2.3.0",
+    "react-markdown": "^6.0.2",
     "use-dark-mode": "^2.3.1"
   },
   "devDependencies": {
-    "autoprefixer": "^10.2.5",
-    "eslint": "^7.26.0",
+    "autoprefixer": "^10.2.6",
+    "eslint": "^7.29.0",
     "eslint-config-google": "^0.14.0",
-    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react": "^7.24.0",
     "fslightbox-react": "^1.6.2",
-    "postcss": "^8.2.12",
-    "raw-loader": "^4.0.2",
-    "tailwindcss": "^2.1.2"
+    "postcss": "^8.3.5",
+    "tailwindcss": "^2.2.2",
+    "uglify-js": "^3.13.9"
   }
 }

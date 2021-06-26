@@ -1,7 +1,4 @@
 module.exports = {
-  future: {
-    webpack5: true,
-  },
   webpack: (config, {dev, isServer}) => {
     // Replace React with Preact only in production
     if (!dev && !isServer) {
@@ -13,9 +10,15 @@ module.exports = {
     }
 
     // Inline SVG
+    config.module.rules = config.module.rules.map((rule) => {
+      if (rule.test && rule.test.test('.svg')) {
+        rule.test = RegExp(rule.test.toString().replace('|svg', ''))
+      }
+      return rule
+    })
     config.module.rules.push({
       test: /\.svg$/,
-      use: 'raw-loader',
+      type: 'asset/source'
     })
 
     return config
