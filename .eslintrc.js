@@ -28,4 +28,9 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'require-jsdoc': 'off',
   },
+  'settings': {
+    'react': {
+      'version': 'detect'
+    }
+  }
 }
