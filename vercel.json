@@ -1,10 +1,6 @@
 {
   "redirects": [
     {
-      "source": "/(cb|coderbyte)",
-      "destination": "https://coderbyte.com/profile/kiloev"
-    },
-    {
       "source": "/(fb|facebook)",
       "destination": "https://www.facebook.com/kiloev"
     },
@@ -27,6 +23,10 @@
     {
       "source": "/(in|linkedin)",
       "destination": "https://www.linkedin.com/in/kputrajaya/"
+    },
+    {
+      "source": "/(lc|leetcode)",
+      "destination": "https://leetcode.com/kiloev/"
     },
     {
       "source": "/(qu|quora)",
