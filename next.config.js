@@ -18,7 +18,7 @@ module.exports = {
     })
     config.module.rules.push({
       test: /\.svg$/,
-      type: 'asset/source'
+      type: 'asset/source',
     })
 
     return config
