@@ -1,10 +1,10 @@
-import {SVG_POST_SIZE} from '../utils/constants'
-import {formatDate} from '../utils/dates'
-import Image from './image'
-import SvgDate from '../public/images/post-date.svg'
-import SvgTag from '../public/images/post-tag.svg'
+import { SVG_POST_SIZE } from '../utils/constants';
+import { formatDate } from '../utils/dates';
+import Image from './image';
+import SvgDate from '../public/images/post-date.svg';
+import SvgTag from '../public/images/post-tag.svg';
 
-export default function PostSubtitle({date, tags}) {
+export default function PostSubtitle({ date, tags }) {
   return (
     <>
       <Image
@@ -14,8 +14,7 @@ export default function PostSubtitle({date, tags}) {
         className="mr-1 inline-block relative -top-0.25"
       />
       {formatDate(date)}
-      {
-        tags?.length > 0 &&
+      {tags?.length > 0 && (
         <>
           &nbsp;&nbsp;&middot;&nbsp;&nbsp;
           <Image
@@ -26,7 +25,7 @@ export default function PostSubtitle({date, tags}) {
           />
           {tags.sort().join(', ')}
         </>
-      }
+      )}
     </>
-  )
+  );
 }

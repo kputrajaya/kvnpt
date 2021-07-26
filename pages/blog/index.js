@@ -1,5 +1,5 @@
 export default function Blog() {
-  return null
+  return null;
 }
 
 export async function getServerSideProps() {
@@ -8,5 +8,5 @@ export async function getServerSideProps() {
       destination: '/blog/pages/1',
       permanent: true,
     },
-  }
+  };
 }

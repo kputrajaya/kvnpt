@@ -1,8 +1,8 @@
-import {BLOCK_PHOTO_ALBUM_LINK_PREVIEW_COUNT} from '../utils/constants'
-import PhotoAlbumImages from './photo_album_images'
-import PostSubtitle from './post_subtitle'
+import { BLOCK_PHOTO_ALBUM_LINK_PREVIEW_COUNT } from '../utils/constants';
+import PhotoAlbumImages from './photo_album_images';
+import PostSubtitle from './post_subtitle';
 
-export default function BlockPhotoAlbumLink({block}) {
+export default function BlockPhotoAlbumLink({ block }) {
   return (
     <div className="kvn-card">
       <div className="mb-4">
@@ -16,5 +16,5 @@ export default function BlockPhotoAlbumLink({block}) {
 
       <PhotoAlbumImages album={block.photo_album} previewCount={BLOCK_PHOTO_ALBUM_LINK_PREVIEW_COUNT} />
     </div>
-  )
+  );
 }

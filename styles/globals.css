@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* Elements */
 
 * {
@@ -40,7 +39,6 @@ strong {
   @apply font-semibold;
 }
 
-
 /* Utilities */
 
 .text-scheme-first {
@@ -63,20 +61,19 @@ strong {
   @apply bg-gray-200;
   @apply dark:bg-gray-800;
   @apply bg-opacity-90;
-  @apply dark:bg-opacity-90;  /* Specificity issue */
+  @apply dark:bg-opacity-90; /* Specificity issue */
 }
 .bg-scheme-75 {
   @apply bg-gray-200;
   @apply dark:bg-gray-800;
   @apply bg-opacity-75;
-  @apply dark:bg-opacity-75;  /* Specificity issue */
+  @apply dark:bg-opacity-75; /* Specificity issue */
 }
 
 .border-scheme {
   @apply border-gray-300;
   @apply dark:border-gray-700;
 }
-
 
 /* Custom components */
 
@@ -85,7 +82,7 @@ strong {
   @apply bg-gray-200;
   @apply dark:bg-gray-800;
   @apply bg-opacity-90;
-  @apply dark:bg-opacity-90;  /* Specificity issue */
+  @apply dark:bg-opacity-90; /* Specificity issue */
   @apply border;
   @apply border-gray-200;
   @apply dark:border-gray-800;
@@ -139,7 +136,7 @@ strong {
   @apply bg-gray-200;
   @apply dark:bg-gray-800;
   @apply bg-opacity-90;
-  @apply dark:bg-opacity-90;  /* Specificity issue */
+  @apply dark:bg-opacity-90; /* Specificity issue */
   @apply border;
   @apply border-gray-200;
   @apply dark:border-gray-800;
@@ -157,7 +154,7 @@ strong {
   @apply bg-gray-200;
   @apply dark:bg-gray-800;
   @apply bg-opacity-90;
-  @apply dark:bg-opacity-90;  /* Specificity issue */
+  @apply dark:bg-opacity-90; /* Specificity issue */
   @apply shadow-none;
   @apply items-center;
 }

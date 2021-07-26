@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "date-fns": "^2.22.1",
-    "link-preview-js": "^2.1.6",
+    "link-preview-js": "^2.1.8",
     "next": "^11.0.0",
     "preact": "^10.5.13",
     "react": "17.0.2",
@@ -25,6 +25,7 @@
     "eslint": "^7.29.0",
     "eslint-config-google": "^0.14.0",
     "eslint-config-next": "^11.0.1",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-react": "^7.24.0",
     "fslightbox-react": "^1.6.2",
     "postcss": "^8.3.5",

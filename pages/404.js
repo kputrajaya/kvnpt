@@ -1,7 +1,7 @@
-import Head from 'next/head'
+import Head from 'next/head';
 
-import {SITE_TITLE} from '../utils/constants'
-import BackButton from '../components/back_button'
+import { SITE_TITLE } from '../utils/constants';
+import BackButton from '../components/back_button';
 
 export default function Custom404() {
   return (
@@ -18,5 +18,5 @@ export default function Custom404() {
         </div>
       </div>
     </>
-  )
+  );
 }
