@@ -41,12 +41,16 @@
       "destination": "https://steamcommunity.com/id/kiloev/"
     },
     {
+      "source": "/(tc|twitter)",
+      "destination": "https://www.twitch.tv/kputrajaya"
+    },
+    {
       "source": "/(tw|twitter)",
       "destination": "https://twitter.com/kputrajaya"
     },
     {
       "source": "/(yt|youtube)",
-      "destination": "https://youtube.com/c/KevinPutrajaya/live"
+      "destination": "https://youtube.com/c/KevinPutrajaya"
     }
   ]
 }
