@@ -41,7 +41,7 @@
       "destination": "https://steamcommunity.com/id/kiloev/"
     },
     {
-      "source": "/(tc|twitter)",
+      "source": "/(tv|twitch)",
       "destination": "https://www.twitch.tv/kputrajaya"
     },
     {
