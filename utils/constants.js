@@ -26,7 +26,7 @@ export const SITE_IMAGE = IMAGEKIT_ENDPOINT + 'og_image_nbEDAvfHN8N.jpg';
 export const SITE_TITLE = 'Kevin Putrajaya';
 export const SITE_TWITTER_USER = '@kputrajaya';
 
-export const STATIC_PROPS_REVALIDATE = process.env.STATIC_PROPS_REVALIDATE || 30;
+export const STATIC_PROPS_REVALIDATE = Math.floor(process.env.STATIC_PROPS_REVALIDATE || 30);
 
 export const STORYBLOK_TOKEN = process.env.STORYBLOK_TOKEN || 'Not initialized';
 
