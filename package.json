@@ -31,5 +31,8 @@
     "postcss": "^8.3.5",
     "tailwindcss": "^2.2.2",
     "uglify-js": "^3.13.9"
+  },
+  "optionalDependencies": {
+    "@swc/core-linux-x64-musl": "^1.2.106"
   }
 }
