@@ -1,7 +1,6 @@
 const colors = require('tailwindcss/colors');
 
-const imagePrefix =
-  process.env.IMAGEKIT_ENDPOINT && process.env.HOSTNAME ? process.env.IMAGEKIT_ENDPOINT + process.env.HOSTNAME : '';
+const imagePrefix = 'https://ik.imagekit.io/kvn/https://kvn.pt';
 
 module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
