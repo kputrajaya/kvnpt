@@ -1,5 +1,4 @@
 module.exports = {
-  swcMinify: false,
   webpack: (config, { dev, isServer }) => {
     // Replace React with Preact only in production
     if (!dev && !isServer) {
