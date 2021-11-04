@@ -7,8 +7,6 @@ export const BLOCK_PHOTO_ALBUM_LINK_PREVIEW_COUNT = 6;
 
 export const BLOG_PER_PAGE = 20;
 
-export const HOSTNAME = process.env.HOSTNAME || 'https://www.kvn.pt';
-
 export const IMAGEKIT_ENDPOINT = process.env.IMAGEKIT_ENDPOINT || 'https://ik.imagekit.io/kvn/';
 
 export const INTRO_AVATAR_SIZE = 125;
