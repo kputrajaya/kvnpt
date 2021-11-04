@@ -8,14 +8,11 @@ import SvgLight from '../public/images/scheme-light.svg';
 import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
-  const darkMode =
-    typeof window !== 'undefined'
-      ? useDarkMode(true, {
-          classNameDark: 'dark',
-          classNameLight: 'light',
-          element: document.documentElement,
-        })
-      : null;
+  const darkMode = useDarkMode(true, {
+    classNameDark: 'dark',
+    classNameLight: 'light',
+    element: document ? document.documentElement : null,
+  });
 
   return (
     <>
@@ -38,7 +35,7 @@ function MyApp({ Component, pageProps }) {
             title="Dark mode"
             onClick={darkMode.toggle}
           >
-            <Image src={darkMode.value ? SvgDark : SvgLight} width={SVG_SCHEME_SIZE} height={SVG_SCHEME_SIZE} />
+            <Image src={darkMode.value ? SvgDark : SvgLight} width={SVG_SCHEME_SIZE} height={SVG_SCHEME_SIZE} alt="" />
           </div>
         )}
       </div>

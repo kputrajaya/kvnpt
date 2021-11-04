@@ -43,6 +43,7 @@ export default function Home({ photo, introduction, contacts }) {
                     width={INTRO_CONTACT_SIZE}
                     height={INTRO_CONTACT_SIZE}
                     className="fill-current text-scheme-primary"
+                    alt=""
                   />
                 </a>
               ))}

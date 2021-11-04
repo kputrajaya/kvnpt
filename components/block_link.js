@@ -11,6 +11,7 @@ export default function BlockLink({ block }) {
               src={block.link.preview.image}
               width={BLOCK_LINK_IMAGE_SIZE}
               height={BLOCK_LINK_IMAGE_SIZE}
+              alt=""
               dynamicRatio
             />
           </div>

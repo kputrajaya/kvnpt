@@ -43,9 +43,9 @@ export default function Songs({ albums }) {
                       style={{ width: SVG_SONG_SIZE }}
                     >
                       {playing ? (
-                        <Image src={SvgSongPlaying} width={SVG_SONG_SIZE} height={SVG_SONG_SIZE} />
+                        <Image src={SvgSongPlaying} width={SVG_SONG_SIZE} height={SVG_SONG_SIZE} alt="" />
                       ) : (
-                        <Image src={SvgSongPlay} width={SVG_SONG_SIZE} height={SVG_SONG_SIZE} />
+                        <Image src={SvgSongPlay} width={SVG_SONG_SIZE} height={SVG_SONG_SIZE} alt="" />
                       )}
                     </div>
                     <div className="min-w-0 truncate flex-grow">

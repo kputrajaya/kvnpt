@@ -12,6 +12,7 @@ export default function PostSubtitle({ date, tags }) {
         width={SVG_POST_SIZE}
         height={SVG_POST_SIZE}
         className="mr-1 inline-block relative -top-0.25"
+        alt=""
       />
       {formatDate(date)}
       {tags?.length > 0 && (
@@ -22,6 +23,7 @@ export default function PostSubtitle({ date, tags }) {
             width={SVG_POST_SIZE}
             height={SVG_POST_SIZE}
             className="mr-1 inline-block relative -top-0.25"
+            alt=""
           />
           {tags.sort().join(', ')}
         </>

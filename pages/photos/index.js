@@ -28,7 +28,12 @@ export default function Photos({ albums }) {
             <div className="-mt-4 -mx-4 mb-3 text-xs text-scheme-second leading-0 flex">
               {album.content.photos.slice(0, PHOTO_ALBUM_TEASER_COUNT).map((photo, index) => (
                 <div className="w-3/12 relative" key={index}>
-                  <Image src={photo.image.url} width={PHOTO_ALBUM_TEASER_SIZE} height={PHOTO_ALBUM_TEASER_SIZE} />
+                  <Image
+                    src={photo.image.url}
+                    width={PHOTO_ALBUM_TEASER_SIZE}
+                    height={PHOTO_ALBUM_TEASER_SIZE}
+                    alt=""
+                  />
                   {index === PHOTO_ALBUM_TEASER_COUNT - 1 && album.content.photos.length > PHOTO_ALBUM_TEASER_COUNT && (
                     <div className="font-semibold bg-scheme-75 flex items-center justify-center absolute inset-0">
                       +{album.content.photos.length - PHOTO_ALBUM_TEASER_COUNT + 1} more
