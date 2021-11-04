@@ -11,10 +11,10 @@
   "dependencies": {
     "date-fns": "^2.22.1",
     "link-preview-js": "^2.1.8",
-    "next": "^11.1.0",
+    "next": "^12.0.2",
     "preact": "^10.5.13",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-h5-audio-player": "^3.7.1",
     "react-inlinesvg": "^2.3.0",
     "react-markdown": "^6.0.2",
