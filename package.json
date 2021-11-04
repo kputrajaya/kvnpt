@@ -21,6 +21,7 @@
     "use-dark-mode": "^2.3.1"
   },
   "devDependencies": {
+    "@swc/core": "^1.2.106",
     "autoprefixer": "^10.2.6",
     "eslint": "^7.29.0",
     "eslint-config-google": "^0.14.0",
