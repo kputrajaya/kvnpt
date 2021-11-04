@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
   const darkMode = useDarkMode(true, {
     classNameDark: 'dark',
     classNameLight: 'light',
-    element: document ? document.documentElement : null,
+    element: typeof window !== 'undefined' ? document.documentElement : null,
   });
 
   return (
