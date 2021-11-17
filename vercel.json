@@ -17,6 +17,10 @@
       "destination": "http://gist.github.com/kiloev"
     },
     {
+      "source": "/(gt|gather)",
+      "destination": "https://gather.town/app/ga9RYdfiySIznmgy/Kevin"
+    },
+    {
       "source": "/(ig|instagram)",
       "destination": "https://www.instagram.com/kputrajaya/"
     },
@@ -27,6 +31,10 @@
     {
       "source": "/(li|linkedin)",
       "destination": "https://www.linkedin.com/in/kputrajaya/"
+    },
+    {
+      "source": "/(md|medium)",
+      "destination": "https://kiloev.medium.com/"
     },
     {
       "source": "/(qu|quora)",
