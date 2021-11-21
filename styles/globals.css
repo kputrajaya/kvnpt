@@ -129,7 +129,8 @@ strong {
   @apply list-decimal;
 }
 .kvn-markdown pre,
-.kvn-markdown p code {
+.kvn-markdown p code,
+.kvn-markdown li code {
   @apply px-1;
   @apply font-mono;
   @apply text-sm;
