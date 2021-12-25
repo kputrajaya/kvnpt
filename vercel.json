@@ -10,11 +10,11 @@
     },
     {
       "source": "/(gh|github)",
-      "destination": "https://github.com/kiloev"
+      "destination": "https://github.com/kputrajaya"
     },
     {
       "source": "/(gs|gist)",
-      "destination": "http://gist.github.com/kiloev"
+      "destination": "http://gist.github.com/kputrajaya"
     },
     {
       "source": "/(gt|gather)",
@@ -34,7 +34,7 @@
     },
     {
       "source": "/(md|medium)",
-      "destination": "https://kiloev.medium.com/"
+      "destination": "https://kputrajaya.medium.com/"
     },
     {
       "source": "/(qu|quora)",
@@ -46,7 +46,7 @@
     },
     {
       "source": "/(st|steam)",
-      "destination": "https://steamcommunity.com/id/kiloev/"
+      "destination": "https://steamcommunity.com/id/kputrajaya/"
     },
     {
       "source": "/(tv|twitch)",
