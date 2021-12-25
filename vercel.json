@@ -2,7 +2,7 @@
   "redirects": [
     {
       "source": "/(fb|facebook)",
-      "destination": "https://www.facebook.com/kiloev"
+      "destination": "https://www.facebook.com/kputrajaya"
     },
     {
       "source": "/(fl|flickr)",
@@ -26,7 +26,7 @@
     },
     {
       "source": "/(lc|leetcode)",
-      "destination": "https://leetcode.com/kiloev/"
+      "destination": "https://leetcode.com/kputrajaya/"
     },
     {
       "source": "/(li|linkedin)",
