@@ -6,7 +6,7 @@ export default function BlockLink({ block }) {
     block.link.preview ? (
       <div className="flex">
         {block.link.preview.image && (
-          <div className="mr-4 flex-shrink-0" style={{ width: BLOCK_LINK_IMAGE_SIZE }}>
+          <div className="mr-4 shrink-0" style={{ width: BLOCK_LINK_IMAGE_SIZE }}>
             <Image
               src={block.link.preview.image}
               width={BLOCK_LINK_IMAGE_SIZE}
@@ -16,7 +16,7 @@ export default function BlockLink({ block }) {
             />
           </div>
         )}
-        <div className="min-w-0 flex-grow-1">
+        <div className="min-w-0 grow-1">
           <div className="-mt-1 mb-1 font-semibold truncate">{block.link.preview.title}</div>
           {block.link.preview.description && (
             <div className="mb-2 text-xs text-scheme-second">{block.link.preview.description}</div>

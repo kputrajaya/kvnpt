@@ -3,7 +3,7 @@ const colors = require('tailwindcss/colors');
 const imagePrefix = 'https://ik.imagekit.io/kvn/https://kvn.pt';
 
 module.exports = {
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class',
   theme: {
     extend: {
@@ -16,7 +16,7 @@ module.exports = {
           `url('${imagePrefix}/images/background-light.jpg')`,
       }),
       colors: {
-        gray: colors.trueGray,
+        gray: colors.neutral,
         red: {
           500: '#C83939',
         },
@@ -35,12 +35,6 @@ module.exports = {
       zIndex: {
         '-1': '-1',
       },
-    },
-  },
-  variants: {
-    extend: {
-      backgroundImage: ['dark'],
-      opacity: ['dark', 'responsive'],
     },
   },
   plugins: [],
