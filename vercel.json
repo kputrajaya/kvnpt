@@ -1,6 +1,10 @@
 {
   "redirects": [
     {
+      "source": "/(dc|discord)",
+      "destination": "https://discord.com/users/416165829680300034"
+    },
+    {
       "source": "/(fb|facebook)",
       "destination": "https://www.facebook.com/kputrajaya"
     },
@@ -39,6 +43,10 @@
     {
       "source": "/(qu|quora)",
       "destination": "https://www.quora.com/profile/Kevin-Putrajaya"
+    },
+    {
+      "source": "/(sk|skype)",
+      "destination": "https://join.skype.com/invite/xZIgQm0SZCxG"
     },
     {
       "source": "/(sp|spotify)",
