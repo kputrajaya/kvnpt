@@ -1,6 +1,10 @@
 {
   "redirects": [
     {
+      "source": "/(bb|bitbucket)",
+      "destination": "https://bitbucket.org/kputrajaya"
+    },
+    {
       "source": "/(dc|discord)",
       "destination": "https://discord.com/users/416165829680300034"
     },
@@ -15,6 +19,10 @@
     {
       "source": "/(gh|github)",
       "destination": "https://github.com/kputrajaya"
+    },
+    {
+      "source": "/(gl|gitlab)",
+      "destination": "https://gitlab.com/kputrajaya"
     },
     {
       "source": "/(gs|gist)",
