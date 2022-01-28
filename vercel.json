@@ -1,10 +1,6 @@
 {
   "redirects": [
     {
-      "source": "/(ap|appointment)",
-      "destination": "https://kvnpt.zohobookings.com/#/customer/me"
-    },
-    {
       "source": "/(bb|bitbucket)",
       "destination": "https://bitbucket.org/kputrajaya"
     },
@@ -79,6 +75,10 @@
     {
       "source": "/(yt|youtube)",
       "destination": "https://youtube.com/c/KevinPutrajaya"
+    },
+    {
+      "source": "/(zb|zohobookings)",
+      "destination": "https://kvnpt.zohobookings.com/#/customer/me"
     },
     {
       "source": "/(zm|zoom)",
