@@ -79,6 +79,10 @@
     {
       "source": "/(yt|youtube)",
       "destination": "https://youtube.com/c/KevinPutrajaya"
+    },
+    {
+      "source": "/(zm|zoom)",
+      "destination": "https://us05web.zoom.us/j/3405869113?pwd=Uk0zVDdIZlM2M1B4UjBHL1BKZEZIQT09"
     }
   ]
 }
