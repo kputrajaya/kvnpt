@@ -1,6 +1,10 @@
 {
   "redirects": [
     {
+      "source": "/(ap|appointment)",
+      "destination": "https://kvnpt.zohobookings.com/#/customer/me"
+    },
+    {
       "source": "/(bb|bitbucket)",
       "destination": "https://bitbucket.org/kputrajaya"
     },
