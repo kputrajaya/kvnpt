@@ -25,6 +25,10 @@
       "destination": "https://gitlab.com/kputrajaya"
     },
     {
+      "source": "/(gm|googlemeet)",
+      "destination": "https://meet.google.com/kqo-vgau-pnv"
+    },
+    {
       "source": "/(gs|gist)",
       "destination": "http://gist.github.com/kputrajaya"
     },
