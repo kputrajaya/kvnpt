@@ -18,6 +18,9 @@ export const PHOTO_ALBUM_TEASER_COUNT = 4;
 export const PHOTO_ALBUM_TEASER_SIZE = 176;
 export const PHOTO_ALBUM_THUMB_SIZE = 558;
 
+export const POSTHOG_HOST = 'https://app.posthog.com';
+export const POSTHOG_KEY = 'phc_3LjRv3heki87JOHri2ZTt3bPXnsikbHmRLF6Iiqes3T';
+
 export const RESUME_AVATAR_SIZE = 125;
 
 export const SITE_DESCRIPTION =
