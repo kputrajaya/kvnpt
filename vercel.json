@@ -9,6 +9,10 @@
       "destination": "https://discord.com/users/416165829680300034"
     },
     {
+      "source": "/(em|email)",
+      "destination": "mailto:hi@kvn.pt"
+    },
+    {
       "source": "/(fb|facebook)",
       "destination": "https://www.facebook.com/kputrajaya"
     },
