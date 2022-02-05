@@ -24,7 +24,7 @@ export const POSTHOG_KEY = 'phc_3LjRv3heki87JOHri2ZTt3bPXnsikbHmRLF6Iiqes3T';
 export const RESUME_AVATAR_SIZE = 125;
 
 export const SITE_DESCRIPTION =
-  "I'm Kevin, a Software Engineer from Indonesia. I share my resume, blog, music, and photos here in my site.";
+  "I'm Kevin, a Software Engineer / Manager from Indonesia. I share my resume, blog, music, and photos here in my site.";
 export const SITE_IMAGE = IMAGEKIT_ENDPOINT + 'og_image_nbEDAvfHN8N.jpg';
 export const SITE_TITLE = 'Kevin Putrajaya';
 export const SITE_TWITTER_USER = '@kputrajaya';
