@@ -1,13 +1,29 @@
 import Head from 'next/head';
+import { usePostHog } from 'next-use-posthog';
 import useDarkMode from 'use-dark-mode';
 
 import Image from '../components/image';
-import { SITE_DESCRIPTION, SITE_IMAGE, SITE_TWITTER_USER, SVG_SCHEME_SIZE } from '../utils/constants';
+import {
+  POSTHOG_HOST,
+  POSTHOG_KEY,
+  SITE_DESCRIPTION,
+  SITE_IMAGE,
+  SITE_TWITTER_USER,
+  SVG_SCHEME_SIZE,
+} from '../utils/constants';
 import SvgDark from '../public/images/scheme-dark.svg';
 import SvgLight from '../public/images/scheme-light.svg';
 import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
+  usePostHog(POSTHOG_KEY, {
+    api_host: POSTHOG_HOST,
+    loaded: (posthog) => {
+      if (process.env.NODE_ENV === 'development') {
+        posthog.opt_out_capturing();
+      }
+    },
+  });
   const darkMode = useDarkMode(true, {
     classNameDark: 'dark',
     classNameLight: 'light',
