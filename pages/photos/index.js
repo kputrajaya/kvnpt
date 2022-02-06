@@ -22,23 +22,24 @@ export default function Photos({ albums }) {
       <BackButton href="/" />
       <h1 className="mb-8 text-2xl font-semibold">Photos</h1>
 
-      {albums.map((album, index) => (
-        <Link href={`/photos/${album.slug}`} key={index}>
+      {albums.map((album, albumIndex) => (
+        <Link href={`/photos/${album.slug}`} key={albumIndex}>
           <a className="kvn-card mb-4 block">
             <div className="-mt-4 -mx-4 mb-3 text-xs text-scheme-second leading-0 flex">
-              {album.content.photos.slice(0, PHOTO_ALBUM_TEASER_COUNT).map((photo, index) => (
-                <div className="w-3/12 relative" key={index}>
+              {album.content.photos.slice(0, PHOTO_ALBUM_TEASER_COUNT).map((photo, photoIndex) => (
+                <div className="w-3/12 relative" key={photoIndex}>
                   <Image
                     src={photo.image.url}
                     width={PHOTO_ALBUM_TEASER_SIZE}
                     height={PHOTO_ALBUM_TEASER_SIZE}
                     alt=""
                   />
-                  {index === PHOTO_ALBUM_TEASER_COUNT - 1 && album.content.photos.length > PHOTO_ALBUM_TEASER_COUNT && (
-                    <div className="font-semibold bg-scheme-75 flex items-center justify-center absolute inset-0">
-                      +{album.content.photos.length - PHOTO_ALBUM_TEASER_COUNT + 1} more
-                    </div>
-                  )}
+                  {photoIndex === PHOTO_ALBUM_TEASER_COUNT - 1 &&
+                    album.content.photos.length > PHOTO_ALBUM_TEASER_COUNT && (
+                      <div className="font-semibold bg-scheme-75 flex items-center justify-center absolute inset-0">
+                        +{album.content.photos.length - PHOTO_ALBUM_TEASER_COUNT + 1} more
+                      </div>
+                    )}
                 </div>
               ))}
             </div>

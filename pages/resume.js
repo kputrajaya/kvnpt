@@ -28,15 +28,15 @@ export default function Resume({ resume }) {
       companies.push(currentCompany);
     }
 
-    return companies.map((company, index) => (
-      <div className="kvn-card mt-4" key={index}>
+    return companies.map((company, companyIndex) => (
+      <div className="kvn-card mt-4" key={companyIndex}>
         <div className="-mb-4 font-semibold">
           <a className="inline-block" href={company.company.link.url} target="_blank" rel="noreferrer">
             {company.company.caption}
           </a>
         </div>
-        {company.positions.map((position, index) => (
-          <div className="mt-7 -mb-4 text-sm" key={index}>
+        {company.positions.map((position, positionIndex) => (
+          <div className="mt-7 -mb-4 text-sm" key={positionIndex}>
             <h4 className="mb-1 font-semibold text-scheme-second">
               {position.position} &nbsp;&middot;&nbsp; {position.start} &ndash; {position.end}
             </h4>
