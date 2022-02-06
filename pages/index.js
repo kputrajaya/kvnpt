@@ -60,11 +60,7 @@ export async function getStaticProps() {
   const { photo, introduction, contacts } = resHome.story.content;
 
   return {
-    props: {
-      photo,
-      introduction,
-      contacts,
-    },
+    props: { photo, introduction, contacts },
     revalidate: STATIC_PROPS_REVALIDATE,
   };
 }
