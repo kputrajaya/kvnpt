@@ -86,7 +86,7 @@
     },
     {
       "source": "/(zb|zohobookings)",
-      "destination": "https://kvnpt.zohobookings.com/#/customer/me"
+      "destination": "https://kvnpt.zohobookings.com/#/customer/kvnpt"
     },
     {
       "source": "/(zm|zoom)",
