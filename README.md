@@ -1,7 +1,6 @@
 # KVN.PT
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=kputrajaya_kvnpt&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=kputrajaya_kvnpt)
-[![Known Vulnerabilities](https://snyk.io/test/github/kputrajaya/kvnpt/badge.svg)](https://snyk.io/test/github/kputrajaya/kvnpt)
 
 My current personal site.
 
