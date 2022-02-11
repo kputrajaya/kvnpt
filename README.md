@@ -1,5 +1,7 @@
 # KVN.PT
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=kputrajaya_kvnpt&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=kputrajaya_kvnpt)
+
 My current personal site.
 
 ## Built With
