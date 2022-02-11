@@ -2,95 +2,118 @@
   "redirects": [
     {
       "source": "/(bb|bitbucket)",
-      "destination": "https://bitbucket.org/kputrajaya"
+      "destination": "https://bitbucket.org/kputrajaya",
+      "permanent": false
     },
     {
       "source": "/(dc|discord)",
-      "destination": "https://discord.com/users/416165829680300034"
+      "destination": "https://discord.com/users/416165829680300034",
+      "permanent": false
     },
     {
       "source": "/(em|email)",
-      "destination": "mailto:hi@kvn.pt"
+      "destination": "mailto:hi@kvn.pt",
+      "permanent": false
     },
     {
       "source": "/(fb|facebook)",
-      "destination": "https://www.facebook.com/kputrajaya"
+      "destination": "https://www.facebook.com/kputrajaya",
+      "permanent": false
     },
     {
       "source": "/(fl|flickr)",
-      "destination": "https://flickr.com/photos/kputrajaya"
+      "destination": "https://flickr.com/photos/kputrajaya",
+      "permanent": false
     },
     {
       "source": "/(gh|github)",
-      "destination": "https://github.com/kputrajaya"
+      "destination": "https://github.com/kputrajaya",
+      "permanent": false
     },
     {
       "source": "/(gl|gitlab)",
-      "destination": "https://gitlab.com/kputrajaya"
+      "destination": "https://gitlab.com/kputrajaya",
+      "permanent": false
     },
     {
       "source": "/(gm|googlemeet)",
-      "destination": "https://meet.google.com/kqo-vgau-pnv"
+      "destination": "https://meet.google.com/kqo-vgau-pnv",
+      "permanent": false
     },
     {
       "source": "/(gs|gist)",
-      "destination": "http://gist.github.com/kputrajaya"
+      "destination": "http://gist.github.com/kputrajaya",
+      "permanent": false
     },
     {
       "source": "/(gt|gather)",
-      "destination": "https://gather.town/app/ga9RYdfiySIznmgy/Kevin"
+      "destination": "https://gather.town/app/ga9RYdfiySIznmgy/Kevin",
+      "permanent": false
     },
     {
       "source": "/(ig|instagram)",
-      "destination": "https://www.instagram.com/kputrajaya/"
+      "destination": "https://www.instagram.com/kputrajaya/",
+      "permanent": false
     },
     {
       "source": "/(lc|leetcode)",
-      "destination": "https://leetcode.com/kputrajaya/"
+      "destination": "https://leetcode.com/kputrajaya/",
+      "permanent": false
     },
     {
       "source": "/(li|linkedin)",
-      "destination": "https://www.linkedin.com/in/kputrajaya/"
+      "destination": "https://www.linkedin.com/in/kputrajaya/",
+      "permanent": false
     },
     {
       "source": "/(md|medium)",
-      "destination": "https://kputrajaya.medium.com/"
+      "destination": "https://kputrajaya.medium.com/",
+      "permanent": false
     },
     {
       "source": "/(qu|quora)",
-      "destination": "https://www.quora.com/profile/Kevin-Putrajaya"
+      "destination": "https://www.quora.com/profile/Kevin-Putrajaya",
+      "permanent": false
     },
     {
       "source": "/(sk|skype)",
-      "destination": "https://join.skype.com/invite/xZIgQm0SZCxG"
+      "destination": "https://join.skype.com/invite/xZIgQm0SZCxG",
+      "permanent": false
     },
     {
       "source": "/(sp|spotify)",
-      "destination": "https://open.spotify.com/user/21qf3gujlq6pmr55bmvehhxpa"
+      "destination": "https://open.spotify.com/user/21qf3gujlq6pmr55bmvehhxpa",
+      "permanent": false
     },
     {
       "source": "/(st|steam)",
-      "destination": "https://steamcommunity.com/id/kputrajaya/"
+      "destination": "https://steamcommunity.com/id/kputrajaya/",
+      "permanent": false
     },
     {
       "source": "/(tv|twitch)",
-      "destination": "https://www.twitch.tv/kputrajaya"
+      "destination": "https://www.twitch.tv/kputrajaya",
+      "permanent": false
     },
     {
       "source": "/(tw|twitter)",
-      "destination": "https://twitter.com/kputrajaya"
+      "destination": "https://twitter.com/kputrajaya",
+      "permanent": false
     },
     {
       "source": "/(yt|youtube)",
-      "destination": "https://youtube.com/c/KevinPutrajaya"
+      "destination": "https://youtube.com/c/KevinPutrajaya",
+      "permanent": false
     },
     {
       "source": "/(zb|zohobookings)",
-      "destination": "https://kvnpt.zohobookings.com/#/customer/kvnpt"
+      "destination": "https://kvnpt.zohobookings.com/#/customer/kvnpt",
+      "permanent": false
     },
     {
       "source": "/(zm|zoom)",
-      "destination": "https://us05web.zoom.us/j/3405869113?pwd=Uk0zVDdIZlM2M1B4UjBHL1BKZEZIQT09"
+      "destination": "https://us05web.zoom.us/j/3405869113?pwd=Uk0zVDdIZlM2M1B4UjBHL1BKZEZIQT09",
+      "permanent": false
     }
   ]
 }
