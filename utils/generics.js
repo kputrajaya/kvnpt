@@ -1,4 +1,13 @@
+import useDarkMode from 'use-dark-mode';
+
 import { IMAGEKIT_ENDPOINT } from './constants';
+
+export const useDark = () =>
+  useDarkMode(true, {
+    classNameDark: 'dark',
+    classNameLight: 'light',
+    element: typeof window !== 'undefined' ? document.documentElement : null,
+  });
 
 export const buildImageSrc = (src, width, height, dynamicRatio = false) => {
   let newSrc = src;

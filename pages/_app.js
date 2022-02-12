@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import { usePostHog } from 'next-use-posthog';
-import useDarkMode from 'use-dark-mode';
 
 import Image from '../components/image';
 import {
@@ -11,6 +10,7 @@ import {
   SITE_TWITTER_USER,
   SVG_SCHEME_SIZE,
 } from '../utils/constants';
+import { useDark } from '../utils/generics';
 import SvgDark from '../public/images/scheme-dark.svg';
 import SvgLight from '../public/images/scheme-light.svg';
 import '../styles/globals.css';
@@ -24,11 +24,7 @@ function MyApp({ Component, pageProps }) {
       }
     },
   });
-  const darkMode = useDarkMode(true, {
-    classNameDark: 'dark',
-    classNameLight: 'light',
-    element: typeof window !== 'undefined' ? document.documentElement : null,
-  });
+  const darkMode = useDark();
 
   return (
     <>

@@ -156,8 +156,8 @@ strong {
   @apply w-fit;
   @apply min-w-full;
   @apply m-0 !important;
-  @apply font-mono !important;
-  @apply bg-gray-800 !important;
+  @apply font-mono;
+  @apply bg-transparent !important;
 }
 
 .kvn-audio .rhap_container {
