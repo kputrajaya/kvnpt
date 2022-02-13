@@ -24,9 +24,10 @@ export default function Markdown({ text }) {
       );
     },
     code({ node, inline, className, children, ...props }) {
-      const match = /language-(\w+)/.exec(className || '');
-      return !inline && match ? (
-        <SyntaxHighlighter style={darkMode.value ? tomorrow : coldarkCold} language={match[1]} PreTag="div" {...props}>
+      const matchLang = /language-(\w+)/.exec(className || '');
+      const style = darkMode.value ? tomorrow : coldarkCold;
+      return !inline && matchLang ? (
+        <SyntaxHighlighter PreTag="div" language={matchLang[1]} style={style} {...props}>
           {String(children).replace(/\n$/, '')}
         </SyntaxHighlighter>
       ) : (
