@@ -76,6 +76,11 @@
       "permanent": false
     },
     {
+      "source": "/(sc|soundcloud)",
+      "destination": "https://soundcloud.com/kputrajaya",
+      "permanent": false
+    },
+    {
       "source": "/(sk|skype)",
       "destination": "https://join.skype.com/invite/xZIgQm0SZCxG",
       "permanent": false
