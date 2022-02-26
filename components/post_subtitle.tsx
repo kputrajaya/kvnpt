@@ -16,7 +16,7 @@ export default function PostSubtitle({ date, tags = [] }) {
         title=""
       />
       {formatDate(date)}
-      {tags?.length > 0 && (
+      {tags.length > 0 && (
         <>
           &nbsp;&nbsp;&middot;&nbsp;&nbsp;
           <Image
@@ -27,7 +27,7 @@ export default function PostSubtitle({ date, tags = [] }) {
             alt=""
             title=""
           />
-          {tags.sort().join(', ')}
+          {[...tags].sort().join(', ')}
         </>
       )}
     </>

@@ -69,8 +69,8 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   // Get posts for current page
-  const pageCurrent = Math.floor(params.page);
-  if (!(pageCurrent > 0)) return { notFound: true };
+  const pageCurrent = parseInt(params.page);
+  if (!pageCurrent || pageCurrent <= 0) return { notFound: true };
   const resPosts = await getPosts(pageCurrent, BLOG_PER_PAGE);
   if (!resPosts?.stories?.length) return { notFound: true };
   const pageCount = Math.ceil(resPosts.count / BLOG_PER_PAGE);
