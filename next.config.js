@@ -1,7 +1,6 @@
 const withTM = require('next-transpile-modules')(['react-syntax-highlighter']);
 
 module.exports = withTM({
-  swcMinify: false,
   webpack: (config, { dev, isServer }) => {
     // Replace React with Preact only in production
     if (!dev && !isServer) {
