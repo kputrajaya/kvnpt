@@ -20,10 +20,14 @@ body::after {
   @apply fixed;
   @apply inset-0;
   @apply bottom-1/2;
-  @apply bg-custom-light;
-  @apply dark:bg-custom-dark;
   @apply bg-cover;
   @apply -z-1;
+}
+html.light > body::after {
+  @apply bg-custom-light;
+}
+html.dark > body::after {
+  @apply bg-custom-dark;
 }
 
 a {
