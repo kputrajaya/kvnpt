@@ -4,7 +4,7 @@ import Image from './image';
 import SvgDate from '../public/images/post-date.svg';
 import SvgTag from '../public/images/post-tag.svg';
 
-export default function PostSubtitle({ date, tags=[] }) {
+export default function PostSubtitle({ date, tags = [] }) {
   return (
     <>
       <Image

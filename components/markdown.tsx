@@ -31,12 +31,10 @@ export default function Markdown({ text }) {
             PreTag: 'div',
             language: matchLang ? matchLang[1] : null,
             style: darkMode.value ? tomorrow : coldarkCold,
-            ...props
+            ...props,
           };
           return !inline && highlighterProps.language ? (
-            <SyntaxHighlighter {...highlighterProps}>
-              {String(children).replace(/\n$/, '')}
-            </SyntaxHighlighter>
+            <SyntaxHighlighter {...highlighterProps}>{String(children).replace(/\n$/, '')}</SyntaxHighlighter>
           ) : (
             <code className={className} {...props}>
               {children}

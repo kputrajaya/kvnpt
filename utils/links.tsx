@@ -13,7 +13,7 @@ export const getLinkPreview = async (url) => {
       result.title = preview.title || preview.siteName || null;
       result.description = preview.description || null;
       result.image = (preview.images || []).find((_) => true) || result.image;
-    };
+    }
     return result;
   } catch (e) {
     return null;
