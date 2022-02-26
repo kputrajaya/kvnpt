@@ -31,6 +31,7 @@ export default function PhotoAlbumImages({ album, previewCount }) {
                 width={PHOTO_ALBUM_THUMB_SIZE}
                 height={PHOTO_ALBUM_THUMB_SIZE}
                 alt=""
+                title=""
                 onClick={() =>
                   setLightboxControl({
                     toggler: !lightboxControl.toggler,

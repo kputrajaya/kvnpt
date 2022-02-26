@@ -33,6 +33,7 @@ export default function Photos({ albums }) {
                     width={PHOTO_ALBUM_TEASER_SIZE}
                     height={PHOTO_ALBUM_TEASER_SIZE}
                     alt=""
+                    title=""
                   />
                   {photoIndex === PHOTO_ALBUM_TEASER_COUNT - 1 &&
                     album.content.photos.length > PHOTO_ALBUM_TEASER_COUNT && (
@@ -54,7 +55,7 @@ export default function Photos({ albums }) {
   );
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps() {
   const resPhotoAlbums = await getPhotoAlbums();
 
   return {

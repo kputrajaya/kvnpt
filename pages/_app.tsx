@@ -47,7 +47,13 @@ function MyApp({ Component, pageProps }) {
             title="Dark mode"
             onClick={darkMode.toggle}
           >
-            <Image src={darkMode.value ? SvgDark : SvgLight} width={SVG_SCHEME_SIZE} height={SVG_SCHEME_SIZE} alt="" />
+            <Image
+              src={darkMode.value ? SvgDark : SvgLight}
+              width={SVG_SCHEME_SIZE}
+              height={SVG_SCHEME_SIZE}
+              alt=""
+              title=""
+            />
           </div>
         )}
       </div>

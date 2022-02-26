@@ -58,7 +58,7 @@ export async function getStaticPaths() {
   const pageCount = Math.ceil(count / BLOG_PER_PAGE);
 
   // Build list of pages
-  const paths = [...Array(pageCount).keys()].map((key) => ({
+  const paths = Array.from(Array(pageCount).keys()).map((key) => ({
     params: {
       page: `${key + 1}`,
     },

@@ -3,7 +3,14 @@ import Image from './image';
 
 export default function BlockPhoto({ block }) {
   let image = (
-    <Image src={block.image.url} width={BLOCK_PHOTO_MAX_WIDTH} height={BLOCK_PHOTO_MAX_HEIGHT} alt="" dynamicRatio />
+    <Image
+      src={block.image.url}
+      width={BLOCK_PHOTO_MAX_WIDTH}
+      height={BLOCK_PHOTO_MAX_HEIGHT}
+      alt=""
+      title=""
+      dynamicRatio
+    />
   );
   if (block.link?.url) {
     image = (

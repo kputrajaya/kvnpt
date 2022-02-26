@@ -4,7 +4,7 @@ import Image from './image';
 import SvgDate from '../public/images/post-date.svg';
 import SvgTag from '../public/images/post-tag.svg';
 
-export default function PostSubtitle({ date, tags }) {
+export default function PostSubtitle({ date, tags=[] }) {
   return (
     <>
       <Image
@@ -13,6 +13,7 @@ export default function PostSubtitle({ date, tags }) {
         height={SVG_POST_SIZE}
         className="mr-1 inline-block relative -top-0.25"
         alt=""
+        title=""
       />
       {formatDate(date)}
       {tags?.length > 0 && (
@@ -24,6 +25,7 @@ export default function PostSubtitle({ date, tags }) {
             height={SVG_POST_SIZE}
             className="mr-1 inline-block relative -top-0.25"
             alt=""
+            title=""
           />
           {tags.sort().join(', ')}
         </>

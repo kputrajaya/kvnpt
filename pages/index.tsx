@@ -29,6 +29,7 @@ export default function Home({ photo, introduction, contacts }) {
             height={INTRO_AVATAR_SIZE}
             className="rounded-full md:mt-1 md:shrink-0"
             alt={SITE_TITLE}
+            title={SITE_TITLE}
           />
           <div className="mt-8 md:mt-0 md:ml-8">
             <div className="mb-8">
