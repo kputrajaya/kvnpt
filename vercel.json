@@ -71,6 +71,11 @@
       "permanent": false
     },
     {
+      "source": "/(pp|paypal)",
+      "destination": "https://www.paypal.com/paypalme/kputrajaya",
+      "permanent": false
+    },
+    {
       "source": "/(qu|quora)",
       "destination": "https://www.quora.com/profile/Kevin-Putrajaya",
       "permanent": false
