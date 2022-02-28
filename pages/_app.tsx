@@ -39,11 +39,11 @@ function MyApp({ Component, pageProps }) {
         <meta name="description" content={SITE_DESCRIPTION} />
       </Head>
 
-      <div className="container max-w-3xl mx-auto p-8 relative">
+      <div className="container relative mx-auto max-w-3xl p-8">
         <Component {...pageProps} />
         {darkMode && (
           <div
-            className="p-2 bg-scheme rounded-full leading-0 absolute top-8 right-8 cursor-pointer print:hidden"
+            className="bg-scheme absolute top-8 right-8 cursor-pointer rounded-full p-2 leading-0 print:hidden"
             title="Dark mode"
             onClick={darkMode.toggle}
           >

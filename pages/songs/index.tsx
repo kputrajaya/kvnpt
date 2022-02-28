@@ -38,7 +38,7 @@ export default function Songs({ albums }) {
               const renderLine = () => (
                 <div className="flex">
                   <div
-                    className="mr-4 text-scheme-primary fill-current shrink-0 self-center"
+                    className="text-scheme-primary mr-4 shrink-0 self-center fill-current"
                     style={{ width: SVG_SONG_SIZE }}
                   >
                     {playing ? (
@@ -47,26 +47,26 @@ export default function Songs({ albums }) {
                       <Image src={SvgSongPlay} width={SVG_SONG_SIZE} height={SVG_SONG_SIZE} alt="" title="" />
                     )}
                   </div>
-                  <div className="min-w-0 truncate grow">
+                  <div className="min-w-0 grow truncate">
                     <div>{song.title}</div>
                     {song.featuring && (
-                      <div className="text-xs text-scheme-third">
+                      <div className="text-scheme-third text-xs">
                         <span className="italic">w.</span> {song.featuring}
                       </div>
                     )}
                   </div>
-                  <div className="ml-4 text-scheme-third shrink-0">{song.duration || '--:--'}</div>
+                  <div className="text-scheme-third ml-4 shrink-0">{song.duration || '--:--'}</div>
                 </div>
               );
 
               return (
-                <div className="text-sm border-t border-scheme" key={songIndex}>
+                <div className="border-scheme border-t text-sm" key={songIndex}>
                   {song.audio.url ? (
-                    <div className="py-2 cursor-pointer" onClick={() => setPlayIndex(currentIndex)}>
+                    <div className="cursor-pointer py-2" onClick={() => setPlayIndex(currentIndex)}>
                       {renderLine()}
                     </div>
                   ) : (
-                    <div className="py-2 text-scheme-third cursor-not-allowed">{renderLine()}</div>
+                    <div className="text-scheme-third cursor-not-allowed py-2">{renderLine()}</div>
                   )}
                 </div>
               );

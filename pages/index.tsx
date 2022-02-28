@@ -21,7 +21,7 @@ export default function Home({ photo, introduction, contacts }) {
         <title>{SITE_TITLE}</title>
       </Head>
 
-      <div className="h-screen -my-8 py-8 flex items-center">
+      <div className="-my-8 flex h-screen items-center py-8">
         <div className="md:flex md:items-start">
           <Image
             src={photo.url}
@@ -43,7 +43,7 @@ export default function Home({ photo, introduction, contacts }) {
                     title={contact.caption}
                     width={INTRO_CONTACT_SIZE}
                     height={INTRO_CONTACT_SIZE}
-                    className="fill-current text-scheme-primary"
+                    className="text-scheme-primary fill-current"
                     alt=""
                   />
                 </a>

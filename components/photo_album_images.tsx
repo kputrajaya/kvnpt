@@ -25,7 +25,7 @@ export default function PhotoAlbumImages({ album, previewCount }) {
         {images
           .filter((image, index) => expand || index < previewCount)
           .map((image, index) => (
-            <div className="cursor-pointer sm:w-6/12 p-1 inline-block" key={index}>
+            <div className="inline-block cursor-pointer p-1 sm:w-6/12" key={index}>
               <Image
                 src={image}
                 width={PHOTO_ALBUM_THUMB_SIZE}
@@ -44,7 +44,7 @@ export default function PhotoAlbumImages({ album, previewCount }) {
       </div>
       {images.length > previewCount && (
         <button
-          className="w-full mt-2 -mb-2 p-2 text-xs text-scheme-third text-center cursor-pointer"
+          className="text-scheme-third mt-2 -mb-2 w-full cursor-pointer p-2 text-center text-xs"
           onClick={() => setExpand(!expand)}
         >
           {expand ? 'View less' : `View ${images.length - previewCount} more`} &hellip;

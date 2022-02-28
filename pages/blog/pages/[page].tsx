@@ -22,14 +22,14 @@ export default function Page({ posts, pageCurrent, pageCount }) {
         <Link href={`/blog/posts/${post.slug}`} key={index}>
           <a className="kvn-card mb-4 block">
             <h2 className="mb-1 font-semibold">{post.name}</h2>
-            <h3 className="text-sm text-scheme-third">
+            <h3 className="text-scheme-third text-sm">
               <PostSubtitle date={post.first_published_at} tags={post.tag_list} />
             </h3>
           </a>
         </Link>
       ))}
 
-      <div className="mt-8 text-sm text-scheme-third">
+      <div className="text-scheme-third mt-8 text-sm">
         {pageCurrent > 1 && (
           <>
             <Link href={`/blog/pages/${pageCurrent - 1}`}>

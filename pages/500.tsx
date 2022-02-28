@@ -10,7 +10,7 @@ export default function Custom500() {
         <title>Internal Server Error - {SITE_TITLE}</title>
       </Head>
 
-      <div className="h-screen -my-8 py-8 flex items-center justify-center">
+      <div className="-my-8 flex h-screen items-center justify-center py-8">
         <div className="text-center">
           <div className="text-5xl font-semibold">500</div>
           <h1 className="my-4 text-lg">Something went wrong.</h1>

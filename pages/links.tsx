@@ -13,11 +13,11 @@ export default function Links({ links }) {
       <BackButton href="/" />
       <h1 className="mb-8 text-2xl font-semibold">Links</h1>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
         {links.map((link, index) => (
           <a className="kvn-card block" href={`/${link.short}`} target="_blank" rel="noreferrer" key={index}>
             <h2 className="mb-1 font-semibold">/{link.short}</h2>
-            <h3 className="text-sm text-scheme-third">{link.name}</h3>
+            <h3 className="text-scheme-third text-sm">{link.name}</h3>
           </a>
         ))}
       </div>

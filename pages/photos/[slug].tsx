@@ -19,7 +19,7 @@ export default function Photo({ album }) {
 
       <BackButton href="/photos" />
       <h1 className="mb-2 text-2xl font-semibold">{album.name}</h1>
-      <h3 className="mb-8 text-sm text-scheme-third">
+      <h3 className="text-scheme-third mb-8 text-sm">
         <PostSubtitle date={album.content.date} />
       </h3>
 

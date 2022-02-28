@@ -8,7 +8,7 @@ export default function Audio({ songs, index, setIndex }) {
   return (
     <>
       <div className="mb-24"></div>
-      <div className="kvn-audio fixed bottom-0 inset-x-0">
+      <div className="kvn-audio fixed inset-x-0 bottom-0">
         <AudioPlayer
           autoPlayAfterSrcChange={true}
           showFilledVolume={true}

@@ -25,9 +25,9 @@ export default function Photos({ albums }) {
       {albums.map((album, albumIndex) => (
         <Link href={`/photos/${album.slug}`} key={albumIndex}>
           <a className="kvn-card mb-4 block">
-            <div className="-mt-4 -mx-4 mb-3 text-xs text-scheme-second leading-0 flex">
+            <div className="text-scheme-second -mx-4 -mt-4 mb-3 flex text-xs leading-0">
               {album.content.photos.slice(0, PHOTO_ALBUM_TEASER_COUNT).map((photo, photoIndex) => (
-                <div className="w-3/12 relative" key={photoIndex}>
+                <div className="relative w-3/12" key={photoIndex}>
                   <Image
                     src={photo.image.url}
                     width={PHOTO_ALBUM_TEASER_SIZE}
@@ -37,7 +37,7 @@ export default function Photos({ albums }) {
                   />
                   {photoIndex === PHOTO_ALBUM_TEASER_COUNT - 1 &&
                     album.content.photos.length > PHOTO_ALBUM_TEASER_COUNT && (
-                      <div className="font-semibold bg-scheme-75 flex items-center justify-center absolute inset-0">
+                      <div className="bg-scheme-75 absolute inset-0 flex items-center justify-center font-semibold">
                         +{album.content.photos.length - PHOTO_ALBUM_TEASER_COUNT + 1} more
                       </div>
                     )}
@@ -45,7 +45,7 @@ export default function Photos({ albums }) {
               ))}
             </div>
             <h2 className="mb-1 font-semibold">{album.name}</h2>
-            <h3 className="text-sm text-scheme-third">
+            <h3 className="text-scheme-third text-sm">
               <PostSubtitle date={album.content.date} />
             </h3>
           </a>

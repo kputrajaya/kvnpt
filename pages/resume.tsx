@@ -37,7 +37,7 @@ export default function Resume({ resume }) {
         </div>
         {company.positions.map((position, positionIndex) => (
           <div className="mt-7 -mb-4 text-sm" key={positionIndex}>
-            <h4 className="mb-1 font-semibold text-scheme-second">
+            <h4 className="text-scheme-second mb-1 font-semibold">
               {position.position} &nbsp;&middot;&nbsp; {position.start} &ndash; {position.end}
             </h4>
             <div className="text-scheme-third">
@@ -65,7 +65,7 @@ export default function Resume({ resume }) {
         title=""
       />
       <h1 className="mb-2 text-2xl font-semibold">{resume.name}</h1>
-      <h3 className="mb-6 text-sm text-scheme-third">
+      <h3 className="text-scheme-third mb-6 text-sm">
         {resume.position} &nbsp;&middot;&nbsp; {resume.location}
       </h3>
 
@@ -79,7 +79,7 @@ export default function Resume({ resume }) {
       <h3 className="mt-12 text-lg font-semibold">Skills</h3>
       <ul className="mt-4 leading-0">
         {resume.skills.map((block, index) => (
-          <li className="kvn-card kvn-card-small mt-2 mr-2 text-sm inline-block" key={index}>
+          <li className="kvn-card kvn-card-small mt-2 mr-2 inline-block text-sm" key={index}>
             <span className={block.highlight ? 'font-semibold' : ''}>{block.name}</span>
           </li>
         ))}

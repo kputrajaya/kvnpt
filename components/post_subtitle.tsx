@@ -11,7 +11,7 @@ export default function PostSubtitle({ date, tags = [] }) {
         src={SvgDate}
         width={SVG_POST_SIZE}
         height={SVG_POST_SIZE}
-        className="mr-1 inline-block relative -top-0.25"
+        className="relative -top-0.25 mr-1 inline-block"
         alt=""
         title=""
       />
@@ -23,7 +23,7 @@ export default function PostSubtitle({ date, tags = [] }) {
             src={SvgTag}
             width={SVG_POST_SIZE}
             height={SVG_POST_SIZE}
-            className="mr-1 inline-block relative -top-0.25"
+            className="relative -top-0.25 mr-1 inline-block"
             alt=""
             title=""
           />

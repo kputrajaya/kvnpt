@@ -9,7 +9,7 @@ export default function BlockPhotoAlbumLink({ block }) {
         <div className="mb-1 text-lg font-semibold">
           <a href={`/photos/${block.photo_album.slug}`}>{block.photo_album.name}</a>
         </div>
-        <div className="text-sm text-scheme-third">
+        <div className="text-scheme-third text-sm">
           <PostSubtitle date={block.photo_album.content.date} />
         </div>
       </div>

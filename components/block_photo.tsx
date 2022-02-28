@@ -23,7 +23,7 @@ export default function BlockPhoto({ block }) {
   return (
     <div className="text-center">
       <div className="inline-block">{image}</div>
-      {block.caption && <div className="mt-2 text-xs text-center italic text-scheme-third">{block.caption}</div>}
+      {block.caption && <div className="text-scheme-third mt-2 text-center text-xs italic">{block.caption}</div>}
     </div>
   );
 }
