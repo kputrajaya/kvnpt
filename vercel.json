@@ -6,6 +6,11 @@
       "permanent": false
     },
     {
+      "source": "/(bc|bandcamp)",
+      "destination": "https://bandcamp.com/kputrajaya",
+      "permanent": false
+    },
+    {
       "source": "/(dc|discord)",
       "destination": "https://discord.com/users/416165829680300034",
       "permanent": false
