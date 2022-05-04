@@ -46,6 +46,11 @@
       "permanent": false
     },
     {
+      "source": "/(gr|goodreads)",
+      "destination": "https://www.goodreads.com/user/show/55996891-kevin-putrajaya",
+      "permanent": false
+    },
+    {
       "source": "/(gs|gist)",
       "destination": "http://gist.github.com/kputrajaya",
       "permanent": false
