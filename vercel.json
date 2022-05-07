@@ -7,7 +7,7 @@
     },
     {
       "source": "/(bc|bandcamp)",
-      "destination": "https://bandcamp.com/kputrajaya",
+      "destination": "https://kputrajaya.bandcamp.com/releases",
       "permanent": false
     },
     {
