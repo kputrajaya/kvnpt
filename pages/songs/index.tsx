@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import Head from 'next/head';
 
-import { SITE_TITLE, STATIC_PROPS_REVALIDATE, SVG_SONG_SIZE } from '../../utils/constants';
+import { SITE_TITLE, STATIC_PROPS_REVALIDATE, SVG_INFO_SIZE, SVG_SONG_SIZE } from '../../utils/constants';
 import { getSongAlbums } from '../../utils/storyblok';
 import Audio from '../../components/audio';
 import BackButton from '../../components/back_button';
 import Image from '../../components/image';
+import SvgSongInfo from '../../public/images/song-info.svg';
 import SvgSongPlay from '../../public/images/song-play.svg';
 import SvgSongPlaying from '../../public/images/song-playing.svg';
 
@@ -25,7 +26,19 @@ export default function Songs({ albums }) {
 
       {albums.map((album, albumIndex) => (
         <div className="kvn-card mb-8" key={albumIndex}>
-          <h2 className="mb-4 font-semibold">{album.name}</h2>
+          <h2 className="mb-4 font-semibold">
+            {album.name}
+            {album.content?.link?.url && (
+              <a
+                className="-my-px inline-block px-2 py-1 align-middle"
+                href={album.content.link.url}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Image src={SvgSongInfo} width={SVG_INFO_SIZE} height={SVG_INFO_SIZE} alt="" title="" />
+              </a>
+            )}
+          </h2>
           <div className="-mb-2">
             {album.content.songs.map((song, songIndex) => {
               const currentIndex = counter;

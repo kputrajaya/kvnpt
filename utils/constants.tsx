@@ -33,6 +33,7 @@ export const STATIC_PROPS_REVALIDATE = parseInt(process.env.STATIC_PROPS_REVALID
 
 export const STORYBLOK_TOKEN = process.env.STORYBLOK_TOKEN || 'Not initialized';
 
-export const SVG_SCHEME_SIZE = 19;
+export const SVG_INFO_SIZE = 15;
 export const SVG_POST_SIZE = 15;
+export const SVG_SCHEME_SIZE = 19;
 export const SVG_SONG_SIZE = 10;
