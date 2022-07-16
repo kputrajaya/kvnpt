@@ -93,7 +93,7 @@ export default function Songs({ albums }) {
   );
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps() {
   const resSongAlbums = await getSongAlbums();
 
   return {

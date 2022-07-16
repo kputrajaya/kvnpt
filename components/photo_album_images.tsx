@@ -23,7 +23,7 @@ export default function PhotoAlbumImages({ album, previewCount }) {
     <div className="leading-0">
       <div className="-m-1 leading-0">
         {images
-          .filter((image, index) => expand || index < previewCount)
+          .filter((_, index) => expand || index < previewCount)
           .map((image, index) => (
             <div className="inline-block cursor-pointer p-1 sm:w-6/12" key={index}>
               <Image

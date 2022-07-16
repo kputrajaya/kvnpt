@@ -25,7 +25,7 @@ export default function Markdown({ text }) {
             </a>
           );
         },
-        code({ node, inline, className, children, ...props }) {
+        code({ node: _, inline, className, children, ...props }) {
           const matchLang = /language-(\w+)/.exec(className || '');
           const highlighterProps = {
             PreTag: 'div',
