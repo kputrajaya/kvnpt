@@ -16,6 +16,11 @@
       "permanent": false
     },
     {
+      "source": "/(dh|docker)",
+      "destination": "https://hub.docker.com/u/kiloev",
+      "permanent": false
+    },
+    {
       "source": "/(em|email)",
       "destination": "mailto:hi@kvn.pt",
       "permanent": false
@@ -78,11 +83,6 @@
     {
       "source": "/(md|medium)",
       "destination": "https://kputrajaya.medium.com/",
-      "permanent": false
-    },
-    {
-      "source": "/(pk|publickey)",
-      "destination": "https://gist.githubusercontent.com/kputrajaya/4f3f769ecbf128545191aa9f002c0841/raw/8e394b64d40567562cb62a05687aa40fe73c9e48/key.pub",
       "permanent": false
     },
     {
