@@ -11,6 +11,11 @@
       "permanent": false
     },
     {
+      "source": "/(bg|boardgamegeek)",
+      "destination": "https://boardgamegeek.com/collection/user/kputrajaya",
+      "permanent": false
+    },
+    {
       "source": "/(dc|discord)",
       "destination": "https://discord.com/users/416165829680300034",
       "permanent": false
