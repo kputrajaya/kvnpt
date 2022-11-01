@@ -137,7 +137,7 @@
     },
     {
       "source": "/(yt|youtube)",
-      "destination": "https://youtube.com/c/KevinPutrajaya",
+      "destination": "https://youtube.com/@kputrajaya",
       "permanent": false
     },
     {
