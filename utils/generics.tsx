@@ -1,4 +1,4 @@
-import useDarkMode from 'use-dark-mode';
+import useDarkMode from '@fisch0920/use-dark-mode';
 
 import { IMAGEKIT_ENDPOINT } from './constants';
 

@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fisch0920/use-dark-mode": "^2.4.0",
     "date-fns": "^2.28.0",
     "link-preview-js": "^2.1.16",
     "next": "^13.0.3",
@@ -19,8 +20,7 @@
     "react-h5-audio-player": "^3.8.4",
     "react-inlinesvg": "^3.0.1",
     "react-markdown": "^8.0.3",
-    "react-syntax-highlighter": "^15.5.0",
-    "use-dark-mode": "^2.3.1"
+    "react-syntax-highlighter": "^15.5.0"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^12.1.5",
