@@ -16,9 +16,7 @@ export default function Markdown({ text }) {
       components={{
         a({ children, href }) {
           return String(href).startsWith('/') ? (
-            <Link href={href}>
-              <a>{children}</a>
-            </Link>
+            <Link href={href}>{children}</Link>
           ) : (
             <a href={String(href)} target="_blank" rel="noreferrer">
               {children}

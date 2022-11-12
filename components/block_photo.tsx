@@ -7,7 +7,7 @@ export default function BlockPhoto({ block }) {
       src={block.image.url}
       width={BLOCK_PHOTO_MAX_WIDTH}
       height={BLOCK_PHOTO_MAX_HEIGHT}
-      alt=""
+      alt={block.caption || 'Image'}
       title=""
       dynamicRatio
     />

@@ -61,7 +61,7 @@ export default function Resume({ resume }) {
         width={RESUME_AVATAR_SIZE}
         height={RESUME_AVATAR_SIZE}
         className="mb-4 rounded-full"
-        alt=""
+        alt={resume.name}
         title=""
       />
       <h1 className="mb-2 text-2xl font-semibold">{resume.name}</h1>

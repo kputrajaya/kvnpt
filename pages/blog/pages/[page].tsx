@@ -19,22 +19,18 @@ export default function Page({ posts, pageCurrent, pageCount }) {
       <h1 className="mb-8 text-2xl font-semibold">Blog</h1>
 
       {posts.map((post, index) => (
-        <Link href={`/blog/posts/${post.slug}`} key={index}>
-          <a className="kvn-card mb-4 block">
-            <h2 className="mb-1 font-semibold">{post.name}</h2>
-            <h3 className="text-scheme-third text-sm">
-              <PostSubtitle date={post.first_published_at} tags={post.tag_list} />
-            </h3>
-          </a>
+        <Link className="kvn-card mb-4 block" href={`/blog/posts/${post.slug}`} key={index}>
+          <h2 className="mb-1 font-semibold">{post.name}</h2>
+          <h3 className="text-scheme-third text-sm">
+            <PostSubtitle date={post.first_published_at} tags={post.tag_list} />
+          </h3>
         </Link>
       ))}
 
       <div className="text-scheme-third mt-8 text-sm">
         {pageCurrent > 1 && (
           <>
-            <Link href={`/blog/pages/${pageCurrent - 1}`}>
-              <a>&larr; Previous</a>
-            </Link>
+            <Link href={`/blog/pages/${pageCurrent - 1}`}>&larr; Previous</Link>
             <span className="mx-2">&middot;</span>
           </>
         )}
@@ -42,9 +38,7 @@ export default function Page({ posts, pageCurrent, pageCount }) {
         {pageCurrent < pageCount && (
           <>
             <span className="mx-2">&middot;</span>
-            <Link href={`/blog/pages/${pageCurrent + 1}`}>
-              <a>Next &rarr;</a>
-            </Link>
+            <Link href={`/blog/pages/${pageCurrent + 1}`}>Next &rarr;</Link>
           </>
         )}
       </div>

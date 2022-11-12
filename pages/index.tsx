@@ -24,12 +24,12 @@ export default function Home({ photo, introduction, contacts }) {
       <div className="-my-8 flex h-screen items-center py-8">
         <div className="md:flex md:items-start">
           <Image
+            className="rounded-full md:mt-1 md:shrink-0"
             src={photo.url}
             width={INTRO_AVATAR_SIZE}
             height={INTRO_AVATAR_SIZE}
-            className="rounded-full md:mt-1 md:shrink-0"
             alt={SITE_TITLE}
-            title={SITE_TITLE}
+            title=""
           />
           <div className="mt-8 md:mt-0 md:ml-8">
             <div className="mb-8">
@@ -39,12 +39,12 @@ export default function Home({ photo, introduction, contacts }) {
               {contacts.map((contact, index) => (
                 <a className="mr-4 inline-block" href={contact.link.url} target="_blank" rel="noreferrer" key={index}>
                   <Image
+                    className="text-scheme-primary fill-current"
                     src={contactSvgMap[contact.caption]}
-                    title={contact.caption}
                     width={INTRO_CONTACT_SIZE}
                     height={INTRO_CONTACT_SIZE}
-                    className="text-scheme-primary fill-current"
-                    alt=""
+                    alt={contact.caption}
+                    title={contact.caption}
                   />
                 </a>
               ))}

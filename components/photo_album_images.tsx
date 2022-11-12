@@ -30,7 +30,7 @@ export default function PhotoAlbumImages({ album, previewCount }) {
                 src={image}
                 width={PHOTO_ALBUM_THUMB_SIZE}
                 height={PHOTO_ALBUM_THUMB_SIZE}
-                alt=""
+                alt={album.name}
                 title=""
                 onClick={() =>
                   setLightboxControl({

@@ -44,14 +44,14 @@ function MyApp({ Component, pageProps }) {
         {darkMode && (
           <div
             className="bg-scheme absolute top-8 right-8 cursor-pointer rounded-full p-2 leading-0 print:hidden"
-            title="Dark mode"
+            title="Dark Mode"
             onClick={darkMode.toggle}
           >
             <Image
               src={darkMode.value ? SvgDark : SvgLight}
               width={SVG_SCHEME_SIZE}
               height={SVG_SCHEME_SIZE}
-              alt=""
+              alt="Dark Mode"
               title=""
             />
           </div>

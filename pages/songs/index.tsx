@@ -35,7 +35,7 @@ export default function Songs({ albums }) {
                 target="_blank"
                 rel="noreferrer"
               >
-                <Image src={SvgSongInfo} width={SVG_INFO_SIZE} height={SVG_INFO_SIZE} alt="" title="" />
+                <Image src={SvgSongInfo} width={SVG_INFO_SIZE} height={SVG_INFO_SIZE} alt="Info" title="Info" />
               </a>
             )}
           </h2>
@@ -55,9 +55,9 @@ export default function Songs({ albums }) {
                     style={{ width: SVG_SONG_SIZE }}
                   >
                     {playing ? (
-                      <Image src={SvgSongPlaying} width={SVG_SONG_SIZE} height={SVG_SONG_SIZE} alt="" title="" />
+                      <Image src={SvgSongPlaying} width={SVG_SONG_SIZE} height={SVG_SONG_SIZE} alt="Playing" title="" />
                     ) : (
-                      <Image src={SvgSongPlay} width={SVG_SONG_SIZE} height={SVG_SONG_SIZE} alt="" title="" />
+                      <Image src={SvgSongPlay} width={SVG_SONG_SIZE} height={SVG_SONG_SIZE} alt="Play" title="" />
                     )}
                   </div>
                   <div className="min-w-0 grow truncate">
