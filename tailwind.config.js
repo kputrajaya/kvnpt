@@ -1,19 +1,17 @@
 const colors = require('tailwindcss/colors');
 
-const imagePrefix = 'https://ik.imagekit.io/kvn/https://kvn.pt';
-
 module.exports = {
   content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class',
   theme: {
     extend: {
-      backgroundImage: (theme) => ({
+      backgroundImage: () => ({
         'custom-dark':
           'linear-gradient(to bottom, rgba(23, 23, 23, .2) 40%, rgba(23, 23, 23, 1) 60%), ' +
-          `url('${imagePrefix}/images/background-dark.jpg')`,
+          `url('https://ik.imagekit.io/kvn/bg_dark_kZ3_8nAqw.jpg')`,
         'custom-light':
           'linear-gradient(to bottom, rgba(245, 245, 245, .2) 40%, rgba(245, 245, 245, 1) 60%), ' +
-          `url('${imagePrefix}/images/background-light.jpg')`,
+          `url('https://ik.imagekit.io/kvn/bg_light_u6a3rn9yA.jpg')`,
       }),
       colors: {
         gray: colors.neutral,

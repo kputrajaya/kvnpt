@@ -24,15 +24,16 @@ export const POSTHOG_KEY = 'phc_3LjRv3heki87JOHri2ZTt3bPXnsikbHmRLF6Iiqes3T';
 export const RESUME_AVATAR_SIZE = 125;
 
 export const SITE_DESCRIPTION =
-  "I'm Kevin, a Software Engineer from Indonesia. I share my resume, blog, music, and photos here in my site.";
+  "I'm Kevin Putrajaya, a Software Engineer / Manager from Indonesia. I share my resume, blog, music, and photos here.";
 export const SITE_IMAGE = IMAGEKIT_ENDPOINT + 'og_image_nbEDAvfHN8N.jpg';
 export const SITE_TITLE = 'Kevin Putrajaya';
 export const SITE_TWITTER_USER = '@kputrajaya';
 
-export const STATIC_PROPS_REVALIDATE = Math.floor(process.env.STATIC_PROPS_REVALIDATE || 30);
+export const STATIC_PROPS_REVALIDATE = parseInt(process.env.STATIC_PROPS_REVALIDATE || '30');
 
 export const STORYBLOK_TOKEN = process.env.STORYBLOK_TOKEN || 'Not initialized';
 
-export const SVG_SCHEME_SIZE = 19;
+export const SVG_INFO_SIZE = 15;
 export const SVG_POST_SIZE = 15;
+export const SVG_SCHEME_SIZE = 19;
 export const SVG_SONG_SIZE = 10;

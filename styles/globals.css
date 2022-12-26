@@ -20,10 +20,14 @@ body::after {
   @apply fixed;
   @apply inset-0;
   @apply bottom-1/2;
-  @apply bg-custom-light;
-  @apply dark:bg-custom-dark;
   @apply bg-cover;
   @apply -z-1;
+}
+html.light > body::after {
+  @apply bg-custom-light;
+}
+html.dark > body::after {
+  @apply bg-custom-dark;
 }
 
 a {
@@ -144,8 +148,20 @@ strong {
   @apply rounded-md;
 }
 .kvn-markdown pre {
-  @apply p-4;
+  @apply p-0;
   @apply overflow-x-auto;
+}
+.kvn-markdown pre > code {
+  @apply w-fit;
+  @apply p-4;
+  @apply block;
+}
+.kvn-markdown pre > div {
+  @apply w-fit;
+  @apply min-w-full;
+  @apply m-0 !important;
+  @apply font-mono;
+  @apply bg-transparent !important;
 }
 
 .kvn-audio .rhap_container {

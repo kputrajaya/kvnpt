@@ -11,17 +11,18 @@ export default function BlockLink({ block }) {
               src={block.link.preview.image}
               width={BLOCK_LINK_IMAGE_SIZE}
               height={BLOCK_LINK_IMAGE_SIZE}
-              alt=""
+              alt={block.link.preview.title}
+              title=""
               dynamicRatio
             />
           </div>
         )}
-        <div className="min-w-0 grow-1">
-          <div className="-mt-1 mb-1 font-semibold truncate">{block.link.preview.title}</div>
+        <div className="grow-1 min-w-0">
+          <div className="-mt-1 mb-1 truncate font-semibold">{block.link.preview.title}</div>
           {block.link.preview.description && (
-            <div className="mb-2 text-xs text-scheme-second">{block.link.preview.description}</div>
+            <div className="text-scheme-second mb-2 text-xs">{block.link.preview.description}</div>
           )}
-          <div className="text-xs text-scheme-third">{block.link.preview.url}</div>
+          <div className="text-scheme-third text-xs">{block.link.preview.url}</div>
         </div>
       </div>
     ) : (
@@ -30,10 +31,10 @@ export default function BlockLink({ block }) {
 
   return (
     <div>
-      <a className="kvn-card max-w-md mx-auto block" href={block.link.url} target="_blank" rel="noreferrer">
+      <a className="kvn-card mx-auto block max-w-md" href={block.link.url} target="_blank" rel="noreferrer">
         {renderLink()}
       </a>
-      {block.caption && <div className="mt-2 text-xs text-center italic text-scheme-third">{block.caption}</div>}
+      {block.caption && <div className="text-scheme-third mt-2 text-center text-xs italic">{block.caption}</div>}
     </div>
   );
 }

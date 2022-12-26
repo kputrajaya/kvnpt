@@ -1,5 +1,7 @@
 module.exports = {
-  swcMinify: false,
+  experimental: {
+    transpilePackages: ['react-syntax-highlighter'],
+  },
   webpack: (config, { dev, isServer }) => {
     // Replace React with Preact only in production
     if (!dev && !isServer) {

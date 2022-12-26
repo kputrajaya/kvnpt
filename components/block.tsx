@@ -3,7 +3,6 @@ import BlockLink from './block_link';
 import BlockParagraph from './block_paragraph';
 import BlockPhoto from './block_photo';
 import BlockPhotoAlbumLink from './block_photo_album_link';
-import BlockSong from './block_song';
 
 export default function Block({ block }) {
   const renderBlock = () => {
@@ -18,8 +17,6 @@ export default function Block({ block }) {
         return <BlockPhoto block={block} />;
       case 'photo_album_link':
         return <BlockPhotoAlbumLink block={block} />;
-      case 'song':
-        return <BlockSong block={block} />;
       default:
         return <div className="text-scheme-third">[block: {block.component}]</div>;
     }

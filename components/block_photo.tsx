@@ -3,7 +3,14 @@ import Image from './image';
 
 export default function BlockPhoto({ block }) {
   let image = (
-    <Image src={block.image.url} width={BLOCK_PHOTO_MAX_WIDTH} height={BLOCK_PHOTO_MAX_HEIGHT} alt="" dynamicRatio />
+    <Image
+      src={block.image.url}
+      width={BLOCK_PHOTO_MAX_WIDTH}
+      height={BLOCK_PHOTO_MAX_HEIGHT}
+      alt={block.caption || 'Image'}
+      title=""
+      dynamicRatio
+    />
   );
   if (block.link?.url) {
     image = (
@@ -16,7 +23,7 @@ export default function BlockPhoto({ block }) {
   return (
     <div className="text-center">
       <div className="inline-block">{image}</div>
-      {block.caption && <div className="mt-2 text-xs text-center italic text-scheme-third">{block.caption}</div>}
+      {block.caption && <div className="text-scheme-third mt-2 text-center text-xs italic">{block.caption}</div>}
     </div>
   );
 }

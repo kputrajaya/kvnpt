@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import { usePostHog } from 'next-use-posthog';
-import useDarkMode from 'use-dark-mode';
 
 import Image from '../components/image';
 import {
@@ -11,6 +10,7 @@ import {
   SITE_TWITTER_USER,
   SVG_SCHEME_SIZE,
 } from '../utils/constants';
+import { useDark } from '../utils/generics';
 import SvgDark from '../public/images/scheme-dark.svg';
 import SvgLight from '../public/images/scheme-light.svg';
 import '../styles/globals.css';
@@ -24,11 +24,7 @@ function MyApp({ Component, pageProps }) {
       }
     },
   });
-  const darkMode = useDarkMode(true, {
-    classNameDark: 'dark',
-    classNameLight: 'light',
-    element: typeof window !== 'undefined' ? document.documentElement : null,
-  });
+  const darkMode = useDark();
 
   return (
     <>
@@ -43,15 +39,21 @@ function MyApp({ Component, pageProps }) {
         <meta name="description" content={SITE_DESCRIPTION} />
       </Head>
 
-      <div className="container max-w-3xl mx-auto p-8 relative">
+      <div className="container relative mx-auto max-w-3xl p-8">
         <Component {...pageProps} />
         {darkMode && (
           <div
-            className="p-2 bg-scheme rounded-full leading-0 absolute top-8 right-8 cursor-pointer print:hidden"
-            title="Dark mode"
+            className="bg-scheme absolute top-8 right-8 cursor-pointer rounded-full p-2 leading-0 print:hidden"
+            title="Dark Mode"
             onClick={darkMode.toggle}
           >
-            <Image src={darkMode.value ? SvgDark : SvgLight} width={SVG_SCHEME_SIZE} height={SVG_SCHEME_SIZE} alt="" />
+            <Image
+              src={darkMode.value ? SvgDark : SvgLight}
+              width={SVG_SCHEME_SIZE}
+              height={SVG_SCHEME_SIZE}
+              alt="Dark Mode"
+              title=""
+            />
           </div>
         )}
       </div>

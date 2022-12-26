@@ -15,7 +15,7 @@ export const getPosts = async (page, perPage) => {
   const resPosts = await _get('', `starts_with=posts&page=${page}&per_page=${perPage}&sort_by=position`);
   const resPostsJson = await resPosts.json();
   return {
-    count: resPosts.headers.get('total'),
+    count: parseInt(resPosts.headers.get('total')),
     stories: resPostsJson.stories,
   };
 };
