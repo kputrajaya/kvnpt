@@ -69,6 +69,10 @@
       "destination": "https://steamcommunity.com/id/kputrajaya/"
     },
     {
+      "source": "/(tm|telegram)",
+      "destination": "https://t.me/kputrajaya"
+    },
+    {
       "source": "/(tv|twitch)",
       "destination": "https://www.twitch.tv/kputrajaya"
     },
