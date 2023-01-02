@@ -11,8 +11,8 @@
       "permanent": false
     },
     {
-      "source": "/(bg|boardgamegeek)",
-      "destination": "https://boardgamegeek.com/collection/user/kputrajaya",
+      "source": "/(bg|boardgame)",
+      "destination": "https://bgshelf.kvn.ovh/?u=kputrajaya",
       "permanent": false
     },
     {
