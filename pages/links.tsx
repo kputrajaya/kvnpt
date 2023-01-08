@@ -7,7 +7,7 @@ export default function Links({ links }) {
   return (
     <>
       <Head>
-        <title>Links - {SITE_TITLE}</title>
+        <title>{`Links - ${SITE_TITLE}`}</title>
       </Head>
 
       <BackButton href="/" />

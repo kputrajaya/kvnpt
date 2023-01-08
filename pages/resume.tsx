@@ -52,7 +52,7 @@ export default function Resume({ resume }) {
   return (
     <>
       <Head>
-        <title>Resume - {SITE_TITLE}</title>
+        <title>{`Resume - ${SITE_TITLE}`}</title>
       </Head>
 
       <BackButton href="/" />

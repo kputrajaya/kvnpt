@@ -16,7 +16,7 @@ export default function Photos({ albums }) {
   return (
     <>
       <Head>
-        <title>Photos - {SITE_TITLE}</title>
+        <title>{`Photos - ${SITE_TITLE}`}</title>
       </Head>
 
       <BackButton href="/" />

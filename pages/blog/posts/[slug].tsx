@@ -13,9 +13,7 @@ export default function Post({ post }) {
   return (
     <>
       <Head>
-        <title>
-          {post.name} - {SITE_TITLE}
-        </title>
+        <title>{`${post.name} - ${SITE_TITLE}`}</title>
       </Head>
 
       <BackButton href="/blog/pages/1" />

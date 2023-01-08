@@ -18,7 +18,7 @@ export default function Songs({ albums }) {
   return (
     <>
       <Head>
-        <title>Songs - {SITE_TITLE}</title>
+        <title>{`Songs - ${SITE_TITLE}`}</title>
       </Head>
 
       <BackButton href="/" />

@@ -7,7 +7,7 @@ export default function Custom500() {
   return (
     <>
       <Head>
-        <title>Internal Server Error - {SITE_TITLE}</title>
+        <title>{`Server Error - ${SITE_TITLE}`}</title>
       </Head>
 
       <div className="-my-8 flex h-screen items-center justify-center py-8">

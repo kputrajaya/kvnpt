@@ -7,7 +7,7 @@ export default function Custom404() {
   return (
     <>
       <Head>
-        <title>Not Found - {SITE_TITLE}</title>
+        <title>{`Not Found - ${SITE_TITLE}`}</title>
       </Head>
 
       <div className="-my-8 flex h-screen items-center justify-center py-8">

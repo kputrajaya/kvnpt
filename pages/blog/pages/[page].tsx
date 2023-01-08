@@ -12,7 +12,7 @@ export default function Page({ posts, pageCurrent, pageCount }) {
   return (
     <>
       <Head>
-        <title>Blog - {SITE_TITLE}</title>
+        <title>{`Blog - ${SITE_TITLE}`}</title>
       </Head>
 
       <BackButton href="/" />
