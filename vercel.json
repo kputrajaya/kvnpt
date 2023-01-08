@@ -11,8 +11,8 @@
       "permanent": false
     },
     {
-      "source": "/(bg|boardgamegeek)",
-      "destination": "https://boardgamegeek.com/collection/user/kputrajaya",
+      "source": "/(bg|boardgame)",
+      "destination": "https://bgshelf.kvn.ovh/?u=kputrajaya",
       "permanent": false
     },
     {
@@ -124,6 +124,10 @@
       "source": "/(st|steam)",
       "destination": "https://steamcommunity.com/id/kputrajaya/",
       "permanent": false
+    },
+    {
+      "source": "/(tm|telegram)",
+      "destination": "https://t.me/kputrajaya"
     },
     {
       "source": "/(tv|twitch)",
