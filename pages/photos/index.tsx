@@ -22,11 +22,11 @@ export default function Photos({ albums }) {
       <BackButton href="/" />
       <h1 className="mb-8 text-2xl font-semibold">Photos</h1>
 
-      {albums.map((album, albumIndex) => (
-        <Link className="kvn-card mb-4 block" href={`/photos/${album.slug}`} key={albumIndex}>
+      {albums.map((album) => (
+        <Link className="kvn-card mb-4 block" href={`/photos/${album.slug}`} key={album.slug}>
           <div className="text-scheme-second -mx-4 -mt-4 mb-3 flex text-xs leading-0">
             {album.content.photos.slice(0, PHOTO_ALBUM_TEASER_COUNT).map((photo, photoIndex) => (
-              <div className="relative w-3/12" key={photoIndex}>
+              <div className="relative w-3/12" key={photo.image.url}>
                 <Image
                   src={photo.image.url}
                   width={PHOTO_ALBUM_TEASER_SIZE}

@@ -25,7 +25,7 @@ export default function PhotoAlbumImages({ album, previewCount }) {
         {images
           .filter((_, index) => expand || index < previewCount)
           .map((image, index) => (
-            <div className="inline-block cursor-pointer p-1 sm:w-6/12" key={index}>
+            <div className="inline-block cursor-pointer p-1 sm:w-6/12" key={image}>
               <Image
                 src={image}
                 width={PHOTO_ALBUM_THUMB_SIZE}

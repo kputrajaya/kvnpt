@@ -18,8 +18,8 @@ export default function Page({ posts, pageCurrent, pageCount }) {
       <BackButton href="/" />
       <h1 className="mb-8 text-2xl font-semibold">Blog</h1>
 
-      {posts.map((post, index) => (
-        <Link className="kvn-card mb-4 block" href={`/blog/posts/${post.slug}`} key={index}>
+      {posts.map((post) => (
+        <Link className="kvn-card mb-4 block" href={`/blog/posts/${post.slug}`} key={post.slug}>
           <h2 className="mb-1 font-semibold">{post.name}</h2>
           <h3 className="text-scheme-third text-sm">
             <PostSubtitle date={post.first_published_at} tags={post.tag_list} />

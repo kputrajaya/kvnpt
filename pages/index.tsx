@@ -36,8 +36,14 @@ export default function Home({ photo, introduction, contacts }) {
               <Markdown text={introduction} />
             </div>
             <div style={{ height: INTRO_CONTACT_SIZE }}>
-              {contacts.map((contact, index) => (
-                <a className="mr-4 inline-block" href={contact.link.url} target="_blank" rel="noreferrer" key={index}>
+              {contacts.map((contact) => (
+                <a
+                  className="mr-4 inline-block"
+                  href={contact.link.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  key={contact.link.url}
+                >
                   <Image
                     className="text-scheme-primary fill-current"
                     src={contactSvgMap[contact.caption]}

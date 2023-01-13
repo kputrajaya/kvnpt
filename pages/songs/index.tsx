@@ -24,8 +24,8 @@ export default function Songs({ albums }) {
       <BackButton href="/" />
       <h1 className="mb-8 text-2xl font-semibold">Songs</h1>
 
-      {albums.map((album, albumIndex) => (
-        <div className="kvn-card mb-8" key={albumIndex}>
+      {albums.map((album) => (
+        <div className="kvn-card mb-8" key={album.name}>
           <h2 className="mb-4 font-semibold">
             {album.name}
             {album.content?.link?.url && (
@@ -40,7 +40,7 @@ export default function Songs({ albums }) {
             )}
           </h2>
           <div className="-mb-2">
-            {album.content.songs.map((song, songIndex) => {
+            {album.content.songs.map((song) => {
               const currentIndex = counter;
               const playing = song.audio.url && playIndex === currentIndex;
               if (song.audio.url) {
@@ -73,7 +73,7 @@ export default function Songs({ albums }) {
               );
 
               return (
-                <div className="border-scheme border-t text-sm" key={songIndex}>
+                <div className="border-scheme border-t text-sm" key={song.title}>
                   {song.audio.url ? (
                     <div className="cursor-pointer py-2" onClick={() => setPlayIndex(currentIndex)}>
                       {renderLine()}

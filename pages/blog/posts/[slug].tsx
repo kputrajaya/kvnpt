@@ -23,8 +23,8 @@ export default function Post({ post }) {
       </h3>
 
       <div>
-        {post.content.body.map((block, index) => (
-          <div key={index}>
+        {post.content.body.map((block) => (
+          <div key={block._uid}>
             <Block block={block} />
           </div>
         ))}
