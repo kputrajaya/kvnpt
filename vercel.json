@@ -16,6 +16,11 @@
       "permanent": false
     },
     {
+      "source": "/(cl|calendly)",
+      "destination": "https://calendly.com/kputrajaya/quick",
+      "permanent": false
+    },
+    {
       "source": "/(dc|discord)",
       "destination": "https://discord.com/users/416165829680300034",
       "permanent": false
@@ -142,11 +147,6 @@
     {
       "source": "/(yt|youtube)",
       "destination": "https://youtube.com/@kputrajaya",
-      "permanent": false
-    },
-    {
-      "source": "/(zb|zohobookings)",
-      "destination": "https://kvnpt.zohobookings.com/#/customer/kvnpt",
       "permanent": false
     },
     {
