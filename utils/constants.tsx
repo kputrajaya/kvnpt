@@ -1,9 +1,9 @@
 export const BLOCK_LINK_IMAGE_SIZE = 75;
 
+export const BLOCK_PHOTO_ALBUM_LINK_PREVIEW_COUNT = 6;
+
 export const BLOCK_PHOTO_MAX_HEIGHT = 500;
 export const BLOCK_PHOTO_MAX_WIDTH = 704;
-
-export const BLOCK_PHOTO_ALBUM_LINK_PREVIEW_COUNT = 6;
 
 export const BLOG_PER_PAGE = 20;
 
@@ -22,6 +22,8 @@ export const POSTHOG_HOST = 'https://app.posthog.com';
 export const POSTHOG_KEY = 'phc_3LjRv3heki87JOHri2ZTt3bPXnsikbHmRLF6Iiqes3T';
 
 export const RESUME_AVATAR_SIZE = 125;
+
+export const SHORTIO_HOST = 'https://r.kvn.pt/';
 
 export const SITE_DESCRIPTION =
   "I'm Kevin Putrajaya, a Software Engineer / Manager from Indonesia. I share my resume, blog, music, and photos here.";
