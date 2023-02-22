@@ -16,7 +16,7 @@
       "permanent": false
     },
     {
-      "source": "/(cl|calendly)",
+      "source": "/(ca|calendly)",
       "destination": "https://calendly.com/kputrajaya/quick",
       "permanent": false
     },
@@ -57,7 +57,7 @@
     },
     {
       "source": "/(gm|googlemeet)",
-      "destination": "https://meet.google.com/kqo-vgau-pnv",
+      "destination": "https://meet.google.com/sae-rafu-pro",
       "permanent": false
     },
     {
