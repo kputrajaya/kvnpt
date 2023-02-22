@@ -81,6 +81,11 @@
       "permanent": false
     },
     {
+      "source": "/(js|jitsi)",
+      "destination": "https://meet.jit.si/KevinPutrajayaMeetingRoom",
+      "permanent": false
+    },
+    {
       "source": "/(lc|leetcode)",
       "destination": "https://leetcode.com/kputrajaya/",
       "permanent": false
