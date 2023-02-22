@@ -11,11 +11,6 @@
       "permanent": false
     },
     {
-      "source": "/(bg|boardgame)",
-      "destination": "https://bgshelf.kvn.ovh/?u=kputrajaya",
-      "permanent": false
-    },
-    {
       "source": "/(ca|calendly)",
       "destination": "https://calendly.com/kputrajaya/quick",
       "permanent": false
