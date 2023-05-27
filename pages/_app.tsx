@@ -29,6 +29,8 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
         <meta property="og:image" content={SITE_IMAGE} />
         <meta property="og:description" content={SITE_DESCRIPTION} />
 
