@@ -10,9 +10,9 @@ export default function Redirect() {
   const { slug } = router.query;
 
   useEffect(() => {
-    if (slug) {
-      window.location.href = `${SHORTIO_HOST}${slug}`;
-    }
+    if (!slug) return;
+
+    window.location.href = `${SHORTIO_HOST}${slug}`;
   }, [slug]);
 
   return (
