@@ -27,7 +27,7 @@ export default function PostSubtitle({ date, tags = [] }) {
             alt="Tags"
             title="Tags"
           />
-          {[...tags].sort().join(', ')}
+          {[...tags].sort((a, b) => a.localeCompare(b)).join(', ')}
         </>
       )}
     </>

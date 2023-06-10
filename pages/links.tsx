@@ -28,7 +28,7 @@ export default function Links({ links }) {
 export async function getStaticProps() {
   const vercelConfig = require('../vercel.json');
   const links = vercelConfig.redirects.map((rule) => {
-    const [short, name] = rule.source.replace(/[\/\(\)]/g, '').split('|');
+    const [short, name] = rule.source.replace(/[/()]/g, '').split('|');
     return { short, name, url: rule.destination };
   });
 
