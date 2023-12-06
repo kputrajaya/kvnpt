@@ -14,7 +14,7 @@ export default function Audio({ songs, index, setIndex }) {
           showFilledVolume={true}
           showJumpControls={false}
           showSkipControls={true}
-          src={songs[index]?.audio?.url}
+          src={songs[index]?.audio}
           onClickPrevious={previous}
           onClickNext={next}
           onEnded={next}

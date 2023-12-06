@@ -248,3 +248,90 @@ export const PHOTO_ALBUMS = [
     ],
   },
 ];
+
+export const SONG_ALBUMS = [
+  {
+    name: 'Cornerstone',
+    link: 'https://kputrajaya.bandcamp.com/album/cornerstone',
+    songs: [
+      {
+        audio: 'https://d.kvn.pt/songs/cornerstone_mutasi_7.mp3',
+        title: 'Mutasi',
+        duration: '01:25',
+        featuring: '',
+      },
+      {
+        audio: 'https://d.kvn.pt/songs/cornerstone_pergi_5.mp3',
+        title: 'Pergi',
+        duration: '01:21',
+        featuring: '',
+      },
+      {
+        audio: 'https://d.kvn.pt/songs/cornerstone_teknologi_5.mp3',
+        title: 'Teknologi',
+        duration: '01:29',
+        featuring: '',
+      },
+      {
+        audio: 'https://d.kvn.pt/songs/cornerstone_hobi_3.mp3',
+        title: 'Hobi',
+        duration: '01:23',
+        featuring: '',
+      },
+    ],
+  },
+  {
+    name: 'ViCiDi',
+    link: '',
+    songs: [
+      {
+        audio: 'https://d.kvn.pt/songs/butter_2.mp3',
+        title: 'Butter (BTS)',
+        duration: '02:59',
+        featuring: 'Adityo, Christina, Ritchie',
+      },
+      {
+        audio: 'https://d.kvn.pt/songs/plastic_love_9.mp3',
+        title: 'Plastic Love (Mariya Takeuchi)',
+        duration: '04:34',
+        featuring: 'Adityo, Christina, Ritchie',
+      },
+      {
+        audio: 'https://d.kvn.pt/songs/sweet_dreams_2.mp3',
+        title: 'Sweet Dreams (Eurythmics)',
+        duration: '03:34',
+        featuring: 'Adityo, Ritchie',
+      },
+    ],
+  },
+  {
+    name: 'Kaveat',
+    link: '',
+    songs: [
+      {
+        audio: 'https://d.kvn.pt/songs/no_matter_where_you_are_2.mp3',
+        title: 'No Matter Where You Are (Us The Duo)',
+        duration: '03:00',
+        featuring: 'Dian',
+      },
+      {
+        audio: 'https://d.kvn.pt/songs/raindrops_keep_falling_on_my_head_2.mp3',
+        title: 'Raindrops Keep Falling On My Head (B. J. Thomas)',
+        duration: '02:10',
+        featuring: 'Dian',
+      },
+      {
+        audio: 'https://d.kvn.pt/songs/falling_slowly_6.mp3',
+        title: 'Falling Slowly (Glen Hansard & Markéta Irglová)',
+        duration: '04:03',
+        featuring: 'Dian',
+      },
+      {
+        audio: 'https://d.kvn.pt/songs/nuansa_bening_2.mp3',
+        title: 'Nuansa Bening (Keenan Nasution)',
+        duration: '03:21',
+        featuring: 'Dian',
+      },
+    ],
+  },
+];
