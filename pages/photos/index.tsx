@@ -7,7 +7,7 @@ import {
   SITE_TITLE,
   STATIC_PROPS_REVALIDATE,
 } from '../../utils/constants';
-import { getPhotoAlbums } from '../../utils/storyblok';
+import { PHOTO_ALBUMS } from '../../utils/contents';
 import BackButton from '../../components/back_button';
 import Image from '../../components/image';
 import PostSubtitle from '../../components/post_subtitle';
@@ -25,27 +25,26 @@ export default function Photos({ albums }) {
       {albums.map((album) => (
         <Link className="kvn-card mb-4 block" href={`/photos/${album.slug}`} key={album.slug}>
           <div className="text-scheme-second -mx-4 -mt-4 mb-3 flex text-xs leading-0">
-            {album.content.photos.slice(0, PHOTO_ALBUM_TEASER_COUNT).map((photo, photoIndex) => (
-              <div className="relative w-3/12" key={photo.image.url}>
+            {album.photos.slice(0, PHOTO_ALBUM_TEASER_COUNT).map((photo, photoIndex) => (
+              <div className="relative w-3/12" key={photo}>
                 <Image
-                  src={photo.image.url}
+                  src={photo}
                   width={PHOTO_ALBUM_TEASER_SIZE}
                   height={PHOTO_ALBUM_TEASER_SIZE}
                   alt={album.name}
                   title=""
                 />
-                {photoIndex === PHOTO_ALBUM_TEASER_COUNT - 1 &&
-                  album.content.photos.length > PHOTO_ALBUM_TEASER_COUNT && (
-                    <div className="bg-scheme-75 absolute inset-0 flex items-center justify-center font-semibold">
-                      +{album.content.photos.length - PHOTO_ALBUM_TEASER_COUNT + 1} more
-                    </div>
-                  )}
+                {photoIndex === PHOTO_ALBUM_TEASER_COUNT - 1 && album.photos.length > PHOTO_ALBUM_TEASER_COUNT && (
+                  <div className="bg-scheme-75 absolute inset-0 flex items-center justify-center font-semibold">
+                    +{album.photos.length - PHOTO_ALBUM_TEASER_COUNT + 1} more
+                  </div>
+                )}
               </div>
             ))}
           </div>
           <h2 className="mb-1 font-semibold">{album.name}</h2>
           <h3 className="text-scheme-third text-sm">
-            <PostSubtitle date={album.content.date} />
+            <PostSubtitle date={album.date} />
           </h3>
         </Link>
       ))}
@@ -53,12 +52,10 @@ export default function Photos({ albums }) {
   );
 }
 
-export async function getStaticProps() {
-  const resPhotoAlbums = await getPhotoAlbums();
-
+export function getStaticProps() {
   return {
     props: {
-      albums: resPhotoAlbums.stories,
+      albums: PHOTO_ALBUMS,
     },
     revalidate: STATIC_PROPS_REVALIDATE,
   };

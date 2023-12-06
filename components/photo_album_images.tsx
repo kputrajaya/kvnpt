@@ -14,9 +14,9 @@ export default function PhotoAlbumImages({ album, previewCount }) {
 
   const lightboxSources = [];
   const images = [];
-  album.content.photos.forEach((photo) => {
-    lightboxSources.push(buildImageSrc(photo.image.url, PHOTO_ALBUM_IMAGE_SIZE, PHOTO_ALBUM_IMAGE_SIZE, true));
-    images.push(photo.image.url);
+  album.photos.forEach((photo) => {
+    lightboxSources.push(buildImageSrc(photo, PHOTO_ALBUM_IMAGE_SIZE, PHOTO_ALBUM_IMAGE_SIZE, true));
+    images.push(photo);
   });
 
   return (
