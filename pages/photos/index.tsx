@@ -52,7 +52,7 @@ export default function Photos({ albums }) {
   );
 }
 
-export function getStaticProps() {
+export async function getStaticProps() {
   return {
     props: {
       albums: PHOTO_ALBUMS,

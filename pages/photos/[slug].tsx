@@ -32,7 +32,7 @@ export async function getStaticPaths() {
   return { paths: [], fallback: true };
 }
 
-export function getStaticProps({ params }) {
+export async function getStaticProps({ params }) {
   // Get album for current slug
   const resAlbum = PHOTO_ALBUMS.find((album) => album.slug === params.slug);
   if (!resAlbum) return { notFound: true };

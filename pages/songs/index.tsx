@@ -93,7 +93,7 @@ export default function Songs({ albums }) {
   );
 }
 
-export function getStaticProps() {
+export async function getStaticProps() {
   return {
     props: {
       albums: SONG_ALBUMS,
