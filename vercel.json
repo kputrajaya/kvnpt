@@ -11,6 +11,16 @@
       "permanent": false
     },
     {
+      "source": "/(ba|boardgamearena)",
+      "destination": "https://boardgamearena.com/player?id=93015343",
+      "permanent": false
+    },
+    {
+      "source": "/(bg|boardgamegeek)",
+      "destination": "https://boardgamegeek.com/user/kputrajaya",
+      "permanent": false
+    },
+    {
       "source": "/(ca|calendly)",
       "destination": "https://calendly.com/kputrajaya/quick",
       "permanent": false
@@ -23,6 +33,11 @@
     {
       "source": "/(dh|docker)",
       "destination": "https://hub.docker.com/u/kiloev",
+      "permanent": false
+    },
+    {
+      "source": "/(eg|epicgames)",
+      "destination": "https://store.epicgames.com/u/5eb30fa615694f7ab05434f2cda05f08",
       "permanent": false
     },
     {
@@ -61,7 +76,7 @@
       "permanent": false
     },
     {
-      "source": "/(gs|gist)",
+      "source": "/(gs|githubgist)",
       "destination": "http://gist.github.com/kputrajaya",
       "permanent": false
     },
