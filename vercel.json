@@ -51,11 +51,6 @@
       "permanent": false
     },
     {
-      "source": "/(fl|flickr)",
-      "destination": "https://flickr.com/photos/kputrajaya",
-      "permanent": false
-    },
-    {
       "source": "/(gh|github)",
       "destination": "https://github.com/kputrajaya",
       "permanent": false
@@ -73,16 +68,6 @@
     {
       "source": "/(gr|goodreads)",
       "destination": "https://www.goodreads.com/user/show/55996891-kevin-putrajaya",
-      "permanent": false
-    },
-    {
-      "source": "/(gs|githubgist)",
-      "destination": "http://gist.github.com/kputrajaya",
-      "permanent": false
-    },
-    {
-      "source": "/(gt|gather)",
-      "destination": "https://gather.town/app/ga9RYdfiySIznmgy/Kevin",
       "permanent": false
     },
     {
@@ -123,11 +108,6 @@
     {
       "source": "/(qu|quora)",
       "destination": "https://www.quora.com/profile/Kevin-Putrajaya",
-      "permanent": false
-    },
-    {
-      "source": "/(sc|soundcloud)",
-      "destination": "https://soundcloud.com/kputrajaya",
       "permanent": false
     },
     {
