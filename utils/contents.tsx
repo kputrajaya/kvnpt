@@ -84,7 +84,6 @@ export const PHOTO_ALBUMS = [
       'https://ik.imagekit.io/kvn/Thailand/DSCF2351_ZJnF2Ewz28.JPG',
       'https://ik.imagekit.io/kvn/Thailand/DSCF2355_tqShA3bOZ.JPG',
       'https://ik.imagekit.io/kvn/Thailand/DSCF2367_oYRFCYR0L.JPG',
-      'https://ik.imagekit.io/kvn/Thailand/DSCF2372_Nag4fmy18.JPG',
       'https://ik.imagekit.io/kvn/Thailand/DSCF2395_-looxBfpo.JPG',
       'https://ik.imagekit.io/kvn/Thailand/DSCF2426_W-gH0vB8N.JPG',
       'https://ik.imagekit.io/kvn/Thailand/DSCF2437_u0OWMiWPj.JPG',
