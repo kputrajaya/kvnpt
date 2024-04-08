@@ -26,11 +26,6 @@
       "permanent": false
     },
     {
-      "source": "/(em|email)",
-      "destination": "mailto:hi@kvn.pt",
-      "permanent": false
-    },
-    {
       "source": "/(fb|facebook)",
       "destination": "https://www.facebook.com/kputrajaya",
       "permanent": false
