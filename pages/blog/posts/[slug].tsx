@@ -13,9 +13,7 @@ export default function Post({ post }) {
   return (
     <>
       <Head>
-        <title>
-          {post.name} - {SITE_TITLE}
-        </title>
+        <title>{`${post.name} - ${SITE_TITLE}`}</title>
       </Head>
 
       <BackButton href="/blog/pages/1" />
@@ -25,8 +23,8 @@ export default function Post({ post }) {
       </h3>
 
       <div>
-        {post.content.body.map((block, index) => (
-          <div key={index}>
+        {post.content.body.map((block) => (
+          <div key={block._uid}>
             <Block block={block} />
           </div>
         ))}

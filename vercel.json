@@ -11,8 +11,18 @@
       "permanent": false
     },
     {
-      "source": "/(bg|boardgame)",
-      "destination": "https://bgshelf.kvn.ovh/?u=kputrajaya",
+      "source": "/(ba|boardgamearena)",
+      "destination": "https://boardgamearena.com/player?id=93015343",
+      "permanent": false
+    },
+    {
+      "source": "/(bg|boardgamegeek)",
+      "destination": "https://boardgamegeek.com/user/kputrajaya",
+      "permanent": false
+    },
+    {
+      "source": "/(ca|calendly)",
+      "destination": "https://calendly.com/kputrajaya/quick",
       "permanent": false
     },
     {
@@ -26,13 +36,13 @@
       "permanent": false
     },
     {
-      "source": "/(fb|facebook)",
-      "destination": "https://www.facebook.com/kputrajaya",
+      "source": "/(eg|epicgames)",
+      "destination": "https://store.epicgames.com/u/5eb30fa615694f7ab05434f2cda05f08",
       "permanent": false
     },
     {
-      "source": "/(fl|flickr)",
-      "destination": "https://flickr.com/photos/kputrajaya",
+      "source": "/(fb|facebook)",
+      "destination": "https://www.facebook.com/kputrajaya",
       "permanent": false
     },
     {
@@ -47,7 +57,7 @@
     },
     {
       "source": "/(gm|googlemeet)",
-      "destination": "https://meet.google.com/kqo-vgau-pnv",
+      "destination": "https://meet.google.com/sae-rafu-pro",
       "permanent": false
     },
     {
@@ -56,18 +66,18 @@
       "permanent": false
     },
     {
-      "source": "/(gs|gist)",
-      "destination": "http://gist.github.com/kputrajaya",
-      "permanent": false
-    },
-    {
-      "source": "/(gt|gather)",
-      "destination": "https://gather.town/app/ga9RYdfiySIznmgy/Kevin",
-      "permanent": false
-    },
-    {
       "source": "/(ig|instagram)",
       "destination": "https://www.instagram.com/kputrajaya/",
+      "permanent": false
+    },
+    {
+      "source": "/(js|jitsi)",
+      "destination": "https://meet.jit.si/KevinPutrajayaMeetingRoom",
+      "permanent": false
+    },
+    {
+      "source": "/(kf|kofi)",
+      "destination": "https://ko-fi.com/kputrajaya",
       "permanent": false
     },
     {
@@ -93,11 +103,6 @@
     {
       "source": "/(qu|quora)",
       "destination": "https://www.quora.com/profile/Kevin-Putrajaya",
-      "permanent": false
-    },
-    {
-      "source": "/(sc|soundcloud)",
-      "destination": "https://soundcloud.com/kputrajaya",
       "permanent": false
     },
     {
@@ -137,11 +142,6 @@
     {
       "source": "/(yt|youtube)",
       "destination": "https://youtube.com/@kputrajaya",
-      "permanent": false
-    },
-    {
-      "source": "/(zb|zohobookings)",
-      "destination": "https://kvnpt.zohobookings.com/#/customer/kvnpt",
       "permanent": false
     },
     {

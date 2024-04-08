@@ -28,15 +28,15 @@ export default function Resume({ resume }) {
       companies.push(currentCompany);
     }
 
-    return companies.map((company, companyIndex) => (
-      <div className="kvn-card mt-4" key={companyIndex}>
+    return companies.map((company) => (
+      <div className="kvn-card mt-4" key={company.company.caption}>
         <div className="-mb-4 font-semibold">
           <a className="inline-block" href={company.company.link.url} target="_blank" rel="noreferrer">
             {company.company.caption}
           </a>
         </div>
-        {company.positions.map((position, positionIndex) => (
-          <div className="mt-7 -mb-4 text-sm" key={positionIndex}>
+        {company.positions.map((position) => (
+          <div className="mt-7 -mb-4 text-sm" key={`${position.position}-${position.start}`}>
             <h4 className="text-scheme-second mb-1 font-semibold">
               {position.position} &nbsp;&middot;&nbsp; {position.start} &ndash; {position.end}
             </h4>
@@ -52,7 +52,7 @@ export default function Resume({ resume }) {
   return (
     <>
       <Head>
-        <title>Resume - {SITE_TITLE}</title>
+        <title>{`Resume - ${SITE_TITLE}`}</title>
       </Head>
 
       <BackButton href="/" />
@@ -78,8 +78,8 @@ export default function Resume({ resume }) {
 
       <h3 className="mt-12 text-lg font-semibold">Skills</h3>
       <ul className="mt-4 leading-0">
-        {resume.skills.map((block, index) => (
-          <li className="kvn-card kvn-card-small mt-2 mr-2 inline-block text-sm" key={index}>
+        {resume.skills.map((block) => (
+          <li className="kvn-card kvn-card-small mt-2 mr-2 inline-block text-sm" key={block.name}>
             <span className={block.highlight ? 'font-semibold' : ''}>{block.name}</span>
           </li>
         ))}

@@ -7,12 +7,12 @@ export const getLinkPreview = async (url) => {
       url: preview.url || null,
       title: null,
       description: null,
-      image: (preview.favicons || []).filter((icon) => icon.toLowerCase().endsWith('.png')).find((_) => true) || null,
+      image: (preview.favicons || []).find((icon) => icon.toLowerCase().endsWith('.png')) || null,
     };
     if ('title' in preview) {
       result.title = preview.title || preview.siteName || null;
       result.description = preview.description || null;
-      result.image = (preview.images || []).find((_) => true) || result.image;
+      result.image = (preview.images || []).find(() => true) || result.image;
     }
     return result;
   } catch (e) {

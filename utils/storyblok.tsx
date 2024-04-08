@@ -26,11 +26,3 @@ export const getPostCount = async () => {
 };
 
 export const getPost = (slug) => _getJson(`posts/${slug}`, 'resolve_relations=photo_album_link.photo_album');
-
-export const getPhotoAlbums = () => _getJson('', 'starts_with=photo-albums&per_page=100&sort_by=position');
-
-export const getPhotoAlbum = (slug) => _getJson(`photo-albums/${slug}`);
-
-export const getSongAlbums = () => _getJson('', 'starts_with=song-albums&per_page=100&sort_by=position');
-
-export const getSongAlbum = (slug) => _getJson(`song-albums/${slug}`);

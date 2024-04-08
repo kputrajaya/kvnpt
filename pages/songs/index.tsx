@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Head from 'next/head';
 
 import { SITE_TITLE, STATIC_PROPS_REVALIDATE, SVG_INFO_SIZE, SVG_SONG_SIZE } from '../../utils/constants';
-import { getSongAlbums } from '../../utils/storyblok';
+import { SONG_ALBUMS } from '../../utils/contents';
 import Audio from '../../components/audio';
 import BackButton from '../../components/back_button';
 import Image from '../../components/image';
@@ -18,20 +18,20 @@ export default function Songs({ albums }) {
   return (
     <>
       <Head>
-        <title>Songs - {SITE_TITLE}</title>
+        <title>{`Songs - ${SITE_TITLE}`}</title>
       </Head>
 
       <BackButton href="/" />
       <h1 className="mb-8 text-2xl font-semibold">Songs</h1>
 
-      {albums.map((album, albumIndex) => (
-        <div className="kvn-card mb-8" key={albumIndex}>
+      {albums.map((album) => (
+        <div className="kvn-card mb-8" key={album.name}>
           <h2 className="mb-4 font-semibold">
             {album.name}
-            {album.content?.link?.url && (
+            {album.link && (
               <a
                 className="-my-px inline-block px-2 py-1 align-middle"
-                href={album.content.link.url}
+                href={album.link}
                 target="_blank"
                 rel="noreferrer"
               >
@@ -40,10 +40,10 @@ export default function Songs({ albums }) {
             )}
           </h2>
           <div className="-mb-2">
-            {album.content.songs.map((song, songIndex) => {
+            {album.songs.map((song) => {
               const currentIndex = counter;
-              const playing = song.audio.url && playIndex === currentIndex;
-              if (song.audio.url) {
+              const playing = song.audio && playIndex === currentIndex;
+              if (song.audio) {
                 playableSongs.push(song);
                 counter++;
               }
@@ -73,8 +73,8 @@ export default function Songs({ albums }) {
               );
 
               return (
-                <div className="border-scheme border-t text-sm" key={songIndex}>
-                  {song.audio.url ? (
+                <div className="border-scheme border-t text-sm" key={song.title}>
+                  {song.audio ? (
                     <div className="cursor-pointer py-2" onClick={() => setPlayIndex(currentIndex)}>
                       {renderLine()}
                     </div>
@@ -94,11 +94,9 @@ export default function Songs({ albums }) {
 }
 
 export async function getStaticProps() {
-  const resSongAlbums = await getSongAlbums();
-
   return {
     props: {
-      albums: resSongAlbums.stories,
+      albums: SONG_ALBUMS,
     },
     revalidate: STATIC_PROPS_REVALIDATE,
   };
