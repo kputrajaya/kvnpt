@@ -17,7 +17,7 @@
     },
     {
       "source": "/(bg|boardgamegeek)",
-      "destination": "https://boardgamegeek.com/user/kputrajaya",
+      "destination": "https://boardgamegeek.com/collection/user/kputrajaya?own=1&subtype=boardgame",
       "permanent": false
     },
     {
@@ -68,16 +68,6 @@
     {
       "source": "/(ig|instagram)",
       "destination": "https://www.instagram.com/kputrajaya/",
-      "permanent": false
-    },
-    {
-      "source": "/(js|jitsi)",
-      "destination": "https://meet.jit.si/KevinPutrajayaMeetingRoom",
-      "permanent": false
-    },
-    {
-      "source": "/(kf|kofi)",
-      "destination": "https://ko-fi.com/kputrajaya",
       "permanent": false
     },
     {
