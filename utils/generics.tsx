@@ -11,7 +11,7 @@ export const useDark = () =>
 
 export const buildImageSrc = (src, width, height, dynamicRatio = false) => {
   let newSrc = src;
-  if (newSrc.startsWith('http') && !newSrc.startsWith(IMAGEKIT_ENDPOINT)) {
+  if (!newSrc.startsWith(IMAGEKIT_ENDPOINT)) {
     newSrc = IMAGEKIT_ENDPOINT + newSrc;
   }
   newSrc += `?tr=w-${width * 1.5},h-${height * 1.5}`;
