@@ -2,7 +2,7 @@ export const PHOTO_ALBUMS = [
   {
     name: 'Thailand',
     slug: '2023-thailand',
-    date: '2023-11-01 00:00',
+    date: '2023-11-01',
     photos: [
       'Thailand/DSCF1501_m3kl-0GyHo.JPG',
       'Thailand/DSCF1515_z_nIBDMDeM.JPG',
@@ -93,7 +93,7 @@ export const PHOTO_ALBUMS = [
   {
     name: 'Jakarta - Car Free Day',
     slug: '2023-jakarta-car-free-day',
-    date: '2023-06-11 00:00',
+    date: '2023-06-11',
     photos: [
       'Car_Free_Day/DSCF0613_NyVo9Id9st.JPG',
       'Car_Free_Day/DSCF0617_Gqga2aJnZ.JPG',
@@ -126,7 +126,7 @@ export const PHOTO_ALBUMS = [
   {
     name: 'Jakarta - PIK',
     slug: '2023-jakarta-pik',
-    date: '2023-01-23 00:00',
+    date: '2023-01-23',
     photos: [
       'PIK/DSCF0461_ebkcmXZMf.JPG',
       'PIK/DSCF0464_QXdi1qiff.JPG',
@@ -148,7 +148,7 @@ export const PHOTO_ALBUMS = [
   {
     name: 'Yogyakarta',
     slug: '2022-yogyakarta',
-    date: '2022-12-17 00:00',
+    date: '2022-12-17',
     photos: [
       'Yogyakarta_2/DSCF0274_VfU8k2f_j.JPG',
       'Yogyakarta_2/DSCF0277_RNDqAKlWy.JPG',
@@ -189,7 +189,7 @@ export const PHOTO_ALBUMS = [
   {
     name: 'Bogor',
     slug: '2022-bogor',
-    date: '2022-02-02 00:00',
+    date: '2022-02-02',
     photos: [
       'Bogor/DSCF0158_xkOT3UMDe.JPG',
       'Bogor/DSCF0161_uQ_Hp_egmSy.JPG',
@@ -213,7 +213,7 @@ export const PHOTO_ALBUMS = [
   {
     name: 'Yogyakarta',
     slug: '2021-yogyakarta',
-    date: '2021-09-28 00:00',
+    date: '2021-09-28',
     photos: [
       'Yogyakarta/DSCF9185_N_BP4TMlme.JPG',
       'Yogyakarta/DSCF9207_46-WccHyf.JPG',
@@ -236,7 +236,7 @@ export const PHOTO_ALBUMS = [
   {
     name: 'Tangerang - The Breeze',
     slug: '2020-tangerang-the-breeze',
-    date: '2020-10-17 00:00',
+    date: '2020-10-17',
     photos: [
       'The_Breeze/DSCF9045_fK64n7eD7ai.JPG',
       'The_Breeze/DSCF9048_mE-5p3dAc9Q.JPG',
@@ -268,7 +268,7 @@ export const PHOTO_ALBUMS = [
   {
     name: 'Tangerang - Intermoda',
     slug: '2020-tangerang-intermoda',
-    date: '2020-10-04 00:00',
+    date: '2020-10-04',
     photos: [
       'Intermoda/DSCF9729_N5V7PsTBQNPY.JPG',
       'Intermoda/DSCF9730_SOP-3aDzmbi.JPG',
@@ -296,7 +296,7 @@ export const PHOTO_ALBUMS = [
   {
     name: 'Singapore',
     slug: '2019-singapore',
-    date: '2019-11-01 00:00',
+    date: '2019-11-01',
     photos: [
       'Singapore/DSCF1584_BYiqGNImAtXI.JPG',
       'Singapore/DSCF1604_rQY8MlKCj1.JPG',
