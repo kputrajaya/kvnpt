@@ -64,6 +64,9 @@ function MyApp({ Component, pageProps }) {
               className="bg-scheme absolute top-8 right-8 cursor-pointer rounded-full p-2 leading-0 print:hidden"
               title="Dark Mode"
               onClick={darkMode.toggle}
+              onKeyDown={darkMode.toggle}
+              role="button"
+              tabIndex={0}
             >
               <Image
                 src={darkMode.value ? SvgDark : SvgLight}
