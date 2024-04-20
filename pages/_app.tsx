@@ -58,15 +58,12 @@ function MyApp({ Component, pageProps }) {
 
       <PostHogProvider client={posthog}>
         <div className="container relative mx-auto max-w-3xl p-8">
-          <Component {...pageProps} />
           {darkMode && (
-            <div
+            <button
               className="bg-scheme absolute top-8 right-8 cursor-pointer rounded-full p-2 leading-0 print:hidden"
+              type="button"
               title="Dark Mode"
               onClick={darkMode.toggle}
-              onKeyDown={darkMode.toggle}
-              role="button"
-              tabIndex={0}
             >
               <Image
                 src={darkMode.value ? SvgDark : SvgLight}
@@ -75,8 +72,9 @@ function MyApp({ Component, pageProps }) {
                 alt="Dark Mode"
                 title=""
               />
-            </div>
+            </button>
           )}
+          <Component {...pageProps} />
         </div>
       </PostHogProvider>
     </>

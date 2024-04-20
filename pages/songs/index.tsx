@@ -73,19 +73,17 @@ export default function Songs({ albums }) {
               );
 
               return (
-                <div className="border-scheme border-t text-sm" key={song.title}>
+                <div className="border-scheme -mx-2 border-t text-sm" key={song.title}>
                   {song.audio ? (
-                    <div
-                      className="cursor-pointer py-2"
+                    <button
+                      className="w-full cursor-pointer p-2 text-left"
+                      type="button"
                       onClick={() => setPlayIndex(currentIndex)}
-                      onKeyDown={() => setPlayIndex(currentIndex)}
-                      role="button"
-                      tabIndex={0}
                     >
                       {renderLine()}
-                    </div>
+                    </button>
                   ) : (
-                    <div className="text-scheme-third cursor-not-allowed py-2">{renderLine()}</div>
+                    <div className="text-scheme-third cursor-not-allowed p-2">{renderLine()}</div>
                   )}
                 </div>
               );
