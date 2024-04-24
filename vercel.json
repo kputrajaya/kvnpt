@@ -130,6 +130,11 @@
       "permanent": false
     },
     {
+      "source": "/(wa|whatsapp)",
+      "destination": "https://wa.me/qr/FFJUNCQ3X3PDI1",
+      "permanent": false
+    },
+    {
       "source": "/(yt|youtube)",
       "destination": "https://youtube.com/@kputrajaya",
       "permanent": false
