@@ -28,6 +28,7 @@ export const PHOTO_ALBUMS = [
       'Singapore_2/DSCF2683_wIx2B9qkv.JPG',
       'Singapore_2/DSCF2695_LwkPrT4wf.JPG',
       'Singapore_2/DSCF2697_yHml6YjXi.JPG',
+      'Singapore_2/DSCF2700_ZHH66IHt6.JPG',
       'Singapore_2/DSCF2706_KKTaHBcdn.JPG',
       'Singapore_2/DSCF2707_lreMl95JWB.JPG',
       'Singapore_2/DSCF2709_vLy3xJ2WHv.JPG',
@@ -58,7 +59,6 @@ export const PHOTO_ALBUMS = [
       'Singapore_2/DSCF2826_6V7Q-Zrbn.JPG',
       'Singapore_2/DSCF2830_1qSfyKNft.JPG',
       'Singapore_2/DSCF2831_QR_rGBNU9.JPG',
-      'Singapore_2/DSCF2700_ZHH66IHt6.JPG',
     ],
   },
   {
