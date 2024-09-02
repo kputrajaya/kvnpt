@@ -11,12 +11,12 @@
       "permanent": false
     },
     {
-      "source": "/(ba|boardgamearena)",
+      "source": "/(ba|bgarena)",
       "destination": "https://boardgamearena.com/player?id=93015343",
       "permanent": false
     },
     {
-      "source": "/(bg|boardgamegeek)",
+      "source": "/(bg|bggeek)",
       "destination": "https://boardgamegeek.com/collection/user/kputrajaya?own=1&subtype=boardgame",
       "permanent": false
     },
@@ -36,7 +36,7 @@
       "permanent": false
     },
     {
-      "source": "/(eg|epicgames)",
+      "source": "/(eg|epic)",
       "destination": "https://store.epicgames.com/u/5eb30fa615694f7ab05434f2cda05f08",
       "permanent": false
     },
@@ -56,7 +56,7 @@
       "permanent": false
     },
     {
-      "source": "/(gm|googlemeet)",
+      "source": "/(gm|meet)",
       "destination": "https://meet.google.com/sae-rafu-pro",
       "permanent": false
     },
