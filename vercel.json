@@ -11,12 +11,12 @@
       "permanent": false
     },
     {
-      "source": "/(ba|bgarena)",
+      "source": "/(ba|boardgamearena)",
       "destination": "https://boardgamearena.com/player?id=93015343",
       "permanent": false
     },
     {
-      "source": "/(bg|bggeek)",
+      "source": "/(bg|boardgamegeek)",
       "destination": "https://boardgamegeek.com/collection/user/kputrajaya?own=1&subtype=boardgame",
       "permanent": false
     },
