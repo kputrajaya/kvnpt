@@ -21,6 +21,11 @@
       "permanent": false
     },
     {
+      "source": "/(bn|battlenet)",
+      "destination": "https://gist.githubusercontent.com/kputrajaya/b87f1e12644a7863d496d0ef5f95758b/raw/a13b43dd540d41ba081e37aa295848637a0efa33/battle.net",
+      "permanent": false
+    },
+    {
       "source": "/(ca|calendly)",
       "destination": "https://calendly.com/kputrajaya/quick",
       "permanent": false
