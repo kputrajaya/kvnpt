@@ -46,14 +46,14 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
+        <meta name="description" content={SITE_DESCRIPTION} />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+
         <meta property="og:image" content={SITE_IMAGE} />
         <meta property="og:description" content={SITE_DESCRIPTION} />
-
         <meta name="twitter:card" content="summary_large_image"></meta>
         <meta name="twitter:creator" content={SITE_TWITTER_USER} />
         <meta name="twitter:description" content={SITE_DESCRIPTION} />
-
-        <meta name="description" content={SITE_DESCRIPTION} />
       </Head>
 
       <PostHogProvider client={posthog}>
