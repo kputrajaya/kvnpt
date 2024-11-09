@@ -116,7 +116,7 @@
       "permanent": false
     },
     {
-      "source": "/(tm|telegram)",
+      "source": "/(tg|telegram)",
       "destination": "https://t.me/kputrajaya"
     },
     {
