@@ -434,6 +434,18 @@ export const SONG_ALBUMS = [
     ],
   },
   {
+    name: 'Mini Projects',
+    link: '',
+    songs: [
+      {
+        audio: 'https://d.kvn.pt/songs/masa_sepi.mp3',
+        title: 'Masa Sepi (Bernadya)',
+        duration: '00:31',
+        featuring: '',
+      },
+    ],
+  },
+  {
     name: 'ViCiDi',
     link: '',
     songs: [
