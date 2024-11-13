@@ -116,7 +116,7 @@
       "permanent": false
     },
     {
-      "source": "/(tm|telegram)",
+      "source": "/(tg|telegram)",
       "destination": "https://t.me/kputrajaya"
     },
     {
@@ -131,7 +131,7 @@
     },
     {
       "source": "/(wa|whatsapp)",
-      "destination": "https://wa.me/qr/FFJUNCQ3X3PDI1",
+      "destination": "https://r.kvn.pt/whatsapp-link",
       "permanent": false
     },
     {
