@@ -135,6 +135,11 @@
       "permanent": false
     },
     {
+      "source": "/(wb|whiteboard)",
+      "destination": "https://miro.com/app/board/uXjVIo7yPrk=/",
+      "permanent": false
+    },
+    {
       "source": "/(yt|youtube)",
       "destination": "https://youtube.com/@kputrajaya",
       "permanent": false
