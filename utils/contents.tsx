@@ -449,7 +449,7 @@ export const SONG_ALBUMS = [
       {
         audio: 'https://d.kvn.pt/songs/cornerstone_teknologi_5.mp3',
         title: 'Teknologi',
-        duration: '01:29',
+        duration: '01:28',
         featuring: '',
       },
       {
