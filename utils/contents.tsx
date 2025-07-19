@@ -519,7 +519,7 @@ export const SONG_ALBUMS = [
     link: '',
     songs: [
       {
-        audio: 'https://d.kvn.pt/songs/alicia_1.mp3',
+        audio: 'https://d.kvn.pt/songs/alicia_2.mp3',
         title: 'Alicia (Clair Obscur: Expedition 33)',
         duration: '00:34',
         featuring: '',
