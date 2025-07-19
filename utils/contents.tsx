@@ -519,6 +519,12 @@ export const SONG_ALBUMS = [
     link: '',
     songs: [
       {
+        audio: 'https://d.kvn.pt/songs/alicia.mp3',
+        title: 'Alicia (Clair Obscur: Expedition 33)',
+        duration: '00:34',
+        featuring: '',
+      },
+      {
         audio: 'https://d.kvn.pt/songs/masa_sepi.mp3',
         title: 'Masa Sepi (Bernadya)',
         duration: '00:31',
