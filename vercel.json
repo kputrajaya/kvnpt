@@ -91,13 +91,13 @@
       "permanent": false
     },
     {
-      "source": "/(qu|quora)",
-      "destination": "https://www.quora.com/profile/Kevin-Putrajaya",
+      "source": "/(rt|roll20)",
+      "destination": "https://app.roll20.net/users/16525787/kputrajaya",
       "permanent": false
     },
     {
-      "source": "/(sk|skype)",
-      "destination": "https://join.skype.com/invite/xZIgQm0SZCxG",
+      "source": "/(qu|quora)",
+      "destination": "https://www.quora.com/profile/Kevin-Putrajaya",
       "permanent": false
     },
     {
