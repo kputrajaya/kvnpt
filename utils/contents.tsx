@@ -515,11 +515,11 @@ export const SONG_ALBUMS = [
     ],
   },
   {
-    name: 'Minis',
+    name: '30s Choir',
     link: '',
     songs: [
       {
-        audio: 'https://d.kvn.pt/songs/alicia_3.mp3',
+        audio: 'https://d.kvn.pt/songs/alicia_4.mp3',
         title: 'Alicia (Clair Obscur: Expedition 33)',
         duration: '00:34',
         featuring: '',
