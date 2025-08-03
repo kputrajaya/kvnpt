@@ -519,6 +519,12 @@ export const SONG_ALBUMS = [
     link: '',
     songs: [
       {
+        audio: 'https://d.kvn.pt/songs/terbuang_dalam_waktu_1.mp3',
+        title: 'Terbuang Dalam Waktu (Barasuara)',
+        duration: '00:30',
+        featuring: '',
+      },
+      {
         audio: 'https://d.kvn.pt/songs/alicia_4.mp3',
         title: 'Alicia (Clair Obscur: Expedition 33)',
         duration: '00:34',
