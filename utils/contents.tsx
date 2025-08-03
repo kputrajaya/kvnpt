@@ -519,7 +519,7 @@ export const SONG_ALBUMS = [
     link: '',
     songs: [
       {
-        audio: 'https://d.kvn.pt/songs/terbuang_dalam_waktu_2.mp3',
+        audio: 'https://d.kvn.pt/songs/terbuang_dalam_waktu_3.mp3',
         title: 'Terbuang Dalam Waktu (Barasuara)',
         duration: '00:30',
         featuring: '',
