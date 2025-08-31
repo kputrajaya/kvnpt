@@ -515,9 +515,15 @@ export const SONG_ALBUMS = [
     ],
   },
   {
-    name: '30s Choir',
+    name: '30s Cappella',
     link: '',
     songs: [
+      {
+        audio: 'https://d.kvn.pt/songs/god_is.mp3',
+        title: 'God Is (Kanye West)',
+        duration: '00:38',
+        featuring: '',
+      },
       {
         audio: 'https://d.kvn.pt/songs/terbuang_dalam_waktu_6.mp3',
         title: 'Terbuang Dalam Waktu (Barasuara)',
