@@ -519,7 +519,7 @@ export const SONG_ALBUMS = [
     link: '',
     songs: [
       {
-        audio: 'https://d.kvn.pt/songs/god_is.mp3',
+        audio: 'https://d.kvn.pt/songs/god_is_1.mp3',
         title: 'God Is (Kanye West)',
         duration: '00:38',
         featuring: '',
