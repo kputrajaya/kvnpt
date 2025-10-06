@@ -1,11 +1,6 @@
 {
   "redirects": [
     {
-      "source": "/(bb|bitbucket)",
-      "destination": "https://bitbucket.org/kputrajaya",
-      "permanent": false
-    },
-    {
       "source": "/(bc|bandcamp)",
       "destination": "https://kputrajaya.bandcamp.com/releases",
       "permanent": false
@@ -78,11 +73,6 @@
     {
       "source": "/(li|linkedin)",
       "destination": "https://www.linkedin.com/in/kputrajaya/",
-      "permanent": false
-    },
-    {
-      "source": "/(md|medium)",
-      "destination": "https://kputrajaya.medium.com/",
       "permanent": false
     },
     {
