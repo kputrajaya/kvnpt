@@ -6,13 +6,12 @@ import SvgTag from '../public/images/post-tag.svg';
 
 export default function PostSubtitle({ date, tags = [] }) {
   return (
-    <>
+    <div className="flex align-center items-center">
       <Image
         src={SvgDate}
         width={SVG_POST_SIZE}
         height={SVG_POST_SIZE}
-        className="relative -top-0.25 mr-1 inline-block"
-        alt="Date"
+        className="relative mr-1 inline-block"
         title="Date"
       />
       {formatDate(date)}
@@ -23,13 +22,12 @@ export default function PostSubtitle({ date, tags = [] }) {
             src={SvgTag}
             width={SVG_POST_SIZE}
             height={SVG_POST_SIZE}
-            className="relative -top-0.25 mr-1 inline-block"
-            alt="Tags"
+            className="relative mr-1 inline-block"
             title="Tags"
           />
           {[...tags].sort((a, b) => a.localeCompare(b)).join(', ')}
         </>
       )}
-    </>
+    </div>
   );
 }

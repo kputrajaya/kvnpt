@@ -24,7 +24,7 @@ export default function Photos({ albums }) {
 
       {albums.map((album) => (
         <Link className="kvn-card mb-4 block" href={`/photos/${album.slug}`} key={album.slug}>
-          <div className="text-scheme-second -mx-4 -mt-4 mb-3 flex text-xs leading-0">
+          <div className="text-scheme-second -mx-4 -mt-4 mb-3 flex text-xs">
             {album.photos.slice(0, PHOTO_ALBUM_TEASER_COUNT).map((photo, photoIndex) => (
               <div className="relative w-3/12" key={photo}>
                 <Image

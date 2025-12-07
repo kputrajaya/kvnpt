@@ -12,37 +12,38 @@ export default function Markdown({ text }) {
   const darkMode = useDark();
 
   return (
-    <ReactMarkdown
-      components={{
-        a({ children, href }) {
-          return String(href).startsWith('/') ? (
-            <Link href={href}>{children}</Link>
-          ) : (
-            <a href={String(href)} target="_blank" rel="noreferrer">
-              {children}
-            </a>
-          );
-        },
-        code({ node: _, inline, className, children, ...props }) {
-          const matchLang = /language-(\w+)/.exec(className || '');
-          const highlighterProps = {
-            PreTag: 'div',
-            language: matchLang ? matchLang[1] : null,
-            style: darkMode.value ? tomorrow : coldarkCold,
-            ...props,
-          };
-          return !inline && highlighterProps.language ? (
-            <SyntaxHighlighter {...highlighterProps}>{String(children).replace(/\n$/, '')}</SyntaxHighlighter>
-          ) : (
-            <code className={className} {...props}>
-              {children}
-            </code>
-          );
-        },
-      }}
-      className="kvn-markdown"
-    >
-      {text}
-    </ReactMarkdown>
+    <div className="kvn-markdown">
+      <ReactMarkdown
+        components={{
+          a({ children, href }) {
+            return String(href).startsWith('/') ? (
+              <Link href={href}>{children}</Link>
+            ) : (
+              <a href={String(href)} target="_blank" rel="noreferrer">
+                {children}
+              </a>
+            );
+          },
+          code({ node: _, className, children, ...props }) {
+            const matchLang = /language-(\w+)/.exec(className || '');
+            const highlighterProps = {
+              PreTag: 'div',
+              language: matchLang ? matchLang[1] : null,
+              style: darkMode.value ? tomorrow : coldarkCold,
+              ...props,
+            };
+            return highlighterProps.language ? (
+              <SyntaxHighlighter {...highlighterProps}>{String(children).replace(/\n$/, '')}</SyntaxHighlighter>
+            ) : (
+              <code className={className} {...props}>
+                {children}
+              </code>
+            );
+          },
+        }}
+      >
+        {text}
+      </ReactMarkdown>
+    </div>
   );
 }

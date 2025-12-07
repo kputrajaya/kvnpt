@@ -20,8 +20,8 @@ export default function PhotoAlbumImages({ album, previewCount }) {
   });
 
   return (
-    <div className="leading-0">
-      <div className="-m-1 leading-0">
+    <div>
+      <div className="-m-1 leading-0!">
         {images
           .filter((_, index) => expand || index < previewCount)
           .map((image, index) => (

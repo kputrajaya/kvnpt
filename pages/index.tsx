@@ -45,7 +45,7 @@ export default function Home({ photo, introduction, contacts }) {
                   key={contact.link.url}
                 >
                   <Image
-                    className="text-scheme-primary fill-current"
+                    className="text-scheme-primary"
                     src={contactSvgMap[contact.caption]}
                     width={INTRO_CONTACT_SIZE}
                     height={INTRO_CONTACT_SIZE}

@@ -77,7 +77,7 @@ export default function Resume({ resume }) {
       <ul className="list-disc">{renderExperience()}</ul>
 
       <h3 className="mt-12 text-lg font-semibold">Skills</h3>
-      <ul className="mt-4 leading-0">
+      <ul className="mt-4 leading-0!">
         {resume.skills.map((block) => (
           <li className="kvn-card kvn-card-small mt-2 mr-2 inline-block text-sm" key={block.name}>
             <span className={block.highlight ? 'font-semibold' : ''}>{block.name}</span>

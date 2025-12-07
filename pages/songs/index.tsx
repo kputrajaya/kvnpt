@@ -35,7 +35,7 @@ export default function Songs({ albums }) {
                 target="_blank"
                 rel="noreferrer"
               >
-                <Image src={SvgSongInfo} width={SVG_INFO_SIZE} height={SVG_INFO_SIZE} alt="Info" title="Info" />
+                <Image src={SvgSongInfo} width={SVG_INFO_SIZE} height={SVG_INFO_SIZE} title="Info" />
               </a>
             )}
           </h2>
@@ -51,13 +51,13 @@ export default function Songs({ albums }) {
               const renderLine = () => (
                 <div className="flex">
                   <div
-                    className="text-scheme-primary mr-4 shrink-0 self-center fill-current"
+                    className={(playing ? 'text-scheme-primary' : 'text-scheme-third') + ' mr-4 shrink-0 self-center'}
                     style={{ width: SVG_SONG_SIZE }}
                   >
                     {playing ? (
-                      <Image src={SvgSongPlaying} width={SVG_SONG_SIZE} height={SVG_SONG_SIZE} alt="Playing" title="" />
+                      <Image src={SvgSongPlaying} width={SVG_SONG_SIZE} height={SVG_SONG_SIZE} title="Playing" />
                     ) : (
-                      <Image src={SvgSongPlay} width={SVG_SONG_SIZE} height={SVG_SONG_SIZE} alt="Play" title="" />
+                      <Image src={SvgSongPlay} width={SVG_SONG_SIZE} height={SVG_SONG_SIZE} title="Play" />
                     )}
                   </div>
                   <div className="min-w-0 grow truncate">

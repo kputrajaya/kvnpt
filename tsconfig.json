@@ -1,7 +1,7 @@
 {
   "allowSyntheticDefaultImports": true,
   "compilerOptions": {
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "esModuleInterop": true,
     "target": "es5",
     "lib": [

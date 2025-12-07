@@ -1,6 +1,10 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@theme {
+  --color-red-500: #C83939;
+}
+
+@custom-variant dark (&:where([class^=dark], [class^=dark] *));
 
 /* Elements */
 
@@ -9,10 +13,10 @@
 }
 
 body {
-  @apply text-gray-900;
-  @apply dark:text-gray-100;
-  @apply bg-gray-100;
-  @apply dark:bg-gray-900;
+  @apply text-neutral-900;
+  @apply dark:text-neutral-100;
+  @apply bg-neutral-100;
+  @apply dark:bg-neutral-900;
 }
 body::after {
   content: '';
@@ -24,10 +28,10 @@ body::after {
   @apply -z-1;
 }
 html.light > body::after {
-  @apply bg-custom-light;
+  background-image: linear-gradient(to bottom, rgba(245, 245, 245, .2) 40%, rgba(245, 245, 245, 1) 60%), url('https://ik.imagekit.io/kvn/bg_light_u6a3rn9yA.jpg')
 }
 html.dark > body::after {
-  @apply bg-custom-dark;
+  background-image: linear-gradient(to bottom, rgba(23, 23, 23, .2) 40%, rgba(23, 23, 23, 1) 60%), url('https://ik.imagekit.io/kvn/bg_dark_kZ3_8nAqw.jpg')
 }
 
 a {
@@ -46,50 +50,44 @@ strong {
 /* Utilities */
 
 .text-scheme-first {
-  @apply text-gray-900;
-  @apply dark:text-gray-100;
+  @apply text-neutral-900;
+  @apply dark:text-neutral-100;
 }
 .text-scheme-second {
-  @apply text-gray-700;
-  @apply dark:text-gray-300;
+  @apply text-neutral-700;
+  @apply dark:text-neutral-300;
 }
 .text-scheme-third {
-  @apply text-gray-500;
-  @apply dark:text-gray-400;
+  @apply text-neutral-500;
+  @apply dark:text-neutral-400;
 }
 .text-scheme-primary {
   @apply text-red-500;
 }
 
 .bg-scheme {
-  @apply bg-gray-200;
-  @apply dark:bg-gray-800;
-  @apply bg-opacity-90;
-  @apply dark:bg-opacity-90; /* Specificity issue */
+  @apply bg-neutral-200/90;
+  @apply dark:bg-neutral-800/90;
 }
 .bg-scheme-75 {
-  @apply bg-gray-200;
-  @apply dark:bg-gray-800;
-  @apply bg-opacity-75;
-  @apply dark:bg-opacity-75; /* Specificity issue */
+  @apply bg-neutral-200/75;
+  @apply dark:bg-neutral-800/75;
 }
 
 .border-scheme {
-  @apply border-gray-300;
-  @apply dark:border-gray-700;
+  @apply border-neutral-300;
+  @apply dark:border-neutral-700;
 }
 
 /* Custom components */
 
 .kvn-card {
   @apply p-4;
-  @apply bg-gray-200;
-  @apply dark:bg-gray-800;
-  @apply bg-opacity-90;
-  @apply dark:bg-opacity-90; /* Specificity issue */
+  @apply bg-neutral-200/90;
+  @apply dark:bg-neutral-800/90;
   @apply border;
-  @apply border-gray-200;
-  @apply dark:border-gray-800;
+  @apply border-neutral-200;
+  @apply dark:border-neutral-800;
   @apply rounded-md;
   @apply overflow-hidden;
 }
@@ -138,13 +136,11 @@ strong {
   @apply px-1;
   @apply font-mono;
   @apply text-sm;
-  @apply bg-gray-200;
-  @apply dark:bg-gray-800;
-  @apply bg-opacity-90;
-  @apply dark:bg-opacity-90; /* Specificity issue */
+  @apply bg-neutral-200/90;
+  @apply dark:bg-neutral-800/90;
   @apply border;
-  @apply border-gray-200;
-  @apply dark:border-gray-800;
+  @apply border-neutral-200;
+  @apply dark:border-neutral-800;
   @apply rounded-md;
 }
 .kvn-markdown pre {
@@ -159,19 +155,17 @@ strong {
 .kvn-markdown pre > div {
   @apply w-fit;
   @apply min-w-full;
-  @apply m-0 !important;
+  @apply m-0!;
   @apply font-mono;
-  @apply bg-transparent !important;
+  @apply bg-transparent!;
 }
 
 .kvn-audio .rhap_container {
   @apply w-full;
   @apply py-3;
   @apply px-8;
-  @apply bg-gray-200;
-  @apply dark:bg-gray-800;
-  @apply bg-opacity-90;
-  @apply dark:bg-opacity-90; /* Specificity issue */
+  @apply bg-neutral-200/90;
+  @apply dark:bg-neutral-800/90;
   @apply shadow-none;
   @apply items-center;
 }
@@ -181,23 +175,23 @@ strong {
 }
 .kvn-audio .rhap_time {
   @apply text-sm;
-  @apply text-gray-700;
-  @apply dark:text-gray-300;
+  @apply text-neutral-700;
+  @apply dark:text-neutral-300;
 }
 .kvn-audio .rhap_repeat-button,
 .kvn-audio .rhap_main-controls-button,
 .kvn-audio .rhap_volume-button {
-  @apply text-gray-600;
-  @apply dark:text-gray-400;
+  @apply text-neutral-600;
+  @apply dark:text-neutral-400;
 }
 .kvn-audio .rhap_play-pause-button {
-  @apply text-gray-700;
-  @apply dark:text-gray-300;
+  @apply text-neutral-700;
+  @apply dark:text-neutral-300;
 }
 .kvn-audio .rhap_progress-indicator,
 .kvn-audio .rhap_volume-indicator {
-  @apply bg-gray-600;
-  @apply dark:bg-gray-400;
+  @apply bg-neutral-600;
+  @apply dark:bg-neutral-400;
   @apply shadow-none;
   @apply opacity-100;
   @apply z-10;
@@ -207,14 +201,14 @@ strong {
   @apply rounded-sm;
 }
 .kvn-audio .rhap_progress-bar-show-download {
-  @apply bg-gray-300;
-  @apply dark:bg-gray-700;
+  @apply bg-neutral-300;
+  @apply dark:bg-neutral-700;
 }
 .kvn-audio .rhap_download-progress,
 .kvn-audio .rhap_volume-bar {
-  @apply bg-gray-400;
-  @apply dark:bg-gray-600;
+  @apply bg-neutral-400;
+  @apply dark:bg-neutral-600;
 }
 .kvn-audio .rhap_progress-filled {
-  @apply bg-gray-500;
+  @apply bg-neutral-500;
 }
