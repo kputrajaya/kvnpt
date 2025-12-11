@@ -26,6 +26,11 @@
       "permanent": false
     },
     {
+      "source": "/(dv|discordvoice)",
+      "destination": "https://discord.gg/t3cDvCy9Bp",
+      "permanent": false
+    },
+    {
       "source": "/(dh|docker)",
       "destination": "https://hub.docker.com/u/kiloev",
       "permanent": false
