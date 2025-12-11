@@ -26,7 +26,7 @@
       "permanent": false
     },
     {
-      "source": "/(dv|discordvoice)",
+      "source": "/(ds|discordserver)",
       "destination": "https://discord.gg/t3cDvCy9Bp",
       "permanent": false
     },
