@@ -31,11 +31,6 @@
       "permanent": false
     },
     {
-      "source": "/(dh|docker)",
-      "destination": "https://hub.docker.com/u/kiloev",
-      "permanent": false
-    },
-    {
       "source": "/(eg|epic)",
       "destination": "https://store.epicgames.com/u/5eb30fa615694f7ab05434f2cda05f08",
       "permanent": false
@@ -103,6 +98,11 @@
     {
       "source": "/(sp|spotify)",
       "destination": "https://open.spotify.com/user/21qf3gujlq6pmr55bmvehhxpa",
+      "permanent": false
+    },
+    {
+      "source": "/(sr|serializd)",
+      "destination": "https://www.serializd.com/user/kputrajaya/shows",
       "permanent": false
     },
     {
