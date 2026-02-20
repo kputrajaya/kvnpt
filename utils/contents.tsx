@@ -50,7 +50,7 @@ export const PHOTO_ALBUMS = [
       'Bali/DSCF3704_ImiguTdaFF.JPG',
       'Bali/DSCF3717_TcogFxnDCa.JPG',
       'Bali/DSCF3719_rFeWAbUe4.JPG',
-      'Bali/DSCF3726_8B8m-lAJd.JPG',
+      'Bali/DSCF3726_e9a_fXRi0.JPG',
     ],
   },
   {
