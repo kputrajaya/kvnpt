@@ -206,9 +206,9 @@ export const PHOTO_ALBUMS = [
       'Thailand/DSCF2324_rXu3tTcTu.JPG',
       'Thailand/DSCF2331_uUCIEfVAU.JPG',
       'Thailand/DSCF2367_oYRFCYR0L.JPG',
-      'Thailand/DSCF2395_xviZy23ke.JPG',
+      'Thailand/DSCF2395_VF9nAUp0p.JPG',
       'Thailand/DSCF2426_W-gH0vB8N.JPG',
-      'Thailand/DSCF2437_OpTT2OvXm.JPG',
+      'Thailand/DSCF2437_ZCUbXVH9H.JPG',
     ],
   },
   {
