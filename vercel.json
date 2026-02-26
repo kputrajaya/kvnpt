@@ -76,6 +76,11 @@
       "permanent": false
     },
     {
+      "source": "/(mp|maps)",
+      "destination": "https://maps.app.goo.gl/Ct8uHYuCSjUr44up8",
+      "permanent": false
+    },
+    {
       "source": "/(pp|paypal)",
       "destination": "https://www.paypal.com/paypalme/kputrajaya",
       "permanent": false
