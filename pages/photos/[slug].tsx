@@ -1,7 +1,6 @@
 import Head from 'next/head';
 
-import { PHOTO_ALBUM_PREVIEW_COUNT, SITE_TITLE, STATIC_PROPS_REVALIDATE } from '../../utils/constants';
-import { PHOTO_ALBUMS } from '../../utils/contents';
+import { PHOTO_ALBUM_PREVIEW_COUNT, PHOTO_ALBUMS, SITE_TITLE, STATIC_PROPS_REVALIDATE } from '../../utils/constants';
 import BackButton from '../../components/back_button';
 import PhotoAlbumImages from '../../components/photo_album_images';
 import PostSubtitle from '../../components/post_subtitle';

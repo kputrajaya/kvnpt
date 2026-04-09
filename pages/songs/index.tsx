@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import Head from 'next/head';
 
-import { SITE_TITLE, STATIC_PROPS_REVALIDATE, SVG_INFO_SIZE, SVG_SONG_SIZE } from '../../utils/constants';
-import { SONG_ALBUMS } from '../../utils/contents';
+import { SITE_TITLE, STATIC_PROPS_REVALIDATE, SVG_INFO_SIZE, SVG_SONG_SIZE, SONG_ALBUMS } from '../../utils/constants';
 import Audio from '../../components/audio';
 import BackButton from '../../components/back_button';
 import Image from '../../components/image';

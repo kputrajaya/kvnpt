@@ -1,3 +1,6 @@
+import photoAlbums from '../data/photo-albums.json';
+import songAlbums from '../data/song-albums.json';
+
 export const BLOCK_LINK_IMAGE_SIZE = 75;
 
 export const BLOCK_PHOTO_ALBUM_LINK_PREVIEW_COUNT = 6;
@@ -36,3 +39,6 @@ export const SVG_INFO_SIZE = 15;
 export const SVG_POST_SIZE = 15;
 export const SVG_SCHEME_SIZE = 19;
 export const SVG_SONG_SIZE = 10;
+
+export const PHOTO_ALBUMS = photoAlbums;
+export const SONG_ALBUMS = songAlbums;

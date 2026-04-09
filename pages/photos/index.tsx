@@ -4,10 +4,10 @@ import Link from 'next/link';
 import {
   PHOTO_ALBUM_TEASER_COUNT,
   PHOTO_ALBUM_TEASER_SIZE,
+  PHOTO_ALBUMS,
   SITE_TITLE,
   STATIC_PROPS_REVALIDATE,
 } from '../../utils/constants';
-import { PHOTO_ALBUMS } from '../../utils/contents';
 import BackButton from '../../components/back_button';
 import Image from '../../components/image';
 import PostSubtitle from '../../components/post_subtitle';

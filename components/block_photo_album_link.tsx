@@ -1,7 +1,6 @@
 import Link from 'next/link';
 
-import { BLOCK_PHOTO_ALBUM_LINK_PREVIEW_COUNT } from '../utils/constants';
-import { PHOTO_ALBUMS } from '../utils/contents';
+import { BLOCK_PHOTO_ALBUM_LINK_PREVIEW_COUNT, PHOTO_ALBUMS } from '../utils/constants';
 import PhotoAlbumImages from './photo_album_images';
 import PostSubtitle from './post_subtitle';
 
