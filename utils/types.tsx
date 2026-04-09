@@ -17,3 +17,9 @@ export type SongAlbum = {
   link: string;
   songs: SongDetail[];
 };
+
+export interface ErrorPageProps {
+  code: number;
+  title: string;
+  message: string;
+}

@@ -1,13 +1,9 @@
 import Head from 'next/head';
 
 import { SITE_TITLE } from '../utils/constants';
+import { ErrorPageProps } from '../utils/types';
 import BackButton from './back_button';
 
-interface ErrorPageProps {
-  code: number;
-  title: string;
-  message: string;
-}
 
 export default function ErrorPage({ code, title, message }: ErrorPageProps) {
   return (

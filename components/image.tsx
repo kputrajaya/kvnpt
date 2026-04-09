@@ -25,5 +25,5 @@ export default function Image({ src, title, width, height, dynamicRatio = false,
         width,
         height: 'auto',
       };
-  return <NextImage src={newSrc} alt={title} title={title} width={width} height={height} style={style} {...props} />;
+  return <NextImage src={newSrc} alt={title} width={width} height={height} style={style} {...props} />;
 }
