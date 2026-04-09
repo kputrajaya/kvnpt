@@ -7,7 +7,7 @@ import { SITE_DESCRIPTION, SITE_IMAGE, SITE_TWITTER_USER, SVG_SCHEME_SIZE } from
 import { useDark } from '../utils/generics';
 import SvgDark from '../public/images/scheme-dark.svg';
 import SvgLight from '../public/images/scheme-light.svg';
-import '../styles/globals.css';
+import '../styles/globals.css' assert { type: 'css' };
 
 function MyApp({ Component, pageProps }) {
   const darkMode = useDark();

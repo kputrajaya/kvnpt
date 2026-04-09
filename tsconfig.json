@@ -1,9 +1,9 @@
 {
-  "allowSyntheticDefaultImports": true,
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
     "jsx": "react-jsx",
     "esModuleInterop": true,
-    "target": "es5",
+    "target": "es2020",
     "lib": [
       "dom",
       "dom.iterable",
@@ -16,7 +16,7 @@
     "noEmit": true,
     "incremental": true,
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true
   },

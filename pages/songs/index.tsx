@@ -41,7 +41,7 @@ export default function Songs({ albums }) {
           <div className="-mb-2">
             {album.songs.map((song) => {
               const currentIndex = counter;
-              const playing = song.audio && playIndex === currentIndex;
+              const isPlaying = song.audio && playIndex === currentIndex;
               if (song.audio) {
                 playableSongs.push(song);
                 counter++;
@@ -50,10 +50,10 @@ export default function Songs({ albums }) {
               const renderLine = () => (
                 <div className="flex">
                   <div
-                    className={(playing ? 'text-scheme-primary' : 'text-scheme-third') + ' mr-4 shrink-0 self-center'}
+                    className={(isPlaying ? 'text-scheme-primary' : 'text-scheme-third') + ' mr-4 shrink-0 self-center'}
                     style={{ width: SVG_SONG_SIZE }}
                   >
-                    {playing ? (
+                    {isPlaying ? (
                       <Image src={SvgSongPlaying} width={SVG_SONG_SIZE} height={SVG_SONG_SIZE} title="Playing" />
                     ) : (
                       <Image src={SvgSongPlay} width={SVG_SONG_SIZE} height={SVG_SONG_SIZE} title="Play" />
