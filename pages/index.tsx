@@ -28,8 +28,7 @@ export default function Home({ photo, introduction, contacts }) {
             src={photo.url}
             width={INTRO_AVATAR_SIZE}
             height={INTRO_AVATAR_SIZE}
-            alt={SITE_TITLE}
-            title=""
+            title={SITE_TITLE}
           />
           <div className="mt-8 md:mt-0 md:ml-8">
             <div className="mb-8">

@@ -31,8 +31,7 @@ export default function Photos({ albums }) {
                   src={photo}
                   width={PHOTO_ALBUM_TEASER_SIZE}
                   height={PHOTO_ALBUM_TEASER_SIZE}
-                  alt={album.name}
-                  title=""
+                  title={`${album.name} - Photo`}
                 />
                 {photoIndex === PHOTO_ALBUM_TEASER_COUNT - 1 && album.photos.length > PHOTO_ALBUM_TEASER_COUNT && (
                   <div className="bg-scheme-75 absolute inset-0 flex items-center justify-center font-semibold">

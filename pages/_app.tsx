@@ -37,7 +37,7 @@ function MyApp({ Component, pageProps }) {
               src={darkMode.value ? SvgDark : SvgLight}
               width={SVG_SCHEME_SIZE}
               height={SVG_SCHEME_SIZE}
-              title=""
+              title="Toggle Dark Mode"
             />
           </button>
         )}
