@@ -6,21 +6,23 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@fisch0920/use-dark-mode": "^2.4.0",
     "date-fns": "^4.1.0",
-    "link-preview-js": "^4.0.0",
-    "next": "^16.1.6",
+    "fslightbox-react": "^2.0.0",
+    "link-preview-js": "^5.0.1",
+    "next": "^16.4.5",
     "react": "19.2.1",
     "react-dom": "19.2.1",
     "react-h5-audio-player": "^3.10.1",
     "react-markdown": "^10.1.0",
-    "react-syntax-highlighter": "^16.1.0"
+    "react-syntax-highlighter": "^16.1.0",
+    "uglify-js": "^3.19.3"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "16.0.7",
+    "@next/eslint-plugin-next": "16.4.5",
     "@svgr/webpack": "^8.1.0",
     "@tailwindcss/postcss": "^4.1.17",
     "@types/node": "^24.10.1",
@@ -28,15 +30,13 @@
     "@types/react-dom": "19.2.3",
     "autoprefixer": "^10.4.22",
     "eslint": "^10.0.1",
-    "eslint-config-next": "^0.2.4",
+    "eslint-config-next": "^16.4.5",
     "eslint-config-prettier": "^10.1.8",
-    "fslightbox-react": "^2.0.0",
     "postcss": "^8.5.6",
     "prettier": "^3.7.4",
     "prettier-plugin-tailwindcss": "^0.7.2",
     "tailwindcss": "^4.1.17",
-    "typescript": "^5.9.3",
-    "uglify-js": "^3.19.3"
+    "typescript": "^5.9.3"
   },
   "overrides": {
     "@types/react": "19.2.7",
