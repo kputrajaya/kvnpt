@@ -8,6 +8,7 @@ My current personal site.
 
 - [Next.js](https://nextjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
+- [Storyblok](https://www.storyblok.com/)
 - [SVGR](https://react-svgr.com/)
 - [React H5 Audio Player](https://github.com/lhz516/react-h5-audio-player)
 - [React Markdown](https://github.com/remarkjs/react-markdown)
