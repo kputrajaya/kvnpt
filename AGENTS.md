@@ -17,7 +17,7 @@ No test framework configured.
 **Stack:** Next.js (Pages Router) + React 19 + TypeScript + Tailwind CSS 4
 
 **Content sources:**
-- **Storyblok CMS** — blog posts, resume, home page content; fetched via `utils/storyblok.ts`
+- **Storyblok CMS** — blog posts, resume, home page content; fetched via `utils/storyblok.tsx`
 - **JSON files** — `data/photo-albums.json`, `data/song-albums.json` for media sections
 
 **Key pages:**
