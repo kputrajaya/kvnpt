@@ -105,7 +105,10 @@ export default function Songs({ albums }) {
                     <button
                       className="w-full cursor-pointer p-2 text-left"
                       type="button"
-                      onClick={() => handleSongClick(currentIndex)}
+                      onClick={(event) => {
+                        if (event.detail > 0) event.currentTarget.blur();
+                        handleSongClick(currentIndex);
+                      }}
                     >
                       {renderLine()}
                     </button>
