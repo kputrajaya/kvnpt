@@ -8,6 +8,8 @@ import BackButton from '../../../components/back_button';
 import Block from '../../../components/block';
 import PostSubtitle from '../../../components/post_subtitle';
 
+const RENDER_DELAY_MS = Number(process.env.POST_RENDER_DELAY_MS || 0);
+
 function PostSkeleton() {
   return (
     <>
@@ -15,14 +17,17 @@ function PostSkeleton() {
       <div role="status" aria-live="polite">
         <span className="sr-only">Loading post</span>
         <div className="mb-2 h-8 w-2/3 animate-pulse rounded bg-scheme-75" />
-        <div className="mb-8 h-4 w-1/3 animate-pulse rounded bg-scheme-75" />
-        <div className="space-y-3">
-          {[0, 1, 2, 3, 4].map((line) => (
-            <div
-              key={line}
-              className={`h-4 animate-pulse rounded bg-scheme-75 ${line === 4 ? 'w-2/3' : 'w-full'}`}
-            />
-          ))}
+        <div className="mb-8 h-5 w-1/3 animate-pulse rounded bg-scheme-75" />
+        <div className="space-y-4">
+          <div>
+            {[0, 1, 2].map((line) => (
+              <div key={line} className="h-[26px] animate-pulse rounded bg-scheme-75" />
+            ))}
+          </div>
+          <div>
+            <div className="h-[26px] animate-pulse rounded bg-scheme-75" />
+            <div className="h-[26px] w-2/3 animate-pulse rounded bg-scheme-75" />
+          </div>
         </div>
       </div>
     </>
@@ -63,6 +68,10 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
+  if (RENDER_DELAY_MS > 0) {
+    await new Promise((resolve) => setTimeout(resolve, RENDER_DELAY_MS));
+  }
+
   // Get post for current slug
   const resPost = await getPost(params.slug);
   if (!resPost?.story) return { notFound: true };
