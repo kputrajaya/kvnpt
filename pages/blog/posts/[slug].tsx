@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 import { SITE_TITLE, STATIC_PROPS_REVALIDATE } from '../../../utils/constants';
 import { getLinkPreview } from '../../../utils/links';
@@ -7,7 +8,31 @@ import BackButton from '../../../components/back_button';
 import Block from '../../../components/block';
 import PostSubtitle from '../../../components/post_subtitle';
 
+function PostSkeleton() {
+  return (
+    <>
+      <BackButton href="/blog/pages/1" />
+      <div role="status" aria-live="polite">
+        <span className="sr-only">Loading post</span>
+        <div className="mb-2 h-8 w-2/3 animate-pulse rounded bg-scheme-75" />
+        <div className="mb-8 h-4 w-1/3 animate-pulse rounded bg-scheme-75" />
+        <div className="space-y-3">
+          {[0, 1, 2, 3, 4].map((line) => (
+            <div
+              key={line}
+              className={`h-4 animate-pulse rounded bg-scheme-75 ${line === 4 ? 'w-2/3' : 'w-full'}`}
+            />
+          ))}
+        </div>
+      </div>
+    </>
+  );
+}
+
 export default function Post({ post }) {
+  const router = useRouter();
+
+  if (router.isFallback) return <PostSkeleton />;
   if (!post) return null;
 
   return (
