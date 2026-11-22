@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Head from 'next/head';
 
 import { SITE_TITLE, STATIC_PROPS_REVALIDATE, SVG_INFO_SIZE, SVG_SONG_SIZE, SONG_ALBUMS } from '../../utils/constants';
@@ -11,8 +11,36 @@ import SvgSongPlaying from '../../public/images/song-playing.svg';
 
 export default function Songs({ albums }) {
   const [playIndex, setPlayIndex] = useState(-1);
+  const [isPlaying, setIsPlaying] = useState(false);
   const playableSongs = [];
   let counter = 0;
+
+  const handleSongClick = (index) => {
+    if (index === playIndex) {
+      setIsPlaying(!isPlaying);
+      return;
+    }
+    setPlayIndex(index);
+    setIsPlaying(true);
+  };
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.code !== 'Space' || event.repeat) return;
+      const target = event.target;
+      if (
+        target instanceof HTMLElement &&
+        (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.isContentEditable)
+      ) {
+        return;
+      }
+      if (playIndex < 0) return;
+      event.preventDefault();
+      setIsPlaying((value) => !value);
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [playIndex]);
 
   return (
     <>
@@ -41,7 +69,7 @@ export default function Songs({ albums }) {
           <div className="-mb-2">
             {album.songs.map((song) => {
               const currentIndex = counter;
-              const isPlaying = song.audio && playIndex === currentIndex;
+              const isActive = song.audio && playIndex === currentIndex && isPlaying;
               if (song.audio) {
                 playableSongs.push(song);
                 counter++;
@@ -50,10 +78,10 @@ export default function Songs({ albums }) {
               const renderLine = () => (
                 <div className="flex">
                   <div
-                    className={(isPlaying ? 'text-scheme-primary' : 'text-scheme-third') + ' mr-4 shrink-0 self-center'}
+                    className={(isActive ? 'text-scheme-primary' : 'text-scheme-third') + ' mr-4 shrink-0 self-center'}
                     style={{ width: SVG_SONG_SIZE }}
                   >
-                    {isPlaying ? (
+                    {isActive ? (
                       <Image src={SvgSongPlaying} width={SVG_SONG_SIZE} height={SVG_SONG_SIZE} title="Playing" />
                     ) : (
                       <Image src={SvgSongPlay} width={SVG_SONG_SIZE} height={SVG_SONG_SIZE} title="Play" />
@@ -77,7 +105,7 @@ export default function Songs({ albums }) {
                     <button
                       className="w-full cursor-pointer p-2 text-left"
                       type="button"
-                      onClick={() => setPlayIndex(currentIndex)}
+                      onClick={() => handleSongClick(currentIndex)}
                     >
                       {renderLine()}
                     </button>
@@ -91,7 +119,13 @@ export default function Songs({ albums }) {
         </div>
       ))}
 
-      <Audio songs={playableSongs} index={playIndex} setIndex={setPlayIndex} />
+      <Audio
+        songs={playableSongs}
+        index={playIndex}
+        isPlaying={isPlaying}
+        setIndex={setPlayIndex}
+        setIsPlaying={setIsPlaying}
+      />
     </>
   );
 }
