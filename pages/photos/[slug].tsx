@@ -1,18 +1,49 @@
-import Head from 'next/head';
-
-import { PHOTO_ALBUM_PREVIEW_COUNT, PHOTO_ALBUMS, SITE_TITLE, STATIC_PROPS_REVALIDATE } from '../../utils/constants';
+import {
+  IMAGEKIT_ENDPOINT,
+  PHOTO_ALBUM_PREVIEW_COUNT,
+  PHOTO_ALBUMS,
+  SITE_NAME,
+  SITE_URL,
+  STATIC_PROPS_REVALIDATE,
+} from '../../utils/constants';
+import { getBreadcrumb } from '../../utils/seo';
 import BackButton from '../../components/back_button';
 import PhotoAlbumImages from '../../components/photo_album_images';
 import PostSubtitle from '../../components/post_subtitle';
+import Seo from '../../components/seo';
 
 export default function Photo({ album }) {
   if (!album) return null;
 
+  const path = `/photos/${album.slug}`;
+  const image = album.photos[0] ? `${IMAGEKIT_ENDPOINT}${album.photos[0]}` : undefined;
+  const structuredData = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'ImageGallery',
+      name: album.name,
+      url: `${SITE_URL}${path}`,
+      image: album.photos.slice(0, 6).map((photo) => `${IMAGEKIT_ENDPOINT}${photo}`),
+      author: { '@type': 'Person', name: SITE_NAME, url: SITE_URL },
+      datePublished: album.date,
+    },
+    getBreadcrumb([
+      { name: 'Home', path: '/' },
+      { name: 'Photos', path: '/photos' },
+      { name: album.name, path },
+    ]),
+  ];
+
   return (
     <>
-      <Head>
-        <title>{`${album.name} - ${SITE_TITLE}`}</title>
-      </Head>
+      <Seo
+        title={album.name}
+        description={`Photo album ${album.name} by ${SITE_NAME}.`}
+        path={path}
+        image={image}
+        type="article"
+        jsonLd={structuredData}
+      />
 
       <BackButton href="/photos" />
       <h1 className="mb-2 text-2xl font-semibold">{album.name}</h1>
@@ -28,7 +59,7 @@ export default function Photo({ album }) {
 }
 
 export async function getStaticPaths() {
-  return { paths: [], fallback: true };
+  return { paths: [], fallback: 'blocking' };
 }
 
 export async function getStaticProps({ params }) {

@@ -1,10 +1,18 @@
 import { useState } from 'react';
-import Head from 'next/head';
 
-import { SITE_TITLE, STATIC_PROPS_REVALIDATE, SVG_INFO_SIZE, SVG_SONG_SIZE, SONG_ALBUMS } from '../../utils/constants';
+import {
+  SITE_NAME,
+  SITE_URL,
+  STATIC_PROPS_REVALIDATE,
+  SVG_INFO_SIZE,
+  SVG_SONG_SIZE,
+  SONG_ALBUMS,
+} from '../../utils/constants';
+import { getBreadcrumb } from '../../utils/seo';
 import Audio from '../../components/audio';
 import BackButton from '../../components/back_button';
 import Image from '../../components/image';
+import Seo from '../../components/seo';
 import SvgSongInfo from '../../public/images/song-info.svg';
 import SvgSongPlay from '../../public/images/song-play.svg';
 import SvgSongPlaying from '../../public/images/song-playing.svg';
@@ -14,11 +22,28 @@ export default function Songs({ albums }) {
   const playableSongs = [];
   let counter = 0;
 
+  const structuredData = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: `Songs — ${SITE_NAME}`,
+      url: `${SITE_URL}/songs`,
+      description: `Music and songs by ${SITE_NAME}.`,
+    },
+    getBreadcrumb([
+      { name: 'Home', path: '/' },
+      { name: 'Songs', path: '/songs' },
+    ]),
+  ];
+
   return (
     <>
-      <Head>
-        <title>{`Songs - ${SITE_TITLE}`}</title>
-      </Head>
+      <Seo
+        title="Songs"
+        description={`Music and songs by ${SITE_NAME}.`}
+        path="/songs"
+        jsonLd={structuredData}
+      />
 
       <BackButton href="/" />
       <h1 className="mb-8 text-2xl font-semibold">Songs</h1>

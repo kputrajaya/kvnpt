@@ -1,6 +1,24 @@
 {
   "redirects": [
     {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.kvn.pt" }],
+      "destination": "https://kvn.pt/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "g.kvn.pt" }],
+      "destination": "https://kvn.pt/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "v.kvn.pt" }],
+      "destination": "https://kvn.pt/:path*",
+      "permanent": true
+    },
+    {
       "source": "/(bc|bandcamp)",
       "destination": "https://kputrajaya.bandcamp.com/releases",
       "permanent": false

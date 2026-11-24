@@ -1,16 +1,11 @@
-import Head from 'next/head';
-
-import { SITE_TITLE } from '../utils/constants';
 import { ErrorPageProps } from '../utils/types';
 import BackButton from './back_button';
-
+import Seo from './seo';
 
 export default function ErrorPage({ code, title, message }: ErrorPageProps) {
   return (
     <>
-      <Head>
-        <title>{`${title} - ${SITE_TITLE}`}</title>
-      </Head>
+      <Seo title={title} description={message} noindex />
 
       <div className="-my-8 flex h-screen items-center justify-center py-8">
         <div className="text-center">

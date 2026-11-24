@@ -1,14 +1,21 @@
-import Head from 'next/head';
-
-import { SITE_TITLE, STATIC_PROPS_REVALIDATE } from '../utils/constants';
+import { SITE_NAME, SITE_URL, STATIC_PROPS_REVALIDATE } from '../utils/constants';
 import BackButton from '../components/back_button';
+import Seo from '../components/seo';
 
 export default function Links({ links }) {
   return (
     <>
-      <Head>
-        <title>{`Links - ${SITE_TITLE}`}</title>
-      </Head>
+      <Seo
+        title="Links"
+        description={`Short links and profiles for ${SITE_NAME}.`}
+        path="/links"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'CollectionPage',
+          name: `Links — ${SITE_NAME}`,
+          url: `${SITE_URL}/links`,
+        }}
+      />
 
       <BackButton href="/" />
       <h1 className="mb-8 text-2xl font-semibold">Links</h1>
@@ -27,10 +34,12 @@ export default function Links({ links }) {
 
 export async function getStaticProps() {
   const vercelConfig = require('../vercel.json');
-  const links = vercelConfig.redirects.map((rule) => {
-    const [short, name] = rule.source.replace(/[/()]/g, '').split('|');
-    return { short, name, url: rule.destination };
-  });
+  const links = vercelConfig.redirects
+    .filter((rule) => !rule.has && rule.source.startsWith('/('))
+    .map((rule) => {
+      const [short, name] = rule.source.replace(/[/()]/g, '').split('|');
+      return { short, name, url: rule.destination };
+    });
 
   return {
     props: { links },

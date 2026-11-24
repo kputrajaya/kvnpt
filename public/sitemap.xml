@@ -2,5 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://kvn.pt/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://kvn.pt/blog/pages/1</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kvn.pt/resume</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kvn.pt/projects</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kvn.pt/photos</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://kvn.pt/songs</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://kvn.pt/links</loc>
+    <priority>0.3</priority>
   </url>
 </urlset>

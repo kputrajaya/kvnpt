@@ -27,10 +27,22 @@ export const RESUME_AVATAR_SIZE = 125;
 export const SHORTIO_HOST = 'https://r.kvn.pt/';
 
 export const SITE_DESCRIPTION =
-  "I'm Kevin Putrajaya, a Software Engineer / Manager from Indonesia. I share my resume, blog, music, and photos here.";
+  "I'm Kevin Putrajaya, an Engineering Manager at Grab. I write about software engineering, management, board games, and side projects.";
 export const SITE_IMAGE = IMAGEKIT_ENDPOINT + 'og_image_nbEDAvfHN8N.jpg';
-export const SITE_TITLE = 'Kevin Putrajaya';
+export const SITE_NAME = 'Kevin Putrajaya';
+export const SITE_TITLE = SITE_NAME;
 export const SITE_TWITTER_USER = '@kputrajaya';
+export const SITE_URL = 'https://kvn.pt';
+export const SITE_JOB_TITLE = 'Engineering Manager';
+export const SITE_EMPLOYER = 'Grab';
+export const SITE_SAME_AS = [
+  'https://id.linkedin.com/in/kputrajaya',
+  'https://github.com/kputrajaya',
+  'https://twitter.com/kputrajaya',
+];
+
+export const BLOG_DESCRIPTION =
+  'Notes on software engineering, engineering management, board games, side projects, and life by Kevin Putrajaya.';
 
 export const STATIC_PROPS_REVALIDATE = parseInt(process.env.STATIC_PROPS_REVALIDATE || '30');
 

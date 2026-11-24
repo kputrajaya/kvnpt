@@ -1,19 +1,33 @@
-import Head from 'next/head';
 import Link from 'next/link';
 
-import { BLOG_PER_PAGE, SITE_TITLE, STATIC_PROPS_REVALIDATE } from '../../../utils/constants';
+import { BLOG_DESCRIPTION, BLOG_PER_PAGE, SITE_NAME, STATIC_PROPS_REVALIDATE } from '../../../utils/constants';
 import { getPostCount, getPosts } from '../../../utils/storyblok';
+import { absoluteUrl, getBreadcrumb } from '../../../utils/seo';
 import BackButton from '../../../components/back_button';
 import PostSubtitle from '../../../components/post_subtitle';
+import Seo from '../../../components/seo';
 
 export default function Page({ posts, pageCurrent, pageCount }) {
   if (!posts) return null;
 
+  const path = `/blog/pages/${pageCurrent}`;
+  const structuredData = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: `Blog — ${SITE_NAME}`,
+      url: absoluteUrl(path),
+      description: BLOG_DESCRIPTION,
+    },
+    getBreadcrumb([
+      { name: 'Home', path: '/' },
+      { name: 'Blog', path },
+    ]),
+  ];
+
   return (
     <>
-      <Head>
-        <title>{`Blog - ${SITE_TITLE}`}</title>
-      </Head>
+      <Seo title="Blog" description={BLOG_DESCRIPTION} path={path} jsonLd={structuredData} />
 
       <BackButton href="/" />
       <h1 className="mb-8 text-2xl font-semibold">Blog</h1>
@@ -58,7 +72,7 @@ export async function getStaticPaths() {
     },
   }));
 
-  return { paths, fallback: true };
+  return { paths, fallback: 'blocking' };
 }
 
 export async function getStaticProps({ params }) {

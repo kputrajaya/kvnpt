@@ -1,9 +1,22 @@
-import Head from 'next/head';
+import Link from 'next/link';
 
-import { INTRO_AVATAR_SIZE, INTRO_CONTACT_SIZE, SITE_TITLE, STATIC_PROPS_REVALIDATE } from '../utils/constants';
+import {
+  INTRO_AVATAR_SIZE,
+  INTRO_CONTACT_SIZE,
+  SITE_DESCRIPTION,
+  SITE_EMPLOYER,
+  SITE_IMAGE,
+  SITE_JOB_TITLE,
+  SITE_NAME,
+  SITE_SAME_AS,
+  SITE_TITLE,
+  SITE_URL,
+  STATIC_PROPS_REVALIDATE,
+} from '../utils/constants';
 import { getHome } from '../utils/storyblok';
 import Image from '../components/image';
 import Markdown from '../components/markdown';
+import Seo from '../components/seo';
 import SvgEmail from '../public/images/contact-email.svg';
 import SvgGitHub from '../public/images/contact-github.svg';
 import SvgLinkedIn from '../public/images/contact-linkedin.svg';
@@ -15,11 +28,30 @@ export default function Home({ photo, introduction, contacts }) {
     LinkedIn: SvgLinkedIn,
   };
 
+  const structuredData = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      name: SITE_NAME,
+      url: SITE_URL,
+      image: SITE_IMAGE,
+      jobTitle: SITE_JOB_TITLE,
+      worksFor: { '@type': 'Organization', name: SITE_EMPLOYER },
+      sameAs: SITE_SAME_AS,
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: SITE_NAME,
+      url: SITE_URL,
+      description: SITE_DESCRIPTION,
+      author: { '@type': 'Person', name: SITE_NAME, url: SITE_URL },
+    },
+  ];
+
   return (
     <>
-      <Head>
-        <title>{SITE_TITLE}</title>
-      </Head>
+      <Seo title={SITE_TITLE} path="/" jsonLd={structuredData} />
 
       <div className="-my-8 flex h-screen items-center py-8">
         <div className="md:flex md:items-start">
@@ -29,6 +61,7 @@ export default function Home({ photo, introduction, contacts }) {
             width={INTRO_AVATAR_SIZE}
             height={INTRO_AVATAR_SIZE}
             title={SITE_TITLE}
+            priority
           />
           <div className="mt-8 md:mt-0 md:ml-8">
             <div className="mb-8">
@@ -53,6 +86,11 @@ export default function Home({ photo, introduction, contacts }) {
                   />
                 </a>
               ))}
+            </div>
+            <div className="mt-8 text-sm">
+              <Link className="underline" href="/projects">
+                View my projects &rarr;
+              </Link>
             </div>
           </div>
         </div>

@@ -1,23 +1,42 @@
-import Head from 'next/head';
 import Link from 'next/link';
 
 import {
   PHOTO_ALBUM_TEASER_COUNT,
   PHOTO_ALBUM_TEASER_SIZE,
   PHOTO_ALBUMS,
-  SITE_TITLE,
+  SITE_NAME,
+  SITE_URL,
   STATIC_PROPS_REVALIDATE,
 } from '../../utils/constants';
+import { getBreadcrumb } from '../../utils/seo';
 import BackButton from '../../components/back_button';
 import Image from '../../components/image';
 import PostSubtitle from '../../components/post_subtitle';
+import Seo from '../../components/seo';
 
 export default function Photos({ albums }) {
+  const structuredData = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: `Photos — ${SITE_NAME}`,
+      url: `${SITE_URL}/photos`,
+      description: `Photo albums by ${SITE_NAME}.`,
+    },
+    getBreadcrumb([
+      { name: 'Home', path: '/' },
+      { name: 'Photos', path: '/photos' },
+    ]),
+  ];
+
   return (
     <>
-      <Head>
-        <title>{`Photos - ${SITE_TITLE}`}</title>
-      </Head>
+      <Seo
+        title="Photos"
+        description={`Photo albums by ${SITE_NAME}.`}
+        path="/photos"
+        jsonLd={structuredData}
+      />
 
       <BackButton href="/" />
       <h1 className="mb-8 text-2xl font-semibold">Photos</h1>

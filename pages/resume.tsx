@@ -1,12 +1,37 @@
-import Head from 'next/head';
 
-import { RESUME_AVATAR_SIZE, SITE_TITLE, STATIC_PROPS_REVALIDATE } from '../utils/constants';
+import {
+  RESUME_AVATAR_SIZE,
+  SITE_EMPLOYER,
+  SITE_JOB_TITLE,
+  SITE_NAME,
+  SITE_SAME_AS,
+  SITE_URL,
+  STATIC_PROPS_REVALIDATE,
+} from '../utils/constants';
 import { getResume } from '../utils/storyblok';
 import BackButton from '../components/back_button';
 import Image from '../components/image';
 import Markdown from '../components/markdown';
+import Seo from '../components/seo';
 
 export default function Resume({ resume }) {
+  const structuredData = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'ProfilePage',
+      name: `Resume of ${SITE_NAME}`,
+      url: `${SITE_URL}/resume`,
+      mainEntity: {
+        '@type': 'Person',
+        name: SITE_NAME,
+        url: SITE_URL,
+        jobTitle: SITE_JOB_TITLE,
+        worksFor: { '@type': 'Organization', name: SITE_EMPLOYER },
+        sameAs: SITE_SAME_AS,
+      },
+    },
+  ];
+
   const renderExperience = () => {
     // Group positions based on company
     const companies = [];
@@ -51,9 +76,13 @@ export default function Resume({ resume }) {
 
   return (
     <>
-      <Head>
-        <title>{`Resume - ${SITE_TITLE}`}</title>
-      </Head>
+      <Seo
+        title="Resume"
+        description={`Resume of ${SITE_NAME}, ${SITE_JOB_TITLE} at ${SITE_EMPLOYER}. Experience, skills, and background.`}
+        path="/resume"
+        type="profile"
+        jsonLd={structuredData}
+      />
 
       <BackButton href="/" />
       <Image
